@@ -1,0 +1,88 @@
+@import "BreakPoints";
+
+/**
+  * @desc Font mixin to set font-family and font-weight for the given font name and font weight value.
+    * @param {string} $fontName - Font name to be used.
+    * @param {number} $fontWeight - Font weight to be used.
+    * @example
+    * @include selectFont("Cairo", 400);
+ */
+@mixin selectFont($fontName, $fontWeight: 400) {
+    $fontNames: (
+        "Cairo": "Cairo",
+    );
+
+    @if map-has-key($fontNames, $fontName) {
+        $fontValue: map-get($fontNames, $fontName);
+        font-family: #{$fontValue}, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+            "Droid Sans", "Helvetica Neue", sans-serif;
+        font-weight: #{$fontWeight};
+    } @else {
+        @warn "Font #{$fontName} is not supported. Supported fonts are: #{map-keys($fontNames)}";
+    }
+}
+
+/**
+ * A mixin for creating responsive styles based on breakpoints.
+ *
+ * @param {string} $breakPoint - The breakpoint identifier (e.g., "md").
+ *
+ * @example
+ * // Usage:
+ * @include responsive("md") {
+ *   color: red;
+ * }
+ *
+ * @note This mixin is used to apply styles within a specific breakpoint range.
+ * If the specified breakpoint is not supported, a warning is issued.
+ */
+
+@mixin responsive($breakPoint) {
+    $breakPoints: (
+        "xs": $xs,
+        "sm": $sm,
+        "md": $md,
+        "lg": $lg,
+        "xl": $xl,
+        "xxl": $xxl,
+        "xxxl": $xxxl,
+    );
+    @if map-has-key($breakPoints, $breakPoint) {
+        $breakPointValue: map-get($breakPoints, $breakPoint);
+        @media (max-width: $breakPointValue) {
+            @content;
+        }
+    } @else {
+        @warn "BreakPoint #{$breakPoint} is not supported. Supported BreakPoints are: #{map-keys($breakPoints)}";
+    }
+}
+
+/**
+ * A mixin to create a responsive container with customizable padding.
+ *
+ * @param {string} $padding - The padding value to apply.
+ *
+ * @example
+ * // Usage:
+ * @include container(120px)
+ */
+
+@mixin container($padding: 80px) {
+    width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include responsive("xl") {
+        width: 100%;
+        padding-inline: $padding;
+    }
+
+    @include responsive("lg") {
+        padding-inline: 40px;
+    }
+
+    @include responsive("md") {
+        padding-inline: 20px;
+    }
+}

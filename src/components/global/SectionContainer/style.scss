@@ -1,0 +1,5 @@
+@import "Styles/style.scss";
+
+#sectionContainer {
+    @include container();
+}

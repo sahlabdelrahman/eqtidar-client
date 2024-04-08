@@ -1,0 +1,27 @@
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+%flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+%position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
