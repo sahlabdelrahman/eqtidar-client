@@ -1,14 +1,16 @@
+@import "./variables";
+
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f9fafb;
+    background: $grayBackgroundColor;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #e4e7eb;
+    background-color: $secondaryBackgroundColor;
     border-radius: 4px;
 }
 

@@ -1,4 +1,4 @@
-@import "Styles/style.scss";
+@import "@/styles/partials/mixins";
 
 #sectionContainer {
     @include container();

@@ -1,0 +1,29 @@
+@import "@/styles/partials/variables";
+
+.logoContainer {
+    color: $mainTextColor;
+    transition: all 0.3s ease-in-out;
+    font-size: 24px;
+    font-weight: 700;
+    svg {
+        path {
+            fill: $mainTextColor;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &.inDrawer {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1.5px solid $secondaryTextColor;
+    }
+
+    &:hover {
+        color: $secondaryTextColor;
+        svg {
+            path {
+                fill: $secondaryTextColor;
+            }
+        }
+    }
+}

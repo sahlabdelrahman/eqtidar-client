@@ -1,0 +1,47 @@
+@import "@/styles/partials/variables";
+@import "@/styles/partials/mixins";
+
+.navbarHamburger {
+    display: none;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    background: none;
+
+    > span {
+        position: relative;
+        width: 22px;
+        height: 3px;
+        transition: all 0.3s linear;
+        background: $mainTextColor;
+        transform-origin: 0;
+    }
+
+    &.mobileOpen {
+        > span {
+            &:first-child {
+                transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            &:last-child {
+                transform: rotate(-45deg);
+                transform-origin: 1px;
+            }
+        }
+    }
+
+    @include responsive("md") {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &:hover {
+        > span {
+            background-color: $secondaryTextColor;
+        }
+    }
+}
