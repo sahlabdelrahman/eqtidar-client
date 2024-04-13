@@ -1,6 +1,5 @@
 import { FC, SVGProps } from "react";
 
-// Type the props by extending SVGProps<SVGSVGElement>
 const MailLogo: FC<SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg

@@ -1,0 +1,43 @@
+@import "@/styles/partials/variables";
+
+.scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    z-index: 99;
+    cursor: pointer;
+    background-color: $secondaryBackgroundColor;
+    color: $lightColor;
+    border: none;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    svg {
+        width: 30px;
+        height: 30px;
+        path {
+            transition: all 0.3s ease-in-out;
+            stroke: $lightColor;
+        }
+    }
+
+    &:hover {
+        background-color: $secondaryTextColor;
+        svg {
+            path {
+                stroke: $mainTextColor;
+            }
+        }
+    }
+}

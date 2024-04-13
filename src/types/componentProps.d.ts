@@ -4,7 +4,7 @@ import React, { FunctionComponent, SVGProps } from "react";
 
 interface NavbarComponentProps {
     window?: () => Window;
-    children: React.ReactElement;
+    children?: React.ReactElement;
 }
 
 interface NavbarHamburgerProps {
