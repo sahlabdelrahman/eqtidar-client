@@ -5,12 +5,16 @@ import { LinksComponentProps } from "@/types/componentProps";
 
 import styles from "./style.module.scss";
 
-const LinksComponent: FC<LinksComponentProps> = ({ notInDrawer, links }) => {
+const LinksComponent: FC<LinksComponentProps> = ({
+    notInDrawer,
+    inFooter,
+    links,
+}) => {
     return (
         <ul
             className={`${styles.linksContainer} ${
                 notInDrawer ? styles.notInDrawer : ""
-            }`}
+            } ${inFooter ? styles.inFooter : ""}`}
         >
             {links.map(({ id, text, path }) => (
                 <li key={id} className={styles.listItem}>

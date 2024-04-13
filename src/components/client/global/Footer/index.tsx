@@ -1,7 +1,52 @@
+import SectionContainer from "@/components/global/SectionContainer";
+import LogoComponent from "../Header/LogoComponent";
+import LinksComponent from "../Header/LinksComponent";
+
+import navbarConfig from "../Header/config";
+import footerConfig from "./config";
+
+import styles from "./style.module.scss";
+
+const { Logo, links } = navbarConfig;
+const { slogan, socialMediaLinks, copyright, developed } = footerConfig;
+
 export default function Footer() {
     return (
-        <footer>
-            <p>footer</p>
+        <footer className={styles.footerContainer}>
+            <section className={styles.topSection}>
+                <div className={styles.topPart}>
+                    <LogoComponent Logo={Logo} />
+                    <p className={styles.slogan}>{slogan}</p>
+                </div>
+                <LinksComponent links={links} inFooter />
+                <div className={styles.socialMediaLinks}>
+                    {socialMediaLinks?.map(({ id, path, Icon }) => (
+                        <a
+                            key={id}
+                            href={path}
+                            className={styles.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Icon />
+                        </a>
+                    ))}
+                </div>
+            </section>
+            <section className={styles.bottomSection}>
+                <p className={styles.copyright}>{copyright}</p>
+                <p className={styles.developed}>
+                    {developed?.text}{" "}
+                    <a
+                        href={developed?.path}
+                        className={styles.name}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {developed?.name}
+                    </a>
+                </p>
+            </section>
         </footer>
     );
 }

@@ -34,4 +34,20 @@
             display: none;
         }
     }
+    &.inFooter {
+        flex-direction: row;
+        width: initial;
+
+        .listItem {
+            width: initial;
+        }
+
+        @include responsive("md") {
+            flex-direction: column;
+        }
+    }
+
+    @include responsive("md") {
+        gap: 12px;
+    }
 }

@@ -18,14 +18,31 @@ interface NavbarLinkProps {
     text: string;
 }
 
+interface SocialMediaLinkProps {
+    id: number;
+    path: string;
+    Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+}
+
 export interface NavbarConfigProps {
     Logo: FunctionComponent<SVGProps<SVGSVGElement>> | string;
     drawerWidth: number;
     links: NavbarLinkProps[];
 }
+export interface FooterConfigProps {
+    slogan: string;
+    copyright: string;
+    developed: {
+        text: string;
+        name: string;
+        path: string;
+    };
+    socialMediaLinks: SocialMediaLinkProps[];
+}
 
 export interface LinksComponentProps {
     notInDrawer?: boolean;
+    inFooter?: boolean;
     links: NavbarLinkProps[];
 }
 export interface LogoComponentProps {

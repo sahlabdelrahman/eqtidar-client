@@ -1,0 +1,114 @@
+@import "@/styles/partials/mixins";
+@import "@/styles/partials/variables";
+
+.footerContainer {
+    .topSection {
+        @include container();
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background-color: $grayBackgroundColor;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        border-bottom: 2px solid #192b49;
+
+        .topPart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .slogan {
+                font-size: 14px;
+                font-weight: 600;
+                color: $secondaryTextColor;
+            }
+        }
+
+        .socialMediaLinks {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            .link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background-color: $secondaryBackgroundColor;
+                color: $grayTextColor;
+                transition: all 0.3s ease-in-out;
+                overflow: hidden;
+
+                svg,
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                svg {
+                    path {
+                        fill: $grayTextColor;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+
+                &:hover {
+                    background-color: $secondaryTextColor;
+                    color: $mainTextColor;
+                    svg {
+                        path {
+                            fill: $mainTextColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottomSection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        min-height: 64px;
+        @include container();
+        background-color: $darkBackgroundColor;
+        color: $lightColor;
+        .developed,
+        .copyright {
+            font-weight: 300;
+        }
+        .developed {
+            .name {
+                color: $secondaryTextColor;
+                font-weight: 500;
+            }
+        }
+    }
+
+    @include responsive("md") {
+        .topSection {
+            .socialMediaLinks {
+                gap: 12px;
+
+                .link {
+                    width: 30px;
+                    height: 30px;
+
+                    svg,
+                    img {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+        .bottomSection {
+            flex-direction: column;
+        }
+    }
+}
