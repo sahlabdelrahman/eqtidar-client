@@ -11,13 +11,28 @@
     .listItem {
         width: 100%;
         .link {
+            position: relative;
             display: inline-block;
-            width: 100%;
             color: $mainTextColor;
             font-size: 18px;
+            font-weight: 400;
             transition: all 0.3s ease-in-out;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: $secondaryTextColor;
+                transition: all 0.3s ease-in-out;
+            }
             &:hover {
                 color: $secondaryTextColor;
+
+                &::before {
+                    width: 100%;
+                }
             }
         }
     }
