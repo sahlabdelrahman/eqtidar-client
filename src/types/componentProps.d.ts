@@ -1,4 +1,4 @@
-import React, { FunctionComponent, SVGProps } from "react";
+import React, { FunctionComponent, ReactNode, SVGProps } from "react";
 import { StaticImageData } from "next/image";
 
 // Navbar types
@@ -62,6 +62,16 @@ interface BannerDataProps {
 export interface BannerComponentProps {
     data: BannerDataProps[];
 }
+
+// Section
+
+export interface SectionComponentProps {
+    title: string;
+    sectionId: string;
+    dark?: boolean;
+    children: ReactNode;
+}
+
 // OurGoals types
 
 interface OurGoalsDataProps {

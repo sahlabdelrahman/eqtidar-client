@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import SectionTitle from "../../global/SectionTitle";
+import Section from "@/components/client/global/Section";
 
 import projectsConfig from "./config";
 
@@ -13,32 +13,27 @@ const { title, sectionId, data, swiperConfig } = projectsConfig;
 
 function Projects() {
     return (
-        <section id={sectionId} className={styles.projects}>
-            <div className={styles.container}>
-                <SectionTitle title={title} />
-                <div className={styles.content}>
-                    {data?.map(({ id, title, description, images }) => (
-                        <aside key={id} className={styles.card}>
-                            <div className={styles.imagesContainer}>
-                                <Swiper {...swiperConfig}>
-                                    {images?.map(({ id, alt, url }) => (
-                                        <SwiperSlide key={id}>
-                                            <Image alt={alt} src={url} />
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-                            </div>
-                            <div className={styles.textContainer}>
-                                <h5 className={styles.title}>{title}</h5>
-                                <p className={styles.description}>
-                                    {description}
-                                </p>
-                            </div>
-                        </aside>
-                    ))}
-                </div>
+        <Section sectionId={sectionId} title={title} dark>
+            <div className={styles.content}>
+                {data?.map(({ id, title, description, images }) => (
+                    <aside key={id} className={styles.card}>
+                        <div className={styles.imagesContainer}>
+                            <Swiper {...swiperConfig}>
+                                {images?.map(({ id, alt, url }) => (
+                                    <SwiperSlide key={id}>
+                                        <Image alt={alt} src={url} />
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
+                        <div className={styles.textContainer}>
+                            <h5 className={styles.title}>{title}</h5>
+                            <p className={styles.description}>{description}</p>
+                        </div>
+                    </aside>
+                ))}
             </div>
-        </section>
+        </Section>
     );
 }
 
