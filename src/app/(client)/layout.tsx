@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import "@/styles/style.scss";
+import "swiper/css";
 
 const cairo = Cairo({
     subsets: ["arabic", "latin"],

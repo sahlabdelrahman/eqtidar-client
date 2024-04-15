@@ -12,7 +12,9 @@ const ProjectsConfig: ProjectsComponentProps = {
     data: [
         {
             id: 0,
-            text: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
+            title: "عنوان المشروع",
+            description:
+                "وصف المشروع أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             images: [
                 {
                     id: "0",
@@ -20,11 +22,30 @@ const ProjectsConfig: ProjectsComponentProps = {
                     url: Project01,
                     blurUrl: "string",
                 },
+                {
+                    id: "1",
+                    alt: "string",
+                    url: Project02,
+                    blurUrl: "string",
+                },
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
             ],
         },
         {
             id: 1,
-            text: "أبجد هوز حطي كلمن ثخذ ضظغ",
+            title: "عنوان المشروع",
+            description: "أبجد هوز حطي كلمن ثخذ ضظغ",
             images: [
                 {
                     id: "0",
@@ -32,11 +53,25 @@ const ProjectsConfig: ProjectsComponentProps = {
                     url: Project02,
                     blurUrl: "string",
                 },
+
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
             ],
         },
         {
             id: 2,
-            text: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
+            title: "عنوان المشروع",
+            description: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             images: [
                 {
                     id: "0",
@@ -44,14 +79,46 @@ const ProjectsConfig: ProjectsComponentProps = {
                     url: Project03,
                     blurUrl: "string",
                 },
+                {
+                    id: "1",
+                    alt: "string",
+                    url: Project02,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
             ],
         },
         {
             id: 3,
-            text: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
+            title: "عنوان المشروع",
+            description:
+                "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             images: [
                 {
                     id: "0",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
+                {
+                    id: "1",
+                    alt: "string",
+                    url: Project02,
+                    blurUrl: "string",
+                },
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
                     alt: "string",
                     url: Project04,
                     blurUrl: "string",
@@ -60,7 +127,8 @@ const ProjectsConfig: ProjectsComponentProps = {
         },
         {
             id: 4,
-            text: "أبجد هوز حطي كلمن سعفص ",
+            title: "عنوان المشروع",
+            description: "أبجد هوز حطي كلمن سعفص ",
             images: [
                 {
                     id: "0",
@@ -68,11 +136,31 @@ const ProjectsConfig: ProjectsComponentProps = {
                     url: Project05,
                     blurUrl: "string",
                 },
+                {
+                    id: "1",
+                    alt: "string",
+                    url: Project02,
+                    blurUrl: "string",
+                },
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
             ],
         },
         {
             id: 5,
-            text: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ ",
+            title: "عنوان المشروع",
+            description:
+                "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ ",
             images: [
                 {
                     id: "0",
@@ -80,11 +168,30 @@ const ProjectsConfig: ProjectsComponentProps = {
                     url: Project01,
                     blurUrl: "string",
                 },
+                {
+                    id: "1",
+                    alt: "string",
+                    url: Project02,
+                    blurUrl: "string",
+                },
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
             ],
         },
         {
             id: 6,
-            text: "استخراج رخص وقفية",
+            title: "عنوان المشروع",
+            description: "استخراج رخص وقفية",
             images: [
                 {
                     id: "0",
@@ -92,11 +199,25 @@ const ProjectsConfig: ProjectsComponentProps = {
                     url: Project02,
                     blurUrl: "string",
                 },
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
             ],
         },
         {
             id: 7,
-            text: "  أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ  أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ قف",
+            title: "عنوان المشروع",
+            description:
+                "  أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ  أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ قف",
             images: [
                 {
                     id: "0",
@@ -104,14 +225,51 @@ const ProjectsConfig: ProjectsComponentProps = {
                     url: Project03,
                     blurUrl: "string",
                 },
+                {
+                    id: "1",
+                    alt: "string",
+                    url: Project02,
+                    blurUrl: "string",
+                },
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
             ],
         },
         {
             id: 8,
-            text: "أبجد هوز حطي كلمن سعفص",
+            title: "عنوان المشروع",
+            description: "أبجد هوز حطي كلمن سعفص",
             images: [
                 {
                     id: "0",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
+                {
+                    id: "1",
+                    alt: "string",
+                    url: Project02,
+                    blurUrl: "string",
+                },
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
                     alt: "string",
                     url: Project04,
                     blurUrl: "string",
@@ -120,7 +278,8 @@ const ProjectsConfig: ProjectsComponentProps = {
         },
         {
             id: 9,
-            text: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
+            title: "عنوان المشروع",
+            description: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             images: [
                 {
                     id: "0",
@@ -128,11 +287,31 @@ const ProjectsConfig: ProjectsComponentProps = {
                     url: Project05,
                     blurUrl: "string",
                 },
+                {
+                    id: "1",
+                    alt: "string",
+                    url: Project02,
+                    blurUrl: "string",
+                },
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
             ],
         },
         {
             id: 10,
-            text: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
+            title: "عنوان المشروع",
+            description:
+                "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             images: [
                 {
                     id: "0",
@@ -140,11 +319,30 @@ const ProjectsConfig: ProjectsComponentProps = {
                     url: Project01,
                     blurUrl: "string",
                 },
+                {
+                    id: "1",
+                    alt: "string",
+                    url: Project02,
+                    blurUrl: "string",
+                },
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
             ],
         },
         {
             id: 11,
-            text: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
+            title: "عنوان المشروع",
+            description: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             images: [
                 {
                     id: "0",
@@ -152,11 +350,24 @@ const ProjectsConfig: ProjectsComponentProps = {
                     url: Project02,
                     blurUrl: "string",
                 },
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
             ],
         },
         {
             id: 12,
-            text: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
+            title: "عنوان المشروع",
+            description: "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             images: [
                 {
                     id: "0",
@@ -164,9 +375,36 @@ const ProjectsConfig: ProjectsComponentProps = {
                     url: Project03,
                     blurUrl: "string",
                 },
+                {
+                    id: "1",
+                    alt: "string",
+                    url: Project02,
+                    blurUrl: "string",
+                },
+                {
+                    id: "2",
+                    alt: "string",
+                    url: Project03,
+                    blurUrl: "string",
+                },
+                {
+                    id: "3",
+                    alt: "string",
+                    url: Project04,
+                    blurUrl: "string",
+                },
             ],
         },
     ],
+    swiperConfig: {
+        // autoplay: {
+        //     delay: 2000,
+        //     disableOnInteraction: false,
+        // },
+        // modules: [Autoplay],
+        slidesPerView: 1,
+        loop: true,
+    },
 };
 
 export default ProjectsConfig;

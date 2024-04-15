@@ -90,23 +90,37 @@ export interface ServicesComponentProps {
 
 // Projects types
 
+interface AutoplayConfig {
+    delay: number;
+    disableOnInteraction: boolean;
+}
+
+interface SwiperConfig {
+    autoplay?: AutoplayConfig;
+    modules?: any[];
+    slidesPerView: number;
+    loop: boolean;
+}
+
+interface ProjectImageProps {
+    id: string;
+    alt: string;
+    url: StaticImageData;
+    blurUrl?: string;
+    width?: number;
+    height?: number;
+}
+
 interface ProjectsDataProps {
     id: number;
-    text: string;
-    images: [
-        {
-            id: string;
-            alt: string;
-            url: StaticImageData;
-            blurUrl?: string;
-            width?: number;
-            height?: number;
-        }
-    ];
+    title: string;
+    description: string;
+    images: ProjectImageProps[];
 }
 
 export interface ProjectsComponentProps {
     title: string;
     sectionId: string;
     data: ProjectsDataProps[];
+    swiperConfig: SwiperConfig;
 }
