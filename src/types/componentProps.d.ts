@@ -1,4 +1,5 @@
 import React, { FunctionComponent, SVGProps } from "react";
+import { StaticImageData } from "next/image";
 
 // Navbar types
 
@@ -48,4 +49,64 @@ export interface LinksComponentProps {
 export interface LogoComponentProps {
     inDrawer?: boolean;
     Logo: FunctionComponent<SVGProps<SVGSVGElement>> | string;
+}
+
+// Banner types
+
+interface BannerDataProps {
+    id: number;
+    title: string;
+    text: string;
+}
+
+export interface BannerComponentProps {
+    data: BannerDataProps[];
+}
+// OurGoals types
+
+interface OurGoalsDataProps {
+    id: number;
+    text: string;
+}
+
+export interface OurGoalsComponentProps {
+    title: string;
+    sectionId: string;
+    data: OurGoalsDataProps[];
+}
+
+// Services types
+
+interface ServicesDataProps {
+    id: number;
+    text: string;
+}
+
+export interface ServicesComponentProps {
+    title: string;
+    sectionId: string;
+    data: ServicesDataProps[];
+}
+
+// Projects types
+
+interface ProjectsDataProps {
+    id: number;
+    text: string;
+    images: [
+        {
+            id: string;
+            alt: string;
+            url: StaticImageData;
+            blurUrl?: string;
+            width?: number;
+            height?: number;
+        }
+    ];
+}
+
+export interface ProjectsComponentProps {
+    title: string;
+    sectionId: string;
+    data: ProjectsDataProps[];
 }

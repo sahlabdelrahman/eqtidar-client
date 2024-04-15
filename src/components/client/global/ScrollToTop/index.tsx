@@ -1,12 +1,12 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import TopArrow from "@/components/Icons/TopArrow";
 
 import styles from "./style.module.scss";
 
-const ScrollToTop: FC = () => {
+function ScrollToTop() {
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
     // Function to toggle visibility based on scroll position
@@ -43,6 +43,6 @@ const ScrollToTop: FC = () => {
             <TopArrow />
         </button>
     );
-};
+}
 
 export default ScrollToTop;

@@ -33,7 +33,7 @@ function HideOnScroll(props: NavbarComponentProps) {
     );
 }
 
-export default function Header(props: NavbarComponentProps) {
+function Header(props: NavbarComponentProps) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -90,3 +90,5 @@ export default function Header(props: NavbarComponentProps) {
         </div>
     );
 }
+
+export default Header;

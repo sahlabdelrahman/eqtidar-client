@@ -1,0 +1,24 @@
+@import "@/styles/partials/mixins";
+@import "@/styles/partials/variables";
+@import "@/styles/partials/inheritance";
+
+.sectionTitle {
+    display: flex;
+    justify-content: center;
+    .title {
+        position: relative;
+        font-size: 28px;
+        font-weight: 600;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 25%;
+            bottom: 0;
+            width: 50%;
+            height: 2px;
+            background-color: $secondaryTextColor;
+            border-radius: 2px;
+        }
+    }
+}

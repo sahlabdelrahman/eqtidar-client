@@ -8,37 +8,37 @@ const navbarConfig: NavbarConfigProps = {
     links: [
         {
             id: 0,
-            path: "/",
+            path: "#goals",
             text: "أهدافنا",
         },
         {
             id: 1,
-            path: "/",
+            path: "#services",
             text: "خدامتنا",
         },
         {
             id: 2,
-            path: "/",
+            path: "#achievements",
             text: "انجازتنا",
         },
         {
             id: 3,
-            path: "/",
+            path: "#projects",
             text: "مشاريعنا",
         },
         {
             id: 4,
-            path: "/",
+            path: "#clients",
             text: "عملائنا",
         },
         {
             id: 5,
-            path: "/",
+            path: "#commonQuestions",
             text: "الاسئلة الشائعة",
         },
         {
             id: 6,
-            path: "/",
+            path: "#contactUs",
             text: "تواصل معنا",
         },
     ],
