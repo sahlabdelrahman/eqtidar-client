@@ -1,10 +1,10 @@
-import { ProjectsComponentProps } from "@/types/componentProps";
-
 import Project01 from "@/components/Images/project_01.jpeg";
 import Project02 from "@/components/Images/project_02.jpeg";
 import Project03 from "@/components/Images/project_03.jpeg";
 import Project04 from "@/components/Images/project_04.jpeg";
 import Project05 from "@/components/Images/project_05.jpeg";
+
+import { ProjectsComponentProps } from "@/types/componentProps";
 
 const ProjectsConfig: ProjectsComponentProps = {
     title: "مشاريعنا",

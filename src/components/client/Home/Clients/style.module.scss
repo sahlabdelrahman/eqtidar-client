@@ -1,0 +1,14 @@
+@import "@/styles/partials/mixins";
+@import "@/styles/partials/variables";
+@import "@/styles/partials/inheritance";
+
+.content {
+    .imageContainer {
+        height: 120px;
+        .image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+}

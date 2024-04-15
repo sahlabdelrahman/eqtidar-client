@@ -105,10 +105,17 @@ interface AutoplayConfig {
     disableOnInteraction: boolean;
 }
 
+type SwiperBreakpoints = {
+    [key: number]: {
+        slidesPerView: number;
+    };
+};
+
 interface SwiperConfig {
     autoplay?: AutoplayConfig;
     modules?: any[];
     slidesPerView: number;
+    breakpoints?: SwiperBreakpoints;
     loop: boolean;
 }
 
@@ -132,5 +139,23 @@ export interface ProjectsComponentProps {
     title: string;
     sectionId: string;
     data: ProjectsDataProps[];
+    swiperConfig: SwiperConfig;
+}
+
+// Clients types
+
+interface ClientProps {
+    id: string;
+    alt: string;
+    url: StaticImageData;
+    blurUrl?: string;
+    width?: number;
+    height?: number;
+}
+
+export interface ClientsComponentProps {
+    title: string;
+    sectionId: string;
+    clients: ClientProps[];
     swiperConfig: SwiperConfig;
 }

@@ -29,7 +29,7 @@ const navbarConfig: NavbarConfigProps = {
         {
             id: 4,
             path: "#clients",
-            text: "عملائنا",
+            text: "عملاؤنا",
         },
         {
             id: 5,
