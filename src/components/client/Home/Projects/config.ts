@@ -1,8 +1,8 @@
-import Project01 from "@/components/Images/project_01.jpeg";
-import Project02 from "@/components/Images/project_02.jpeg";
-import Project03 from "@/components/Images/project_03.jpeg";
-import Project04 from "@/components/Images/project_04.jpeg";
-import Project05 from "@/components/Images/project_05.jpeg";
+import Project01 from "@/components/Images/project_01.jpg";
+import Project02 from "@/components/Images/project_02.jpg";
+import Project03 from "@/components/Images/project_03.jpg";
+import Project04 from "@/components/Images/project_04.jpg";
+import Project05 from "@/components/Images/project_05.jpg";
 
 import { ProjectsComponentProps } from "@/types/componentProps";
 

@@ -60,6 +60,10 @@ interface BannerDataProps {
 }
 
 export interface BannerComponentProps {
+    image: {
+        alt: string;
+        src: StaticImageData;
+    };
     data: BannerDataProps[];
 }
 

@@ -1,10 +1,6 @@
 import { Autoplay } from "swiper/modules";
 
-import Project01 from "@/components/Images/project_01.jpeg";
-import Project02 from "@/components/Images/project_02.jpeg";
-import Project03 from "@/components/Images/project_03.jpeg";
-import Project04 from "@/components/Images/project_04.jpeg";
-import Project05 from "@/components/Images/project_05.jpeg";
+import Logo02 from "@/components/Images/logo_02.png";
 
 import { ClientsComponentProps } from "@/types/componentProps";
 
@@ -15,58 +11,58 @@ const ClientsConfig: ClientsComponentProps = {
         {
             id: "0",
             alt: "string",
-            url: Project01,
+            url: Logo02,
             blurUrl: "string",
         },
         {
             id: "1",
             alt: "string",
-            url: Project02,
+            url: Logo02,
             blurUrl: "string",
         },
         {
             id: "2",
             alt: "string",
-            url: Project03,
+            url: Logo02,
             blurUrl: "string",
         },
         {
             id: "3",
             alt: "string",
-            url: Project04,
+            url: Logo02,
             blurUrl: "string",
         },
         {
             id: "4",
             alt: "string",
-            url: Project05,
+            url: Logo02,
             blurUrl: "string",
         },
         {
             id: "5",
             alt: "string",
-            url: Project03,
+            url: Logo02,
             blurUrl: "string",
         },
         {
             id: "6",
             alt: "string",
-            url: Project01,
+            url: Logo02,
             blurUrl: "string",
         },
         {
             id: "7",
             alt: "string",
-            url: Project05,
+            url: Logo02,
             blurUrl: "string",
         },
     ],
     swiperConfig: {
-        // autoplay: {
-        //     delay: 2000,
-        //     disableOnInteraction: false,
-        // },
-        // modules: [Autoplay],
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        modules: [Autoplay],
         slidesPerView: 1,
         breakpoints: {
             320: {

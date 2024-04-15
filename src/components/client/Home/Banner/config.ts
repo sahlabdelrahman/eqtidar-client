@@ -1,6 +1,12 @@
+import BannerImage from "@/components/Images/banner.jpg";
+
 import { BannerComponentProps } from "@/types/componentProps";
 
 const bannerConfig: BannerComponentProps = {
+    image: {
+        alt: "Banner",
+        src: BannerImage,
+    },
     data: [
         {
             id: 0,

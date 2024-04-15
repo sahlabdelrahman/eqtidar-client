@@ -5,10 +5,17 @@
 .content {
     .imageContainer {
         height: 120px;
+        cursor: grab;
+        opacity: 0.7;
+        transition: all 0.3s ease-in-out;
         .image {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
+        }
+
+        &:hover {
+            opacity: 1;
         }
     }
 }
