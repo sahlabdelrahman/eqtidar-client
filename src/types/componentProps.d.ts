@@ -1,4 +1,12 @@
-import React, { FunctionComponent, ReactNode, SVGProps } from "react";
+import React, {
+    ButtonHTMLAttributes,
+    CSSProperties,
+    FunctionComponent,
+    MouseEventHandler,
+    ReactNode,
+    SVGProps,
+    StyleHTMLAttributes,
+} from "react";
 import { StaticImageData } from "next/image";
 
 // Navbar types
@@ -60,10 +68,6 @@ interface BannerDataProps {
 }
 
 export interface BannerComponentProps {
-    image: {
-        alt: string;
-        src: StaticImageData;
-    };
     data: BannerDataProps[];
 }
 
@@ -73,6 +77,7 @@ export interface SectionComponentProps {
     title: string;
     sectionId: string;
     dark?: boolean;
+    styles?: StyleHTMLAttributes;
     children: ReactNode;
 }
 
@@ -100,6 +105,20 @@ export interface ServicesComponentProps {
     title: string;
     sectionId: string;
     data: ServicesDataProps[];
+}
+
+// Achievements types
+
+interface AchievementsDataProps {
+    id: number;
+    text: string;
+    number: string;
+}
+
+export interface AchievementsComponentProps {
+    title: string;
+    sectionId: string;
+    data: AchievementsDataProps[];
 }
 
 // Projects types
@@ -162,4 +181,75 @@ export interface ClientsComponentProps {
     sectionId: string;
     clients: ClientProps[];
     swiperConfig: SwiperConfig;
+}
+
+// FAQ types
+
+interface QuestionsProps {
+    id: number;
+    question: string;
+    answer: string;
+}
+
+export interface FAQComponentProps {
+    title: string;
+    sectionId: string;
+    questions: QuestionsProps[];
+}
+
+// ContactUs types
+
+type ValidationRule = {
+    value: any;
+    message: string;
+};
+
+type Field = {
+    id: string;
+    name: string;
+    type: string;
+    label: string;
+    placeholder: string;
+    validation: {
+        required: ValidationRule;
+        minLength?: ValidationRule;
+        maxLength?: ValidationRule;
+        pattern?: ValidationRule;
+    };
+    multiline?: boolean;
+};
+
+export interface ContactUsComponentProps {
+    title: string;
+    sectionId: string;
+    fields: Field[];
+    buttonText: string;
+    successMessage: string;
+}
+
+export interface InputComponentProps {
+    name: string;
+    label: string;
+    type?: string;
+    id: string;
+    placeholder: string;
+    validation?: any;
+    multiline?: boolean;
+}
+
+export interface InputErrorComponentProps {
+    message: string;
+}
+
+export interface ButtonComponentProps
+    extends ButtonHTMLAttributes<HTMLButtonElement> {
+    type?: "button" | "submit" | "reset";
+    id?: string;
+    customStyle?: CSSProperties;
+    onClick?: MouseEventHandler<HTMLButtonElement>;
+    disabled?: boolean;
+    StartIcon?: ReactNode;
+    EndIcon?: ReactNode;
+    isLoading?: boolean;
+    LoadingIndicator?: ReactNode;
 }

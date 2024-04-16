@@ -1,7 +1,7 @@
 import { ServicesComponentProps } from "@/types/componentProps";
 
 const ServicesConfig: ServicesComponentProps = {
-    title: "خدامتنا",
+    title: "خدماتنا",
     sectionId: "services",
     data: [
         {

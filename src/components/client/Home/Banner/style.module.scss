@@ -5,8 +5,9 @@
     position: relative;
     padding: 60px 0;
     height: calc(100dvh - 80px);
-    background: linear-gradient(to right, $darkBackgroundColor, #082753);
     color: $lightColor;
+    background: url("../../../Images/banner.jpg") center no-repeat fixed;
+    background-size: cover;
 
     .overlay {
         position: absolute;

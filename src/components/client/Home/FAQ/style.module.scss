@@ -1,0 +1,30 @@
+@import "@/styles/partials/mixins";
+@import "@/styles/partials/variables";
+
+.content {
+    width: 60%;
+    margin: auto;
+
+    .accordion {
+        background: $lightGrayBackgroundColor;
+
+        .accordionDetails {
+            background: $lightColor;
+        }
+        .question {
+            color: $mainTextColor;
+        }
+
+        .answer {
+            color: $secondaryTextColor;
+        }
+    }
+
+    @include responsive("md") {
+        width: 80%;
+    }
+
+    @include responsive("sm") {
+        width: 100%;
+    }
+}

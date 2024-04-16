@@ -14,12 +14,12 @@ const navbarConfig: NavbarConfigProps = {
         {
             id: 1,
             path: "#services",
-            text: "خدامتنا",
+            text: "خدماتنا",
         },
         {
             id: 2,
             path: "#achievements",
-            text: "انجازتنا",
+            text: "إنجازاتنا",
         },
         {
             id: 3,
@@ -33,7 +33,7 @@ const navbarConfig: NavbarConfigProps = {
         },
         {
             id: 5,
-            path: "#commonQuestions",
+            path: "#faq",
             text: "الاسئلة الشائعة",
         },
         {

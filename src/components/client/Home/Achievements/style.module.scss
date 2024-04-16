@@ -1,0 +1,52 @@
+@import "@/styles/partials/mixins";
+@import "@/styles/partials/variables";
+
+.achievements {
+    position: relative;
+    overflow: hidden;
+    background: url("../../../Images/achievements_bg.jpeg") center no-repeat
+        fixed;
+    background-size: cover;
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: hsla(0, 0%, 100%, 0.92);
+        z-index: 1;
+    }
+
+    .content {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        z-index: 1;
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: $mainTextColor;
+
+            .number,
+            .text {
+                font-size: 24px;
+                font-weight: 700;
+                text-align: center;
+            }
+            .text {
+                color: $secondaryTextColor;
+            }
+        }
+
+        @include responsive("md") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include responsive("sm") {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

@@ -3,6 +3,8 @@
 
 .section {
     padding: 60px 0;
+    position: relative;
+    z-index: 1;
 
     .container {
         @include container();

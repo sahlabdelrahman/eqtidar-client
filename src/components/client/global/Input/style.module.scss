@@ -1,0 +1,44 @@
+@import "@/styles/partials/variables";
+
+.inputComponent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+
+    .labelAndError {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            color: $mainTextColor;
+            font-weight: 500;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .inputError {
+            font-weight: 500;
+            color: #f44336;
+        }
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        background: $grayBackgroundColor;
+        color: $mainTextColor;
+        font-weight: 400;
+        font-size: 14px;
+        border-radius: 10px;
+        border: 1px solid $lightGrayBackgroundColor;
+        outline: none;
+
+        &::placeholder {
+            color: $mainTextColor;
+        }
+    }
+}
