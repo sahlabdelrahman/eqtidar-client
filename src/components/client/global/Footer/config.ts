@@ -1,4 +1,4 @@
-import WhatAppLogo from "@/components/Icons/WhatappLogo";
+import WhatsAppLogo from "@/components/Icons/WhatsAppLogo";
 import LinkedInLogo from "@/components/Icons/LinkedInLogo";
 import TwitterLogo from "@/components/Icons/TwitterLogo";
 import InstagramLogo from "@/components/Icons/InstagramLogo";
@@ -19,7 +19,7 @@ const footerConfig: FooterConfigProps = {
         {
             id: 0,
             path: "https://wa.me/966599095059",
-            Icon: WhatAppLogo,
+            Icon: WhatsAppLogo,
         },
         {
             id: 1,
