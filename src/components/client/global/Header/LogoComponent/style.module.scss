@@ -10,7 +10,7 @@
     align-items: center;
 
     img {
-        width: 100%;
+        width: auto;
         height: 40px;
     }
     svg {
@@ -24,10 +24,6 @@
         width: 100%;
         padding: 12px 0;
         border-bottom: 1.5px solid $secondaryTextColor;
-
-        img {
-            width: auto;
-        }
     }
 
     &:hover {
