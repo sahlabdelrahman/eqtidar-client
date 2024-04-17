@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cairo, Kufam } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "@/styles/style.scss";
@@ -18,6 +18,13 @@ const kufam = Kufam({
 export const metadata: Metadata = {
     title: "اقتدار",
     description: "أوقاف مستدامة لمستقبل مشرق",
+};
+
+export const viewport: Viewport = {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
 };
 
 export default function RootLayout({

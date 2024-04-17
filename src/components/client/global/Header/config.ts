@@ -1,9 +1,9 @@
-import ArLogo from "@/components/Icons/ArLogo";
+import Logo from "@/components/Images/logo.png";
 
 import { NavbarConfigProps } from "@/types/componentProps";
 
 const navbarConfig: NavbarConfigProps = {
-    Logo: "اقتدار",
+    Logo: Logo,
     drawerWidth: 240,
     links: [
         {

@@ -30,12 +30,16 @@
         }
 
         .textContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
             padding: 15px;
             height: 120px;
             box-sizing: content-box;
 
             .title {
                 font-size: 16px;
+                font-weight: 700;
                 display: -webkit-box;
                 text-overflow: ellipsis;
                 -webkit-line-clamp: 1;
@@ -44,8 +48,8 @@
             }
 
             .description {
-                font-size: 14px;
-                font-weight: 400;
+                font-size: 13px;
+                font-weight: 300;
                 display: -webkit-box;
                 text-overflow: ellipsis;
                 -webkit-line-clamp: 3;

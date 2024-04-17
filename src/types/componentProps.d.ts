@@ -35,7 +35,7 @@ interface SocialMediaLinkProps {
 }
 
 export interface NavbarConfigProps {
-    Logo: FunctionComponent<SVGProps<SVGSVGElement>> | string;
+    Logo: StaticImageData | string;
     drawerWidth: number;
     links: NavbarLinkProps[];
 }
@@ -57,7 +57,7 @@ export interface LinksComponentProps {
 }
 export interface LogoComponentProps {
     inDrawer?: boolean;
-    Logo: FunctionComponent<SVGProps<SVGSVGElement>> | string;
+    Logo: StaticImageData | string;
 }
 
 // Banner types
