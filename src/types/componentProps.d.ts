@@ -57,7 +57,8 @@ export interface LinksComponentProps {
 }
 export interface LogoComponentProps {
     inDrawer?: boolean;
-    Logo: StaticImageData | string;
+    Logo?: StaticImageData | string;
+    externalPage?: boolean;
 }
 
 // Banner types
@@ -255,4 +256,16 @@ export interface ButtonComponentProps
     EndIcon?: ReactNode;
     isLoading?: boolean;
     LoadingIndicator?: ReactNode;
+}
+
+// ================================================== Pages ============================================== //
+
+// Login page
+
+export interface LoginFormComponentProps {
+    title: string;
+    description: string;
+    fields: Field[];
+    buttonText: string;
+    successMessage: string;
 }

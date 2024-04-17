@@ -7,9 +7,11 @@ import Clients from "../Clients";
 import FAQ from "../FAQ";
 import ContactUs from "../ContactUs";
 
+import styles from "./style.module.scss";
+
 export default function Main() {
     return (
-        <main>
+        <main className={styles.main}>
             <Banner />
             <OurGoals />
             <Services />

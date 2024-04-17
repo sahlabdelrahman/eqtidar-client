@@ -1,0 +1,16 @@
+@import "@/styles/partials/mixins";
+@import "@/styles/partials/variables";
+
+.main {
+    position: relative;
+    .container {
+        min-height: 100dvh;
+        @include container();
+        padding-top: 60px;
+        padding-bottom: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 120px;
+    }
+}

@@ -1,0 +1,50 @@
+@import "@/styles/partials/mixins";
+@import "@/styles/partials/variables";
+
+.loginForm {
+    width: 100%;
+
+    .form {
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+            .title {
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 120%;
+            }
+
+            .description {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 155%;
+            }
+        }
+
+        .buttonContainer {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @include responsive("md") {
+        .form {
+            width: 80%;
+        }
+    }
+
+    @include responsive("sm") {
+        .form {
+            width: 100%;
+        }
+    }
+}
