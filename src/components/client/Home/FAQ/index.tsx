@@ -18,7 +18,7 @@ function FAQ() {
                     <Accordion key={id} className={styles.accordion}>
                         <AccordionSummary
                             aria-controls={`${question}-content`}
-                            id={`${question}-header`}
+                            id={`${question}-${id}-header`}
                         >
                             <p className={styles.question}>{question}</p>
                         </AccordionSummary>

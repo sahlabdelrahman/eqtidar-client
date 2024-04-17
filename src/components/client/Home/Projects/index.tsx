@@ -27,7 +27,7 @@ function Projects() {
                             </Swiper>
                         </div>
                         <div className={styles.textContainer}>
-                            <h5 className={styles.title}>{title}</h5>
+                            <p className={styles.title}>{title}</p>
                             <p className={styles.description}>{description}</p>
                         </div>
                     </aside>

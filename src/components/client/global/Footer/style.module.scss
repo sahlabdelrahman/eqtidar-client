@@ -2,16 +2,18 @@
 @import "@/styles/partials/variables";
 
 .footerContainer {
+    .topContainer {
+        background-color: $grayBackgroundColor;
+        border-bottom: 2px solid #192b49;
+    }
     .topSection {
         @include container();
         padding-top: 60px;
         padding-bottom: 60px;
-        background-color: $grayBackgroundColor;
         display: flex;
         align-items: center;
         flex-direction: column;
         gap: 30px;
-        border-bottom: 2px solid #192b49;
 
         .topPart {
             display: flex;
@@ -67,6 +69,9 @@
             }
         }
     }
+    .bottomContainer {
+        background-color: $darkBackgroundColor;
+    }
     .bottomSection {
         display: flex;
         align-items: center;
@@ -76,7 +81,6 @@
         padding-bottom: 12px;
         min-height: 80px;
         @include container();
-        background-color: $darkBackgroundColor;
         color: $lightColor;
         .developed,
         .copyright {

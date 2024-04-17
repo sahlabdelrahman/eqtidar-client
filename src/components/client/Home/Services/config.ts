@@ -1,8 +1,40 @@
+import { Autoplay } from "swiper/modules";
+
 import { ServicesComponentProps } from "@/types/componentProps";
 
 const ServicesConfig: ServicesComponentProps = {
     title: "خدماتنا",
     sectionId: "services",
+    swiperConfig: {
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        modules: [Autoplay],
+        spaceBetween: 30,
+        slidesPerView: 1,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            600: {
+                slidesPerView: 2,
+            },
+            900: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+            },
+            1536: {
+                slidesPerView: 4,
+            },
+            2048: {
+                slidesPerView: 5,
+            },
+        },
+        loop: true,
+    },
     data: [
         {
             id: 0,

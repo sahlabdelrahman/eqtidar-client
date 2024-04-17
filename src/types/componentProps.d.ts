@@ -104,6 +104,7 @@ interface ServicesDataProps {
 export interface ServicesComponentProps {
     title: string;
     sectionId: string;
+    swiperConfig: SwiperConfig;
     data: ServicesDataProps[];
 }
 
@@ -112,7 +113,7 @@ export interface ServicesComponentProps {
 interface AchievementsDataProps {
     id: number;
     text: string;
-    number: string;
+    number: number;
 }
 
 export interface AchievementsComponentProps {
@@ -137,6 +138,7 @@ type SwiperBreakpoints = {
 interface SwiperConfig {
     autoplay?: AutoplayConfig;
     modules?: any[];
+    spaceBetween?: number;
     slidesPerView: number;
     breakpoints?: SwiperBreakpoints;
     loop: boolean;

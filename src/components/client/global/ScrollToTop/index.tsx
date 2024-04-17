@@ -39,6 +39,7 @@ function ScrollToTop() {
             className={`${styles.scrollToTop} ${isVisible ? styles.show : ""}`}
             onClick={scrollToTop}
             aria-label="Scroll to top"
+            title="Scroll to top"
         >
             <TopArrow />
         </button>

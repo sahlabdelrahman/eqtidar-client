@@ -1,4 +1,3 @@
-import SectionContainer from "@/components/global/SectionContainer";
 import LogoComponent from "../Header/LogoComponent";
 import LinksComponent from "../Header/LinksComponent";
 
@@ -13,40 +12,47 @@ const { slogan, socialMediaLinks, copyright, developed } = footerConfig;
 export default function Footer() {
     return (
         <footer className={styles.footerContainer}>
-            <section className={styles.topSection}>
-                <div className={styles.topPart}>
-                    <LogoComponent Logo={Logo} />
-                    <p className={styles.slogan}>{slogan}</p>
-                </div>
-                <LinksComponent links={links} inFooter />
-                <div className={styles.socialMediaLinks}>
-                    {socialMediaLinks?.map(({ id, path, Icon }) => (
+            <div className={styles.topContainer}>
+                <section className={styles.topSection}>
+                    <div className={styles.topPart}>
+                        <LogoComponent Logo={Logo} />
+                        <p className={styles.slogan}>{slogan}</p>
+                    </div>
+                    <LinksComponent links={links} inFooter />
+                    <div className={styles.socialMediaLinks}>
+                        {socialMediaLinks?.map(({ id, path, Icon }) => (
+                            <a
+                                key={id}
+                                href={path}
+                                className={styles.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={path}
+                            >
+                                <Icon />
+                            </a>
+                        ))}
+                    </div>
+                </section>
+            </div>
+            <div className={styles.bottomContainer}>
+                <section className={styles.bottomSection}>
+                    <p className={styles.copyright}>{copyright}</p>
+                    <p className={styles.developed}>
+                        {developed?.text}{" "}
                         <a
-                            key={id}
-                            href={path}
-                            className={styles.link}
+                            href={developed?.path}
+                            className={styles.name}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={developed?.text + developed?.name}
+                            title={developed?.text + developed?.name}
                         >
-                            <Icon />
+                            {developed?.name}
                         </a>
-                    ))}
-                </div>
-            </section>
-            <section className={styles.bottomSection}>
-                <p className={styles.copyright}>{copyright}</p>
-                <p className={styles.developed}>
-                    {developed?.text}{" "}
-                    <a
-                        href={developed?.path}
-                        className={styles.name}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        {developed?.name}
-                    </a>
-                </p>
-            </section>
+                    </p>
+                </section>
+            </div>
         </footer>
     );
 }

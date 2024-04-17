@@ -12,6 +12,8 @@ const LogoComponent: FC<LogoComponentProps> = ({ inDrawer, Logo }) => {
             className={`${styles.logoContainer} ${
                 inDrawer ? styles.inDrawer : ""
             }`}
+            aria-label={typeof Logo === "string" ? Logo : "Logo"}
+            title={typeof Logo === "string" ? Logo : "Logo"}
         >
             {typeof Logo === "string" ? Logo : <Logo />}
         </Link>

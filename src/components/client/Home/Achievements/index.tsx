@@ -1,4 +1,4 @@
-import Image from "next/image";
+import NumberCounter from "../../global/NumberCounter";
 import Section from "@/components/client/global/Section";
 
 import styles from "./style.module.scss";
@@ -15,7 +15,7 @@ function Achievements() {
                 <div className={styles.content}>
                     {data?.map(({ id, text, number }) => (
                         <aside key={id} className={styles.card}>
-                            <p className={styles.number}>{number}</p>
+                            <NumberCounter targetNumber={number} />
                             <p className={styles.text}>{text}</p>
                         </aside>
                     ))}

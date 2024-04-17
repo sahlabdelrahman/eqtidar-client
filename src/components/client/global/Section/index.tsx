@@ -15,7 +15,6 @@ const Section: FC<SectionComponentProps> = ({
         <section
             id={sectionId}
             className={`${styles.section} ${dark ? styles.dark : ""}`}
-            style={styles}
         >
             <div className={styles.container}>
                 <SectionTitle title={title} />

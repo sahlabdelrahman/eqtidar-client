@@ -7,22 +7,22 @@ const AchievementsConfig: AchievementsComponentProps = {
         {
             id: 0,
             text: "عميل",
-            number: "٢٣٠",
+            number: 230,
         },
         {
             id: 1,
             text: "مشروعات مستقبلية",
-            number: "٤٦٥٤",
+            number: 3254,
         },
         {
             id: 2,
             text: "مشروع تم",
-            number: "٨٧٤",
+            number: 874,
         },
         {
             id: 3,
             text: "موظف",
-            number: "٤٥",
+            number: 45,
         },
     ],
 };

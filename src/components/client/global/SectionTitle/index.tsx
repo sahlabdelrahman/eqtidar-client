@@ -9,7 +9,7 @@ const SectionTitle = (
 ) => {
     return (
         <section className={styles.sectionTitle} {...props}>
-            <h4 className={styles.title}>{props.title}</h4>
+            <p className={styles.title}>{props.title}</p>
         </section>
     );
 };

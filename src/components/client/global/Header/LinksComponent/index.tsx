@@ -18,7 +18,12 @@ const LinksComponent: FC<LinksComponentProps> = ({
         >
             {links.map(({ id, text, path }) => (
                 <li key={id} className={styles.listItem}>
-                    <Link href={path} className={styles.link}>
+                    <Link
+                        href={path}
+                        className={styles.link}
+                        aria-label={text}
+                        title={text}
+                    >
                         {text}
                     </Link>
                 </li>
