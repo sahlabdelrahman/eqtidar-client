@@ -23,6 +23,8 @@ function Clients() {
                                     alt={alt}
                                     src={url}
                                     className={styles.image}
+                                    loading="lazy"
+                                    placeholder="blur"
                                 />
                             </div>
                         </SwiperSlide>

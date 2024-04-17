@@ -21,7 +21,12 @@ function Projects() {
                             <Swiper {...swiperConfig}>
                                 {images?.map(({ id, alt, url }) => (
                                     <SwiperSlide key={id}>
-                                        <Image alt={alt} src={url} />
+                                        <Image
+                                            alt={alt}
+                                            src={url}
+                                            loading="lazy"
+                                            placeholder="blur"
+                                        />
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
