@@ -8,7 +8,7 @@ import {
 
 import styles from "./style.module.scss";
 
-const findInputError = (errors: any, name: string) => {
+const findInputError = (errors: any, name: string): any => {
     const filtered = Object.keys(errors)
         .filter((key) => key.includes(name))
         .reduce((cur, key) => {
@@ -45,8 +45,8 @@ export const Input: React.FC<InputComponentProps> = ({
                 <AnimatePresence initial={false}>
                     {isInvalid && (
                         <InputError
-                            message={inputErrors.error.message}
-                            key={inputErrors.error.message}
+                            message={inputErrors?.error?.message}
+                            key={inputErrors?.error?.message}
                         />
                     )}
                 </AnimatePresence>

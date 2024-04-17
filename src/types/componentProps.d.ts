@@ -8,12 +8,13 @@ import React, {
     StyleHTMLAttributes,
 } from "react";
 import { StaticImageData } from "next/image";
+import { SlideProps } from "@mui/material";
 
 // Navbar types
 
 interface NavbarComponentProps {
     window?: () => Window;
-    children?: React.ReactElement;
+    children?: React.ReactElement | (IntrinsicAttributes & SlideProps);
 }
 
 interface NavbarHamburgerProps {
