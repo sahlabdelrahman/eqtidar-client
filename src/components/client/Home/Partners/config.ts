@@ -1,6 +1,6 @@
 import { Autoplay } from "swiper/modules";
 
-import Logo02 from "@/components/Images/logo_02.png";
+import Logo02 from "@/components/Images/logo_02.jpeg";
 
 import { PartnersComponentProps } from "@/types/componentProps";
 

@@ -1,4 +1,4 @@
-import WhatsAppLogo from "@/components/Icons/WhatsAppLogo";
+import CallIcon from "@/components/Icons/CallIcon";
 import LinkedInLogo from "@/components/Icons/LinkedInLogo";
 import TwitterLogo from "@/components/Icons/TwitterLogo";
 import InstagramLogo from "@/components/Icons/InstagramLogo";
@@ -18,8 +18,8 @@ const footerConfig: FooterConfigProps = {
     socialMediaLinks: [
         {
             id: 0,
-            path: "https://wa.me/+9660535292811",
-            Icon: WhatsAppLogo,
+            path: "tel:+9660535292811",
+            Icon: CallIcon,
         },
         {
             id: 1,

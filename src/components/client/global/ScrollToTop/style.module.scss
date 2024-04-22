@@ -1,9 +1,10 @@
 @import "@/styles/partials/variables";
 
-.scrollToTop {
+.scrollToTop,
+.whatsApp {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    inset-inline-start: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,8 +25,8 @@
     }
 
     svg {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         path {
             transition: all 0.3s ease-in-out;
             stroke: $lightColor;
@@ -34,9 +35,16 @@
 
     &:hover {
         background-color: $secondaryTextColor;
+    }
+
+    &.whatsApp {
+        bottom: 75px;
+
         svg {
             path {
-                stroke: $mainTextColor;
+                transition: all 0.3s ease-in-out;
+                stroke: initial;
+                fill: $lightColor;
             }
         }
     }
