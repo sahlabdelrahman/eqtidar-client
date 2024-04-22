@@ -1,0 +1,60 @@
+@import "@/styles/partials/variables";
+@import "@/styles/partials/mixins";
+
+.dashboardHeader {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+    .controlSideMenu {
+        position: absolute;
+        top: 50%;
+        inset-inline-start: -15px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: $secondaryBackgroundColor;
+        color: $lightColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.9;
+        transition: all 0.3s ease-in-out;
+
+        svg {
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .pageTitle {
+        .title {
+            font-size: 28px;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+    }
+
+    .controls {
+    }
+
+    &.openSideMenu {
+        .controlSideMenu {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    @include responsive("sm") {
+        .controlSideMenu {
+            display: none;
+        }
+    }
+}

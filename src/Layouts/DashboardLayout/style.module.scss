@@ -1,0 +1,67 @@
+@import "@/styles/partials/mixins";
+@import "@/styles/partials/variables";
+
+.dashboardLayout {
+    position: relative;
+    display: grid;
+    height: 100dvh;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: "aside header" "aside main";
+    transition: all 0.3s ease-in-out;
+
+    * {
+        font-family: "Cairo";
+    }
+    > header {
+        position: fixed;
+        top: 0;
+        height: 80px;
+        width: 100%;
+        grid-area: header;
+        background: $lightColor;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+    }
+    > aside {
+        position: fixed;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background: $darkBackgroundColor;
+        grid-area: aside;
+        transition: all 0.3s ease-in-out;
+    }
+    > main {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        grid-area: main;
+        padding: 30px;
+        background: $lightGrayBackgroundColor;
+        transition: all 0.3s ease-in-out;
+
+        .content {
+            padding: 15px;
+            border-radius: 10px;
+            background: $lightColor;
+        }
+    }
+
+    &.openSideMenu {
+        grid-template-columns: 80px 1fr;
+
+        > aside {
+            width: 80px;
+        }
+    }
+
+    @include responsive("sm") {
+        grid-template-columns: 80px 1fr;
+
+        > aside {
+            width: 80px;
+        }
+    }
+}

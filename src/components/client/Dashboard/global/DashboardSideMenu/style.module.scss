@@ -1,0 +1,128 @@
+@import "@/styles/partials/variables";
+@import "@/styles/partials/mixins";
+
+@mixin commonStylesWhenMenuOpen {
+    .logoContainer {
+        padding: 30px 15px;
+
+        .logoText {
+            font-size: 16px;
+        }
+    }
+
+    .linksContainer {
+        padding: 15px;
+        .list {
+            .listItem {
+                .link {
+                    flex-direction: column;
+
+                    .text {
+                        font-size: 10px;
+                        text-align: center;
+                    }
+
+                    &.active {
+                        background: transparent;
+                        opacity: 1;
+
+                        .text {
+                            color: $grayTextColor;
+                        }
+
+                        svg {
+                            path {
+                                fill: $grayTextColor;
+                            }
+                        }
+                    }
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dashboardSideMenu {
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        padding: 30px;
+        border-bottom: 1px solid $grayTextColor;
+
+        .logoText {
+            font-size: 28px;
+            font-weight: 500;
+            color: $grayTextColor;
+        }
+    }
+
+    .linksContainer {
+        padding: 15px 30px;
+        .list {
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+            height: 100%;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .listItem {
+                .link {
+                    padding: 15px;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    border-radius: 10px;
+                    transition: all 0.3s ease-in-out;
+                    cursor: pointer;
+                    opacity: 0.7;
+                    .text {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 150%;
+                        text-transform: capitalize;
+                        color: $grayTextColor;
+                    }
+                    svg {
+                        width: 24px;
+                        height: 24px;
+
+                        path {
+                            fill: $grayTextColor;
+                        }
+                    }
+
+                    &.active {
+                        background: $lightColor;
+                        opacity: 1;
+
+                        .text {
+                            color: $mainTextColor;
+                        }
+
+                        svg {
+                            path {
+                                fill: $mainTextColor;
+                            }
+                        }
+                    }
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &.openSideMenu {
+        @include commonStylesWhenMenuOpen;
+    }
+    @include responsive("sm") {
+        @include commonStylesWhenMenuOpen;
+    }
+}
