@@ -11,6 +11,7 @@
         flex-direction: column;
         background-color: $lightGrayBackgroundColor;
         color: $mainTextColor;
+        border: 1px solid $secondaryTextColor;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 2px 9px rgba(0, 0, 0, 0.17);

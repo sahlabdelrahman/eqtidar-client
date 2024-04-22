@@ -18,7 +18,7 @@ const footerConfig: FooterConfigProps = {
     socialMediaLinks: [
         {
             id: 0,
-            path: "https://wa.me/966599095059",
+            path: "https://wa.me/+9660535292811",
             Icon: WhatsAppLogo,
         },
         {

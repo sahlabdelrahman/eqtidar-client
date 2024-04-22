@@ -4,7 +4,9 @@ import Services from "../Services";
 import Achievements from "../Achievements";
 import Projects from "../Projects";
 import Clients from "../Clients";
-import FAQ from "../FAQ";
+import OurTeam from "../OurTeam";
+import Partners from "../Partners";
+// import FAQ from "../FAQ";
 import ContactUs from "../ContactUs";
 
 import styles from "./style.module.scss";
@@ -18,7 +20,9 @@ export default function Main() {
             <Achievements />
             <Projects />
             <Clients />
-            <FAQ />
+            <OurTeam />
+            <Partners />
+            {/* <FAQ /> */}
             <ContactUs />
         </main>
     );

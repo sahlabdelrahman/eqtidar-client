@@ -2,12 +2,12 @@ import { Autoplay } from "swiper/modules";
 
 import Logo02 from "@/components/Images/logo_02.png";
 
-import { ClientsComponentProps } from "@/types/componentProps";
+import { PartnersComponentProps } from "@/types/componentProps";
 
-const ClientsConfig: ClientsComponentProps = {
-    title: "عملاءنا",
-    sectionId: "clients",
-    clients: [
+const PartnersConfig: PartnersComponentProps = {
+    title: "شركائنا",
+    sectionId: "partners",
+    partners: [
         {
             id: "0",
             alt: "string",
@@ -88,4 +88,4 @@ const ClientsConfig: ClientsComponentProps = {
     },
 };
 
-export default ClientsConfig;
+export default PartnersConfig;

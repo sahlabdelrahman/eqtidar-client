@@ -29,15 +29,25 @@ const navbarConfig: NavbarConfigProps = {
         {
             id: 4,
             path: "#clients",
-            text: "عملاؤنا",
+            text: "عملاءنا",
         },
         {
             id: 5,
-            path: "#faq",
-            text: "الاسئلة الشائعة",
+            path: "#ourTeam",
+            text: "فريقنا",
         },
         {
             id: 6,
+            path: "#partners",
+            text: "شركائنا",
+        },
+        // {
+        //     id: 7,
+        //     path: "#faq",
+        //     text: "الاسئلة الشائعة",
+        // },
+        {
+            id: 8,
             path: "#contactUs",
             text: "تواصل معنا",
         },

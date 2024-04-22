@@ -8,6 +8,7 @@ import styles from "./style.module.scss";
 const Section: FC<SectionComponentProps> = ({
     sectionId,
     title,
+    description,
     dark = false,
     children,
 }) => {
@@ -18,6 +19,9 @@ const Section: FC<SectionComponentProps> = ({
         >
             <div className={styles.container}>
                 <SectionTitle title={title} />
+                {description && (
+                    <p className={styles.description}>{description}</p>
+                )}
                 {children}
             </div>
         </section>

@@ -13,6 +13,8 @@
         padding: 15px;
         background-color: $lightGrayBackgroundColor;
         color: $mainTextColor;
+        border: 0.5px solid $secondaryTextColor;
+
         border-radius: 10px;
         overflow: hidden;
         // box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05),

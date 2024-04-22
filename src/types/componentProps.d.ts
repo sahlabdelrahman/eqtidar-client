@@ -77,6 +77,7 @@ export interface BannerComponentProps {
 
 export interface SectionComponentProps {
     title: string;
+    description?: string;
     sectionId: string;
     dark?: boolean;
     styles?: StyleHTMLAttributes;
@@ -98,15 +99,20 @@ export interface OurGoalsComponentProps {
 
 // Services types
 
+interface SubServicesDataProps {
+    id: number;
+    text: string;
+}
+
 interface ServicesDataProps {
     id: number;
     text: string;
+    subServices: SubServicesDataProps[];
 }
 
 export interface ServicesComponentProps {
     title: string;
     sectionId: string;
-    swiperConfig: SwiperConfig;
     data: ServicesDataProps[];
 }
 
@@ -184,6 +190,47 @@ export interface ClientsComponentProps {
     title: string;
     sectionId: string;
     clients: ClientProps[];
+    swiperConfig: SwiperConfig;
+}
+
+// OurTeam types
+
+interface TeamMemberProps {
+    id: string;
+    name: string;
+    role: string;
+    image: {
+        url: StaticImageData;
+        blurUrl?: string;
+        alt: string;
+        width?: number;
+        height?: number;
+    };
+}
+
+export interface OurTeamComponentProps {
+    title: string;
+    description: string;
+    sectionId: string;
+    teamMembers: TeamMemberProps[];
+    swiperConfig: SwiperConfig;
+}
+
+// Partners types
+
+interface PartnerProps {
+    id: string;
+    alt: string;
+    url: StaticImageData;
+    blurUrl?: string;
+    width?: number;
+    height?: number;
+}
+
+export interface PartnersComponentProps {
+    title: string;
+    sectionId: string;
+    partners: PartnerProps[];
     swiperConfig: SwiperConfig;
 }
 
