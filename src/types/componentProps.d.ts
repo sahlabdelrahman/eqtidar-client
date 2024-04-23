@@ -172,6 +172,7 @@ export interface ProjectsComponentProps {
     title: string;
     sectionId: string;
     data: ProjectsDataProps[];
+    mainSwiperConfig: SwiperConfig;
     swiperConfig: SwiperConfig;
 }
 

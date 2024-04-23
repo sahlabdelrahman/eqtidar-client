@@ -38,7 +38,7 @@ function ScrollToTop() {
     return (
         <>
             <a
-                href="https://wa.me/+9660599095059"
+                href="https://wa.me/message/272JIPSGD74HH1"
                 target="_blank"
                 className={`${styles.whatsApp} ${isVisible ? styles.show : ""}`}
                 aria-label="Chat on whatsapp"

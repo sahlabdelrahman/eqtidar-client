@@ -63,7 +63,7 @@ const OurTeamConfig: OurTeamComponentProps = {
     ],
     swiperConfig: {
         autoplay: {
-            delay: 2000,
+            delay: 6000,
             disableOnInteraction: false,
         },
         modules: [Autoplay],

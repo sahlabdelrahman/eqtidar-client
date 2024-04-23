@@ -1,3 +1,5 @@
+import { Autoplay } from "swiper/modules";
+
 import Project01 from "@/components/Images/project_01.jpg";
 import Project02 from "@/components/Images/project_02.jpg";
 import Project03 from "@/components/Images/project_03.jpg";
@@ -396,6 +398,30 @@ const ProjectsConfig: ProjectsComponentProps = {
             ],
         },
     ],
+    mainSwiperConfig: {
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        modules: [Autoplay],
+        slidesPerView: 1,
+        spaceBetween: 15,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            600: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+            1536: {
+                slidesPerView: 4,
+            },
+        },
+        loop: true,
+    },
     swiperConfig: {
         // autoplay: {
         //     delay: 2000,
