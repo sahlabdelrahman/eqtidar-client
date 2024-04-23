@@ -52,3 +52,32 @@ export interface DashboardSideMenuConfigProps {
 export interface DashboardSideMenuComponentProps {
     openSideMenu: boolean;
 }
+
+// Dynamic form
+
+interface Field {
+    id: string;
+    name: string;
+    type: string;
+    label: string;
+    placeholder: string;
+    multiline?: boolean;
+    validation: any;
+}
+
+export interface FormDataProps {
+    page: string;
+    api: string;
+    title?: string;
+    description?: string;
+    submitText?: string;
+    fields: Field[];
+    success: {
+        message: string;
+        redirectUrl?: string;
+    };
+}
+
+export interface DynamicFormComponentProps {
+    formData: FormDataProps;
+}

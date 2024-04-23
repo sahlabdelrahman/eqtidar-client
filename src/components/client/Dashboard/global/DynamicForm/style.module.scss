@@ -1,0 +1,23 @@
+@import "@/styles/partials/mixins";
+
+.dynamicForm {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .fields {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @include responsive("md") {
+        .fields {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
