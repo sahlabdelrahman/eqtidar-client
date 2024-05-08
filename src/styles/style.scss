@@ -74,3 +74,11 @@ select:focus,
 textarea {
     font-size: 16px !important;
 }
+
+.loadingPage {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

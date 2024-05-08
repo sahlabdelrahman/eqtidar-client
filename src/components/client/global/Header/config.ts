@@ -29,7 +29,7 @@ const navbarConfig: NavbarConfigProps = {
         {
             id: 4,
             path: "#clients",
-            text: "عملاءنا",
+            text: "عملاؤنا",
         },
         {
             id: 5,
@@ -39,7 +39,7 @@ const navbarConfig: NavbarConfigProps = {
         {
             id: 6,
             path: "#partners",
-            text: "شركائنا",
+            text: "شركاؤنا",
         },
         // {
         //     id: 7,

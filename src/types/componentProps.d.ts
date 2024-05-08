@@ -95,6 +95,7 @@ export interface OurGoalsComponentProps {
     title: string;
     sectionId: string;
     data: OurGoalsDataProps[];
+    swiperConfig: SwiperConfig;
 }
 
 // Services types
@@ -147,7 +148,7 @@ interface SwiperConfig {
     autoplay?: AutoplayConfig;
     modules?: any[];
     spaceBetween?: number;
-    slidesPerView: number;
+    slidesPerView?: number;
     breakpoints?: SwiperBreakpoints;
     loop: boolean;
 }

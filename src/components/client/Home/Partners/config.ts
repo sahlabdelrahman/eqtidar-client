@@ -5,7 +5,7 @@ import Logo02 from "@/components/Images/logo_02.jpeg";
 import { PartnersComponentProps } from "@/types/componentProps";
 
 const PartnersConfig: PartnersComponentProps = {
-    title: "شركائنا",
+    title: "شركاؤنا",
     sectionId: "partners",
     partners: [
         {

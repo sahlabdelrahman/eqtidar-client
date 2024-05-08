@@ -17,6 +17,22 @@ const OurGoalsConfig: OurGoalsComponentProps = {
             text: "تعزيز الإثراء المعرفي لمجال الأوقاف.",
         },
     ],
+
+    swiperConfig: {
+        spaceBetween: 15,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            600: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+        },
+        loop: true,
+    },
 };
 
 export default OurGoalsConfig;

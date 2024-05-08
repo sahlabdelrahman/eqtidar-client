@@ -18,12 +18,12 @@ export default function Main() {
             <OurGoals />
             <Services />
             <Achievements />
-            <Projects />
+            {/* <Projects /> */}
             <Clients />
             <OurTeam />
             <Partners />
             {/* <FAQ /> */}
-            <ContactUs />
+            {/* <ContactUs /> */}
         </main>
     );
 }
