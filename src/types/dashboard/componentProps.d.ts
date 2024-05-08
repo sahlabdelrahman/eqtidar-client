@@ -80,4 +80,5 @@ export interface FormDataProps {
 
 export interface DynamicFormComponentProps {
     formData: FormDataProps;
+    initialValues?: any;
 }

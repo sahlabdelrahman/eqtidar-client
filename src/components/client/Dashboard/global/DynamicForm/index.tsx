@@ -12,12 +12,15 @@ import { DynamicFormComponentProps } from "@/types/dashboard/componentProps";
 
 import styles from "./style.module.scss";
 
-const DynamicForm: FC<DynamicFormComponentProps> = ({ formData }) => {
+const DynamicForm: FC<DynamicFormComponentProps> = ({
+    formData,
+    initialValues,
+}) => {
     const { fields, success } = formData;
 
     const [loading, setLoading] = useState<boolean>(false);
 
-    const methods = useForm();
+    const methods = useForm({ defaultValues: initialValues });
 
     const onSubmit = methods.handleSubmit(async (data) => {
         setLoading(true);
