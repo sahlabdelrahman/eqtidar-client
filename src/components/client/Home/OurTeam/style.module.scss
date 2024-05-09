@@ -15,6 +15,7 @@
         overflow: hidden;
         box-shadow: 0 2px 9px rgba(0, 0, 0, 0.17);
         cursor: grab;
+        height: 300px;
 
         .imageContainer {
             display: flex;
@@ -32,7 +33,7 @@
             }
         }
         .name {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 700;
             display: -webkit-box;
             text-overflow: ellipsis;
@@ -41,8 +42,17 @@
             overflow: hidden;
         }
 
-        .role {
+        .teamMemberDescription {
             font-size: 13px;
+            font-weight: 500;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .role {
+            font-size: 12px;
             font-weight: 500;
             display: -webkit-box;
             text-overflow: ellipsis;

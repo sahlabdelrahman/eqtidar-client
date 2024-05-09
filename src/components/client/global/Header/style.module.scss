@@ -26,4 +26,21 @@
     align-items: center;
     text-align: center;
     gap: 12px;
+
+    .logoContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        border-bottom: 1.5px solid #d69f5b;
+        > span {
+            cursor: pointer;
+            display: inline-flex;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
 }

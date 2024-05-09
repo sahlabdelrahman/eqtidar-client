@@ -235,6 +235,7 @@ export interface ClientsComponentProps {
 interface TeamMemberProps {
     id: string;
     name: string;
+    description?: string;
     role: string;
     image: {
         url: StaticImageData;

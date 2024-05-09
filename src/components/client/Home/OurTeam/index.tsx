@@ -24,7 +24,13 @@ function OurTeam() {
             <div className={styles.content}>
                 <Swiper {...swiperConfig}>
                     {teamMembers?.map(
-                        ({ id, name, role, image: { alt, url } }) => (
+                        ({
+                            id,
+                            name,
+                            description: teamMemberDescription,
+                            role,
+                            image: { alt, url },
+                        }) => (
                             <SwiperSlide key={id}>
                                 <div className={styles.card}>
                                     <div className={styles.imageContainer}>
@@ -35,6 +41,15 @@ function OurTeam() {
                                         />
                                     </div>
                                     <p className={styles.name}>{name}</p>
+                                    {teamMemberDescription && (
+                                        <p
+                                            className={
+                                                styles.teamMemberDescription
+                                            }
+                                        >
+                                            {teamMemberDescription}
+                                        </p>
+                                    )}
                                     <p className={styles.role}>{role}</p>
                                 </div>
                             </SwiperSlide>

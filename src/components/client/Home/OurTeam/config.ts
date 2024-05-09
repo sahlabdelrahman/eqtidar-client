@@ -14,6 +14,8 @@ const OurTeamConfig: OurTeamComponentProps = {
             id: "0",
             name: "محمد محمود",
             role: "المدير التنفيذي",
+            description:
+                "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             image: {
                 alt: "string",
                 url: TeamMemberImage,
@@ -24,6 +26,8 @@ const OurTeamConfig: OurTeamComponentProps = {
             id: "1",
             name: "محمد محمود",
             role: "المدير التنفيذي",
+            description:
+                "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             image: {
                 alt: "string",
                 url: TeamMemberImage,
@@ -34,6 +38,8 @@ const OurTeamConfig: OurTeamComponentProps = {
             id: "2",
             name: "محمد محمود",
             role: "المدير التنفيذي",
+            description:
+                "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             image: {
                 alt: "string",
                 url: TeamMemberImage,
@@ -44,6 +50,8 @@ const OurTeamConfig: OurTeamComponentProps = {
             id: "3",
             name: "محمد محمود",
             role: "المدير التنفيذي",
+            description:
+                "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             image: {
                 alt: "string",
                 url: TeamMemberImage,
@@ -54,6 +62,8 @@ const OurTeamConfig: OurTeamComponentProps = {
             id: "4",
             name: "محمد محمود",
             role: "المدير التنفيذي",
+            description:
+                "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ",
             image: {
                 alt: "string",
                 url: TeamMemberImage,

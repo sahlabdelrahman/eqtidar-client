@@ -17,6 +17,7 @@ import navbarConfig from "./config";
 import { NavbarComponentProps } from "@/types/componentProps";
 
 import styles from "./style.module.scss";
+import CloseIcon from "@/components/Icons/CloseIcon";
 
 const { Logo, links, drawerWidth } = navbarConfig;
 
@@ -43,7 +44,12 @@ function Header(props: NavbarComponentProps) {
 
     const drawer = (
         <div onClick={handleDrawerToggle} className={styles.drawerContainer}>
-            <LogoComponent inDrawer Logo={Logo} />
+            <div className={styles.logoContainer}>
+                <LogoComponent inDrawer Logo={Logo} />
+                <span>
+                    <CloseIcon />
+                </span>
+            </div>
             <LinksComponent links={links} />
         </div>
     );
