@@ -38,7 +38,7 @@ export default function Footer() {
             <div className={styles.bottomContainer}>
                 <section className={styles.bottomSection}>
                     <p className={styles.copyright}>{copyright}</p>
-                    <p className={styles.developed}>
+                    {/* <p className={styles.developed}>
                         {developed?.text}{" "}
                         <a
                             href={developed?.path}
@@ -50,7 +50,7 @@ export default function Footer() {
                         >
                             {developed?.name}
                         </a>
-                    </p>
+                    </p> */}
                 </section>
             </div>
         </footer>

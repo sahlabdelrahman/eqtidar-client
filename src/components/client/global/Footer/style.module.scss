@@ -75,23 +75,23 @@
     .bottomSection {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 12px;
+        justify-content: center;
+        // gap: 12px;
         padding-top: 12px;
         padding-bottom: 12px;
         min-height: 80px;
         @include container();
         color: $lightColor;
-        .developed,
+        // .developed,
         .copyright {
             font-weight: 300;
         }
-        .developed {
-            .name {
-                color: $secondaryTextColor;
-                font-weight: 500;
-            }
-        }
+        // .developed {
+        //     .name {
+        //         color: $secondaryTextColor;
+        //         font-weight: 500;
+        //     }
+        // }
     }
 
     @include responsive("md") {
@@ -111,8 +111,8 @@
                 }
             }
         }
-        .bottomSection {
-            flex-direction: column;
-        }
+        // .bottomSection {
+        //     flex-direction: column;
+        // }
     }
 }
