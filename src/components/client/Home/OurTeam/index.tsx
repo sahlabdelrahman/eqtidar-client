@@ -41,6 +41,7 @@ function OurTeam() {
                                         />
                                     </div>
                                     <p className={styles.name}>{name}</p>
+                                    <p className={styles.role}>{role}</p>
                                     {teamMemberDescription && (
                                         <p
                                             className={
@@ -50,7 +51,6 @@ function OurTeam() {
                                             {teamMemberDescription}
                                         </p>
                                     )}
-                                    <p className={styles.role}>{role}</p>
                                 </div>
                             </SwiperSlide>
                         )
