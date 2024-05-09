@@ -18,16 +18,20 @@ export default function TopSection() {
                 <div className={styles.sectionWithTitle}>
                     <p className={styles.title}>اتصل بنا</p>
                     <ul className={styles.contact}>
-                        {contact?.map(({ id, text, Icon }) => (
-                            <li
-                                key={id}
-                                className={styles.item}
-                                aria-label={text}
-                            >
-                                <span>
-                                    <Icon />
-                                </span>
-                                {text}
+                        {contact?.map(({ id, text, Icon, path }) => (
+                            <li key={id} aria-label={text}>
+                                <a
+                                    href={path}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={text}
+                                    className={styles.item}
+                                >
+                                    <span>
+                                        <Icon />
+                                    </span>
+                                    {text}
+                                </a>
                             </li>
                         ))}
                     </ul>

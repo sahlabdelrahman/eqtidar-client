@@ -27,25 +27,28 @@ const footerConfig: FooterConfigProps = {
         {
             id: 0,
             text: "٩٦٦٠٥٣٥٢٩٢٨١١+",
+            path: "tel:+9660535292811",
             Icon: CallIcon,
         },
         {
             id: 1,
             text: "eqtidar.ksa@gmail.com",
+            path: "mailto:eqtidar.ksa@gmail.com",
             Icon: MailLogo,
         },
         {
             id: 2,
             text: "المملكة العربية السعودية - مدينة الرياض",
+            path: "/",
             Icon: LocationIcon,
         },
     ],
     socialMediaLinks: [
-        {
-            id: 0,
-            path: "tel:+9660535292811",
-            Icon: CallIcon,
-        },
+        // {
+        //     id: 0,
+        //     path: "tel:+9660535292811",
+        //     Icon: CallIcon,
+        // },
         {
             id: 1,
             path: "https://www.linkedin.com/in/eqtidarksa",
@@ -66,11 +69,11 @@ const footerConfig: FooterConfigProps = {
             path: "https://www.snapchat.com/add/eqtidarksa",
             Icon: SnapChatLogo,
         },
-        {
-            id: 5,
-            path: "mailto:eqtidar.ksa@gmail.com",
-            Icon: MailLogo,
-        },
+        // {
+        //     id: 5,
+        //     path: "mailto:eqtidar.ksa@gmail.com",
+        //     Icon: MailLogo,
+        // },
     ],
 };
 

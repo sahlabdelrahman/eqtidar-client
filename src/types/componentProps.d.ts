@@ -31,6 +31,7 @@ interface NavbarLinkProps {
 interface ContactProps {
     id: number;
     text: string;
+    path: string;
     Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
 }
 interface SocialMediaLinkProps {
