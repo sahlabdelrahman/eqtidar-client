@@ -155,13 +155,24 @@ type SwiperBreakpoints = {
     };
 };
 
+interface CustomPaginationOptions {
+    dynamicBullets: boolean;
+    clickable: boolean;
+}
+interface CustomHashNavigationOptions {
+    watchState: boolean;
+}
+
 interface SwiperConfig {
     autoplay?: AutoplayConfig;
     modules?: any[];
+    pagination?: CustomPaginationOptions;
+    hashNavigation?: CustomHashNavigationOptions;
+    navigation?: any;
     spaceBetween?: number;
     slidesPerView?: number;
     breakpoints?: SwiperBreakpoints;
-    loop: boolean;
+    loop?: boolean;
 }
 
 interface ProjectImageProps {

@@ -3,6 +3,8 @@ import { Cairo, Kufam } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "@/styles/style.scss";
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "react-toastify/dist/ReactToastify.css";
 
 const cairo = Cairo({

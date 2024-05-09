@@ -1,5 +1,9 @@
 import { OurGoalsComponentProps } from "@/types/componentProps";
 
+// import { Pagination } from "swiper/modules";
+// import { Navigation } from "swiper/modules";
+// import { HashNavigation } from "swiper/modules";
+
 const OurGoalsConfig: OurGoalsComponentProps = {
     title: "أهدافنا",
     sectionId: "goals",
@@ -31,7 +35,14 @@ const OurGoalsConfig: OurGoalsComponentProps = {
                 slidesPerView: 3,
             },
         },
-        loop: true,
+        // modules: [Pagination, Navigation, HashNavigation],
+        // pagination: {
+        //     dynamicBullets: true,
+        //     clickable: true,
+        // },
+        // hashNavigation: {
+        //     watchState: true,
+        // },
     },
 };
 
