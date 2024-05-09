@@ -48,6 +48,7 @@
     }
 
     @include responsive("sm") {
+        background-position: center;
         .container {
             img {
                 max-width: 300px;
