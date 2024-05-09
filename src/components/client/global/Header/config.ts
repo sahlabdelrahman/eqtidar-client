@@ -13,11 +13,12 @@ const navbarConfig: NavbarConfigProps = {
             path: "#goals",
             text: "أهدافنا",
         },
-        {
-            id: 1,
-            path: "#services",
-            text: "خدماتنا",
-        },
+        // TODO: Added a new page for services
+        // {
+        //     id: 1,
+        //     path: "#services",
+        //     text: "خدماتنا",
+        // },
         {
             id: 2,
             path: "#achievements",
