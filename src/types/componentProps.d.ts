@@ -28,6 +28,11 @@ interface NavbarLinkProps {
     text: string;
 }
 
+interface ContactProps {
+    id: number;
+    text: string;
+    Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+}
 interface SocialMediaLinkProps {
     id: number;
     path: string;
@@ -36,6 +41,7 @@ interface SocialMediaLinkProps {
 
 export interface NavbarConfigProps {
     Logo: StaticImageData | string;
+    LogoWithSlogan: StaticImageData | string;
     drawerWidth: number;
     links: NavbarLinkProps[];
 }
@@ -47,7 +53,13 @@ export interface FooterConfigProps {
         name: string;
         path: string;
     };
+    idFile: {
+        text: string;
+        path: string;
+    };
+    whoAreWe: string;
     socialMediaLinks: SocialMediaLinkProps[];
+    contact: ContactProps[];
 }
 
 export interface LinksComponentProps {
@@ -59,6 +71,7 @@ export interface LogoComponentProps {
     inDrawer?: boolean;
     Logo?: StaticImageData | string;
     externalPage?: boolean;
+    withSlogan?: boolean;
 }
 
 // MessageAndVision types

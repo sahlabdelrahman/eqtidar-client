@@ -8,12 +8,13 @@ import navbarConfig from "../config";
 
 import styles from "./style.module.scss";
 
-const { Logo: defaultLogo } = navbarConfig;
+const { Logo: defaultLogo, LogoWithSlogan } = navbarConfig;
 
 const LogoComponent: FC<LogoComponentProps> = ({
     inDrawer,
     Logo = defaultLogo,
     externalPage = false,
+    withSlogan = false,
 }) => {
     return (
         <Link
@@ -24,7 +25,15 @@ const LogoComponent: FC<LogoComponentProps> = ({
             aria-label={typeof Logo === "string" ? Logo : "Logo"}
             title={typeof Logo === "string" ? Logo : "Logo"}
         >
-            {typeof Logo === "string" ? Logo : <Image alt="logo" src={Logo} />}
+            {typeof Logo === "string" ? (
+                Logo
+            ) : (
+                <Image
+                    alt="logo"
+                    className={withSlogan ? styles.withSlogan : ""}
+                    src={withSlogan ? LogoWithSlogan : Logo}
+                />
+            )}
         </Link>
     );
 };

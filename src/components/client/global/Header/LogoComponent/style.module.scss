@@ -12,6 +12,10 @@
     img {
         width: auto;
         height: 40px;
+
+        &.withSlogan {
+            height: 100px;
+        }
     }
     svg {
         path {

@@ -1,9 +1,11 @@
 import Logo from "@/components/Images/logo.png";
+import LogoWithSlogan from "@/components/Images/logoWithSlogan.png";
 
 import { NavbarConfigProps } from "@/types/componentProps";
 
 const navbarConfig: NavbarConfigProps = {
     Logo: Logo,
+    LogoWithSlogan: LogoWithSlogan,
     drawerWidth: 240,
     links: [
         {
