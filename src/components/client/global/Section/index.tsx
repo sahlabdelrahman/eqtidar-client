@@ -18,7 +18,7 @@ const Section: FC<SectionComponentProps> = ({
             className={`${styles.section} ${dark ? styles.dark : ""}`}
         >
             <div className={styles.container}>
-                <SectionTitle title={title} />
+                {title && <SectionTitle title={title} />}
                 {description && (
                     <p className={styles.description}>{description}</p>
                 )}

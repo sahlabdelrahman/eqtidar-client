@@ -12,7 +12,7 @@ const { title, sectionId, data, swiperConfig } = ourGoalsConfig;
 
 function OurGoals() {
     return (
-        <Section title={title} sectionId={sectionId}>
+        <Section title={title} sectionId={sectionId} dark>
             <div className={styles.content}>
                 <Swiper {...swiperConfig}>
                     {data?.map(({ id, text }) => (

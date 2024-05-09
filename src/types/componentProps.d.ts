@@ -61,24 +61,35 @@ export interface LogoComponentProps {
     externalPage?: boolean;
 }
 
-// Banner types
+// MessageAndVision types
 
-interface BannerDataProps {
+interface MessageAndVisionDataProps {
     id: number;
     title: string;
     text: string;
 }
 
+export interface MessageAndVisionComponentProps {
+    data: MessageAndVisionDataProps[];
+}
+
+// Banner types
+
+interface BannerImageProps {
+    url: StaticImageData;
+    alt: string;
+}
+
 export interface BannerComponentProps {
-    data: BannerDataProps[];
+    image: BannerImageProps;
 }
 
 // Section
 
 export interface SectionComponentProps {
-    title: string;
+    title?: string;
     description?: string;
-    sectionId: string;
+    sectionId?: string;
     dark?: boolean;
     styles?: StyleHTMLAttributes;
     children: ReactNode;

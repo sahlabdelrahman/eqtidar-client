@@ -21,11 +21,12 @@ const navbarConfig: NavbarConfigProps = {
             path: "#achievements",
             text: "إنجازاتنا",
         },
-        {
-            id: 3,
-            path: "#projects",
-            text: "مشاريعنا",
-        },
+        // TODO: Show and hide from dashboard
+        // {
+        //     id: 3,
+        //     path: "#projects",
+        //     text: "مشاريعنا",
+        // },
         {
             id: 4,
             path: "#clients",
@@ -41,16 +42,17 @@ const navbarConfig: NavbarConfigProps = {
             path: "#partners",
             text: "شركاؤنا",
         },
+        // TODO: Show and hide from dashboard
         // {
         //     id: 7,
         //     path: "#faq",
         //     text: "الاسئلة الشائعة",
         // },
-        {
-            id: 8,
-            path: "#contactUs",
-            text: "تواصل معنا",
-        },
+        // {
+        //     id: 8,
+        //     path: "#contactUs",
+        //     text: "تواصل معنا",
+        // },
     ],
 };
 

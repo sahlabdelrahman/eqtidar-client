@@ -8,7 +8,7 @@ const { title, sectionId, data } = servicesConfig;
 
 function Services() {
     return (
-        <Section title={title} sectionId={sectionId} dark>
+        <Section title={title} sectionId={sectionId}>
             <div className={styles.content}>
                 {data?.map(({ id, text, subServices }) => (
                     <aside key={id} className={styles.card}>

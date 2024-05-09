@@ -1,13 +1,14 @@
 import Banner from "../Banner";
+import MessageAndVision from "../MessageAndVision";
 import OurGoals from "../OurGoals";
 import Services from "../Services";
 import Achievements from "../Achievements";
-import Projects from "../Projects";
+// import Projects from "../Projects";
 import Clients from "../Clients";
 import OurTeam from "../OurTeam";
 import Partners from "../Partners";
 // import FAQ from "../FAQ";
-import ContactUs from "../ContactUs";
+// import ContactUs from "../ContactUs";
 
 import styles from "./style.module.scss";
 
@@ -15,6 +16,7 @@ export default function Main() {
     return (
         <main className={styles.main}>
             <Banner />
+            <MessageAndVision />
             <OurGoals />
             <Services />
             <Achievements />
