@@ -10,51 +10,56 @@ const navbarConfig: NavbarConfigProps = {
     links: [
         {
             id: 0,
-            path: "#goals",
+            path: "/#goals",
             text: "أهدافنا",
         },
-        // TODO: Added a new page for services
-        // {
-        //     id: 1,
-        //     path: "#services",
-        //     text: "خدماتنا",
-        // },
         {
             id: 2,
-            path: "#achievements",
+            path: "/#achievements",
             text: "إنجازاتنا",
         },
         // TODO: Show and hide from dashboard
         // {
         //     id: 3,
-        //     path: "#projects",
+        //     path: "/#projects",
         //     text: "مشاريعنا",
         // },
         {
             id: 4,
-            path: "#clients",
+            path: "/#clients",
             text: "عملاؤنا",
         },
         {
             id: 5,
-            path: "#ourTeam",
+            path: "/#ourTeam",
             text: "فريقنا",
         },
         {
             id: 6,
-            path: "#partners",
+            path: "/#partners",
             text: "شركاؤنا",
         },
         // TODO: Show and hide from dashboard
         // {
         //     id: 7,
-        //     path: "#faq",
+        //     path: "/#faq",
         //     text: "الاسئلة الشائعة",
         // },
         // {
         //     id: 8,
-        //     path: "#contactUs",
+        //     path: "/#contactUs",
         //     text: "تواصل معنا",
+        // },
+
+        // {
+        //     id: 9,
+        //     path: "/services",
+        //     text: "خدماتنا",
+        // },
+        // {
+        //     id: 10,
+        //     path: "/blogs",
+        //     text: "مدونات",
         // },
     ],
 };

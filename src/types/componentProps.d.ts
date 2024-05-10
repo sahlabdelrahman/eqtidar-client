@@ -7,6 +7,7 @@ import React, {
     SVGProps,
     StyleHTMLAttributes,
 } from "react";
+
 import { StaticImageData } from "next/image";
 import { SlideProps } from "@mui/material";
 
