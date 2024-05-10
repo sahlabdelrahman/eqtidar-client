@@ -4,7 +4,7 @@
 .banner {
     position: relative;
     padding: 60px 0;
-    height: calc(100dvh - 80px);
+    height: calc(100vh - 80px);
     color: $lightColor;
     background: url("../../../Images/banner.jpeg") top no-repeat fixed;
     background-size: cover;
@@ -48,10 +48,10 @@
     }
 
     @include responsive("sm") {
-        background-position: center;
+        background-attachment: scroll;
         .container {
             img {
-                max-width: 300px;
+                max-width: 250px;
             }
         }
     }
