@@ -7,6 +7,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "react-toastify/dist/ReactToastify.css";
 
+import ogImage from "./opengraph-image.png";
+
 const cairo = Cairo({
     subsets: ["arabic", "latin"],
     weight: ["300", "400", "500", "600", "700", "900"],
@@ -20,6 +22,24 @@ const kufam = Kufam({
 export const metadata: Metadata = {
     title: "اقتدار",
     description: "أوقاف مستدامة لمستقبل مشرق",
+    openGraph: {
+        images: [
+            {
+                url: ogImage.src,
+                width: ogImage.width,
+                height: ogImage.height,
+            },
+        ],
+    },
+    twitter: {
+        images: [
+            {
+                url: ogImage.src,
+                width: ogImage.width,
+                height: ogImage.height,
+            },
+        ],
+    },
 };
 
 export const viewport: Viewport = {
