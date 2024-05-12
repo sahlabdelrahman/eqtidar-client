@@ -14,6 +14,11 @@ const navbarConfig: NavbarConfigProps = {
             text: "أهدافنا",
         },
         {
+            id: 1,
+            path: "/#services",
+            text: "خدماتنا",
+        },
+        {
             id: 2,
             path: "/#achievements",
             text: "إنجازاتنا",
@@ -50,17 +55,11 @@ const navbarConfig: NavbarConfigProps = {
         //     path: "/#contactUs",
         //     text: "تواصل معنا",
         // },
-
-        // {
-        //     id: 9,
-        //     path: "/services",
-        //     text: "خدماتنا",
-        // },
-        // {
-        //     id: 10,
-        //     path: "/blogs",
-        //     text: "مدونات",
-        // },
+        {
+            id: 10,
+            path: "/blogs",
+            text: "مدونات",
+        },
     ],
 };
 

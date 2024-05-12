@@ -1,7 +1,7 @@
 import Banner from "../Banner";
 import MessageAndVision from "../MessageAndVision";
 import OurGoals from "../OurGoals";
-// import Services from "../Services";
+import Services from "../Services";
 import Achievements from "../Achievements";
 // import Projects from "../Projects";
 import Clients from "../Clients";
@@ -18,7 +18,7 @@ export default function Main() {
             <Banner />
             <MessageAndVision />
             <OurGoals />
-            {/* <Services /> */}
+            <Services />
             <Achievements />
             {/* <Projects /> */}
             <Clients />

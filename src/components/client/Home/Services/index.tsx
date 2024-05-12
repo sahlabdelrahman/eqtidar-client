@@ -13,7 +13,7 @@ function Services() {
                 {data?.map(({ id, text, subServices }) => (
                     <aside key={id} className={styles.card}>
                         <p className={styles.text}>{text}</p>
-                        <ul className={styles.subServices}>
+                        {/* <ul className={styles.subServices}>
                             {subServices?.map((subService) => (
                                 <li
                                     key={subService?.id}
@@ -23,7 +23,7 @@ function Services() {
                                     {subService?.text}
                                 </li>
                             ))}
-                        </ul>
+                        </ul> */}
                     </aside>
                 ))}
             </div>
