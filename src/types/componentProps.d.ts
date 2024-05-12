@@ -133,6 +133,7 @@ interface SubServicesDataProps {
 
 interface ServicesDataProps {
     id: number;
+    slug: string;
     text: string;
     subServices: SubServicesDataProps[];
 }
@@ -141,6 +142,9 @@ export interface ServicesComponentProps {
     title: string;
     sectionId: string;
     data: ServicesDataProps[];
+    buttonText: string;
+    successMessage: string;
+    fields: Field[];
 }
 
 // Achievements types
@@ -301,13 +305,14 @@ type Field = {
     type: string;
     label: string;
     placeholder: string;
-    validation: {
+    validation?: {
         required: ValidationRule;
         minLength?: ValidationRule;
         maxLength?: ValidationRule;
         pattern?: ValidationRule;
     };
     multiline?: boolean;
+    options?: any;
 };
 
 export interface ContactUsComponentProps {
@@ -326,6 +331,31 @@ export interface InputComponentProps {
     placeholder: string;
     validation?: any;
     multiline?: boolean;
+}
+
+export interface CheckboxComponentProps {
+    id: string;
+    name: string;
+    label: string;
+    placeholder?: string;
+    multiline?: boolean;
+    value?: string;
+    validation?: any;
+    options?: { label: string; value: string }[];
+}
+
+export interface SelectComponentProps {
+    name: string;
+    label: string;
+    id: string;
+    placeholder: string;
+    validation?: any;
+    multiline?: boolean;
+    value?: string;
+    options: {
+        text: string;
+        id: string | number;
+    }[];
 }
 
 export interface InputErrorComponentProps {

@@ -82,3 +82,15 @@ textarea {
     align-items: center;
     justify-content: center;
 }
+
+// customize material ui styles
+
+.MuiSelect-select {
+    display: flex;
+    padding: 12px;
+    border-radius: 10px !important;
+    color: $mainTextColor !important;
+    border: 1px solid $lightGrayBackgroundColor;
+    outline: none !important;
+    width: 100%;
+  }

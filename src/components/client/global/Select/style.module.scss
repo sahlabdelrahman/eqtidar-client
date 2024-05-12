@@ -25,22 +25,15 @@
         }
     }
 
-    input,
-    textarea {
+    select {
         width: 100%;
-        padding: 12px;
         background: $grayBackgroundColor;
-        color: $mainTextColor;
+        outline: none !important;
         font-weight: 400;
         font-size: 14px;
-        border-radius: 10px;
-        border: 1px solid $lightGrayBackgroundColor;
-        outline: none;
-        resize: none;
 
-        &::placeholder {
-            color: $mainTextColor;
-            font-weight: 400;
+        option {
+            color: $mainTextColor !important;
         }
     }
 }

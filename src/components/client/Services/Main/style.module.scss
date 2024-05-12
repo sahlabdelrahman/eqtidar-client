@@ -8,6 +8,42 @@
     z-index: 1;
 
     .container {
-        @include container();
+        display: flex;
+        gap: 60px;
+        padding-top: 30px;
+
+        .subServices {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            flex: 1;
+            .subService {
+                font-size: 18px;
+                font-weight: 300;
+                .bullet {
+                    display: inline-flex;
+                    color: $secondaryTextColor;
+                    margin-inline-end: 10px;
+                }
+            }
+        }
+
+        .form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .buttonContainer {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    @include responsive("lg") {
+        .container {
+            flex-direction: column;
+        }
     }
 }

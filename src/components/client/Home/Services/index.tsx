@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Section from "@/components/client/global/Section";
 
 import styles from "./style.module.scss";
@@ -10,21 +12,17 @@ function Services() {
     return (
         <Section title={title} sectionId={sectionId}>
             <div className={styles.content}>
-                {data?.map(({ id, text, subServices }) => (
-                    <aside key={id} className={styles.card}>
+                {data?.map(({ id, text, subServices, slug }) => (
+                    <Link
+                        key={id}
+                        href={`/services/${slug}`}
+                        aria-label={text}
+                        title={text}
+                        rel="noreferrer"
+                        className={styles.card}
+                    >
                         <p className={styles.text}>{text}</p>
-                        {/* <ul className={styles.subServices}>
-                            {subServices?.map((subService) => (
-                                <li
-                                    key={subService?.id}
-                                    className={styles.subService}
-                                >
-                                    <span className={styles.bullet} />
-                                    {subService?.text}
-                                </li>
-                            ))}
-                        </ul> */}
-                    </aside>
+                    </Link>
                 ))}
             </div>
         </Section>
