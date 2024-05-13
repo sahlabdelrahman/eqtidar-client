@@ -27,7 +27,11 @@ function OurGoals() {
                 >
                     {data?.map(({ id, text }) => (
                         <SwiperSlide key={id}>
-                            <aside className={styles.card}>
+                            <aside
+                                className={styles.card}
+                                data-aos="fade-right"
+                                data-aos-duration="500"
+                            >
                                 <p className={styles.text}>{text}</p>
                             </aside>
                         </SwiperSlide>

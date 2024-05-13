@@ -1,5 +1,9 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Aos from "aos";
 
 import Section from "@/components/client/global/Section";
 
@@ -10,6 +14,11 @@ import styles from "./style.module.scss";
 const { title, data } = blogsConfig;
 
 function BlogsComponent() {
+    useEffect(() => {
+        Aos.init({
+            once: true,
+        });
+    }, []);
     return (
         <Section title={title}>
             <div className={styles.content}>
@@ -22,6 +31,8 @@ function BlogsComponent() {
                         title={title}
                         target="_blank"
                         rel="noreferrer"
+                        data-aos="fade-left"
+                        data-aos-duration="500"
                     >
                         <div className={styles.imagesContainer}>
                             <Image

@@ -39,7 +39,11 @@ export const Input: React.FC<InputComponentProps> = ({
     const isInvalid = isFormInvalid(inputErrors);
 
     return (
-        <div className={styles.inputComponent}>
+        <div
+            className={styles.inputComponent}
+            data-aos="fade-up"
+            data-aos-duration="500"
+        >
             <div className={styles.labelAndError}>
                 <label htmlFor={id}>{label}</label>
                 <AnimatePresence initial={false}>

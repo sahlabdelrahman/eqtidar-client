@@ -32,7 +32,11 @@ function OurTeam() {
                             image: { alt, url },
                         }) => (
                             <SwiperSlide key={id}>
-                                <div className={styles.card}>
+                                <div
+                                    className={styles.card}
+                                    data-aos="fade-left"
+                                    data-aos-duration="500"
+                                >
                                     <div className={styles.imageContainer}>
                                         <Image
                                             alt={alt}

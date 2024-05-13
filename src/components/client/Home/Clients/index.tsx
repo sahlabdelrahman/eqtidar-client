@@ -18,7 +18,11 @@ function Clients() {
                 <Swiper {...swiperConfig}>
                     {clients?.map(({ id, alt, url }) => (
                         <SwiperSlide key={id}>
-                            <div className={styles.imageContainer}>
+                            <div
+                                className={styles.imageContainer}
+                                data-aos="fade-up"
+                                data-aos-duration="500"
+                            >
                                 <Image
                                     alt={alt}
                                     src={url}

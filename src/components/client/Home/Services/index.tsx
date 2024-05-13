@@ -20,6 +20,8 @@ function Services() {
                         title={text}
                         rel="noreferrer"
                         className={styles.card}
+                        data-aos="fade-down"
+                        data-aos-duration="500"
                     >
                         <p className={styles.text}>{text}</p>
                     </Link>

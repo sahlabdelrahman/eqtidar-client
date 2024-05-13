@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "react-toastify/dist/ReactToastify.css";
+import "aos/dist/aos.css";
 
 import ogImage from "./opengraph-image.png";
 

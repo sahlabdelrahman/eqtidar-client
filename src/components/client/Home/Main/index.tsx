@@ -1,3 +1,9 @@
+"use client";
+
+import { useEffect } from "react";
+
+import AOS from "aos";
+
 import Banner from "../Banner";
 import MessageAndVision from "../MessageAndVision";
 import OurGoals from "../OurGoals";
@@ -13,6 +19,12 @@ import Partners from "../Partners";
 import styles from "./style.module.scss";
 
 export default function Main() {
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        });
+    }, []);
+
     return (
         <main className={styles.main}>
             <Banner />

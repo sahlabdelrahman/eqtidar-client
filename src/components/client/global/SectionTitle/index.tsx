@@ -8,7 +8,12 @@ const SectionTitle = (
         HTMLAttributes<HTMLElement>
 ) => {
     return (
-        <section className={styles.sectionTitle} {...props}>
+        <section
+            className={styles.sectionTitle}
+            {...props}
+            data-aos="fade-up"
+            data-aos-duration="500"
+        >
             <p className={styles.title}>{props.title}</p>
         </section>
     );

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import Aos from "aos";
 
 import Section from "@/components/client/global/Section";
 
@@ -22,6 +23,12 @@ const { fields, buttonText, successMessage } = servicesConfig;
 
 export default function Main({ data }: { data: SubServicesDataProps[] }) {
     const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        Aos.init({
+            once: true,
+        });
+    }, []);
 
     const methods = useForm();
 
@@ -57,7 +64,12 @@ export default function Main({ data }: { data: SubServicesDataProps[] }) {
                 <div className={styles.container}>
                     <ul className={styles.subServices}>
                         {data?.map(({ id, text }, index) => (
-                            <li key={id} className={styles.subService}>
+                            <li
+                                key={id}
+                                className={styles.subService}
+                                data-aos="fade-up"
+                                data-aos-duration="500"
+                            >
                                 <span className={styles.bullet}>
                                     {index + 1}
                                 </span>

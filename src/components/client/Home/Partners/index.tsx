@@ -19,7 +19,11 @@ function Partners() {
                 <div className={styles.content}>
                     <Swiper {...swiperConfig}>
                         {partners?.map(({ id, alt, url }) => (
-                            <SwiperSlide key={id}>
+                            <SwiperSlide
+                                key={id}
+                                data-aos="fade-right"
+                                data-aos-duration="500"
+                            >
                                 <div className={styles.imageContainer}>
                                     <Image
                                         alt={alt}
