@@ -29,6 +29,7 @@
     @include responsive("md") {
         .content {
             .text {
+                font-size: 14px;
                 width: 100%;
             }
         }
