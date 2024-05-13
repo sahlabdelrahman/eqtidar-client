@@ -176,8 +176,8 @@ type SwiperBreakpoints = {
 };
 
 interface CustomPaginationOptions {
-    dynamicBullets: boolean;
-    clickable: boolean;
+    dynamicBullets?: boolean;
+    clickable?: boolean;
 }
 interface CustomHashNavigationOptions {
     watchState: boolean;

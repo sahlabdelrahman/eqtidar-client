@@ -94,3 +94,20 @@ textarea {
     outline: none !important;
     width: 100%;
   }
+
+
+  // customize react swiper
+
+  .swiper {
+    display: flex !important;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .swiper-pagination {
+    position: unset !important;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: $secondaryTextColor;
+  }

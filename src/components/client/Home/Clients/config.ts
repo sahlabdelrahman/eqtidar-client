@@ -1,4 +1,4 @@
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 import Logo02 from "@/components/Images/logo_02.jpeg";
 
@@ -62,7 +62,10 @@ const ClientsConfig: ClientsComponentProps = {
             delay: 4000,
             disableOnInteraction: false,
         },
-        modules: [Autoplay],
+        modules: [Autoplay, Pagination],
+        pagination: {
+            clickable: true,
+        },
         slidesPerView: 1,
         breakpoints: {
             320: {

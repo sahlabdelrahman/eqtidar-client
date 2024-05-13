@@ -37,36 +37,7 @@ function OurGoals() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                {/* <div
-                    ref={navigationPrevRef}
-                    style={{
-                        display: "flex",
-                        alignItems: "center",
-                        position: "absolute",
-                        top: "0",
-                        bottom: "0",
-                        left: "0",
-                        right: "auto",
-                        cursor: "pointer",
-                    }}
-                >
-                    prev
-                </div>
-                <div
-                    ref={navigationNextRef}
-                    style={{
-                        display: "flex",
-                        alignItems: "center",
-                        position: "absolute",
-                        top: "0",
-                        bottom: "0",
-                        left: "auto",
-                        right: "0",
-                        cursor: "pointer",
-                    }}
-                >
-                    next
-                </div> */}
+                <div className="swiper-pagination" slot="pagination" />
             </div>
         </Section>
     );

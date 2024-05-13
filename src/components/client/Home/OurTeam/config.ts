@@ -1,4 +1,4 @@
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 import TeamMemberImage from "@/components/Images/team_member.jpeg";
 
@@ -76,7 +76,10 @@ const OurTeamConfig: OurTeamComponentProps = {
             delay: 6000,
             disableOnInteraction: false,
         },
-        modules: [Autoplay],
+        modules: [Pagination, Autoplay],
+        pagination: {
+            clickable: true,
+        },
         slidesPerView: 1,
         spaceBetween: 30,
         breakpoints: {
@@ -96,6 +99,7 @@ const OurTeamConfig: OurTeamComponentProps = {
                 slidesPerView: 5,
             },
         },
+
         loop: true,
     },
 };
