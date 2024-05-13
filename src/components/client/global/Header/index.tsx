@@ -77,6 +77,7 @@ function Header(props: NavbarComponentProps) {
                 <Drawer
                     container={container}
                     variant="temporary"
+                    anchor="right"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
