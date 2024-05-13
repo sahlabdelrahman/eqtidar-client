@@ -67,12 +67,16 @@ export const SelectInput: React.FC<SelectComponentProps> = ({
                         <Select
                             {...field}
                             {...register(name, validation)}
-                            displayEmpty={true}
+                            native
                         >
-                            {options?.map(({ text }) => (
-                                <MenuItem key={text} value={text}>
-                                    {text}
-                                </MenuItem>
+                            {options?.map((group) => (
+                                <optgroup label={group.text} key={group.id}>
+                                    {group?.subServices.map(({ id, text }) => (
+                                        <option key={id} value={text}>
+                                            {text}
+                                        </option>
+                                    ))}
+                                </optgroup>
                             ))}
                         </Select>
                     )}

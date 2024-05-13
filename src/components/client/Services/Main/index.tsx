@@ -15,13 +15,13 @@ import CheckboxInput from "../../global/Checkbox";
 
 import styles from "./style.module.scss";
 
-import { SubServicesDataProps } from "@/types/componentProps";
+import { ServicesDataProps } from "@/types/componentProps";
 
 import servicesConfig from "@/components/client/Home/Services/config";
 
 const { fields, buttonText, successMessage } = servicesConfig;
 
-export default function Main({ data }: { data: SubServicesDataProps[] }) {
+export default function Main({ data }: { data: ServicesDataProps[] }) {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -62,18 +62,34 @@ export default function Main({ data }: { data: SubServicesDataProps[] }) {
         <main className={styles.main}>
             <Section title={"خدماتنا"}>
                 <div className={styles.container}>
-                    <ul className={styles.subServices}>
-                        {data?.map(({ id, text }, index) => (
+                    <ul className={styles.services}>
+                        {data?.map(({ id, text, subServices }) => (
                             <li
                                 key={id}
-                                className={styles.subService}
+                                className={styles.service}
                                 data-aos="fade-up"
                                 data-aos-duration="500"
                             >
-                                <span className={styles.bullet}>
-                                    {index + 1}
-                                </span>
-                                {text}
+                                <p className={styles.serviceText}>{text}</p>
+                                <ul className={styles.subServices}>
+                                    {subServices?.map((subService, index) => (
+                                        <li
+                                            key={subService?.id}
+                                            className={styles.subService}
+                                        >
+                                            <span className={styles.bullet}>
+                                                {index + 1}
+                                            </span>
+                                            <p
+                                                className={
+                                                    styles.subServiceText
+                                                }
+                                            >
+                                                {subService?.text}
+                                            </p>
+                                        </li>
+                                    ))}
+                                </ul>
                             </li>
                         ))}
                     </ul>
@@ -93,7 +109,9 @@ export default function Main({ data }: { data: SubServicesDataProps[] }) {
                                         <SelectInput
                                             key={field?.id}
                                             {...field}
-                                            value={data?.[0]?.text}
+                                            value={
+                                                data?.[0]?.subServices[0]?.text
+                                            }
                                             options={data || []}
                                         />
                                     );
