@@ -14,13 +14,13 @@ import CheckboxInput from "../../global/Checkbox";
 
 import styles from "./style.module.scss";
 
-import { ServicesDataProps } from "@/types/componentProps";
+import { SubServicesDataProps } from "@/types/componentProps";
 
 import servicesConfig from "@/components/client/Home/Services/config";
 
 const { fields, buttonText, successMessage } = servicesConfig;
 
-export default function Main({ data }: { data: ServicesDataProps }) {
+export default function Main({ data }: { data: SubServicesDataProps[] }) {
     const [loading, setLoading] = useState(false);
 
     const methods = useForm();
@@ -53,18 +53,15 @@ export default function Main({ data }: { data: ServicesDataProps }) {
     });
     return (
         <main className={styles.main}>
-            <Section title={data?.text}>
+            <Section title={"خدماتنا"}>
                 <div className={styles.container}>
                     <ul className={styles.subServices}>
-                        {data?.subServices?.map((subService, index) => (
-                            <li
-                                key={subService?.id}
-                                className={styles.subService}
-                            >
+                        {data?.map(({ id, text }, index) => (
+                            <li key={id} className={styles.subService}>
                                 <span className={styles.bullet}>
                                     {index + 1}
                                 </span>
-                                {subService?.text}
+                                {text}
                             </li>
                         ))}
                     </ul>
@@ -84,8 +81,8 @@ export default function Main({ data }: { data: ServicesDataProps }) {
                                         <SelectInput
                                             key={field?.id}
                                             {...field}
-                                            value={data?.subServices?.[0]?.text}
-                                            options={data?.subServices}
+                                            value={data?.[0]?.text}
+                                            options={data || []}
                                         />
                                     );
                                 } else if (field.type === "checkbox") {

@@ -142,6 +142,7 @@ export interface ServicesComponentProps {
     title: string;
     sectionId: string;
     data: ServicesDataProps[];
+    subServices: SubServicesDataProps[];
     buttonText: string;
     successMessage: string;
     fields: Field[];

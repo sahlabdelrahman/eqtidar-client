@@ -15,7 +15,7 @@ function Services() {
                 {data?.map(({ id, text, subServices, slug }) => (
                     <Link
                         key={id}
-                        href={`/services/${slug}`}
+                        href="/services"
                         aria-label={text}
                         title={text}
                         rel="noreferrer"

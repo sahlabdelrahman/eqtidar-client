@@ -15,7 +15,7 @@ const navbarConfig: NavbarConfigProps = {
         },
         {
             id: 1,
-            path: "/#services",
+            path: "/services",
             text: "خدماتنا",
         },
         {

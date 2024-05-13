@@ -9,16 +9,12 @@ export const metadata = {
     },
 };
 
-const { data } = servicesConfig;
+const { subServices } = servicesConfig;
 
-export default function Services({
-    params: { slug },
-}: {
-    params: { slug: string };
-}) {
+export default function Services() {
     return (
         <>
-            <Main data={data[+slug]} />
+            <Main data={subServices} />
         </>
     );
 }
