@@ -5,6 +5,7 @@
     .logoImage {
         object-fit: contain;
         width: 200px;
+        height: auto;
         animation: logoAnimation 1.5s infinite alternate ease-in-out;
     }
 
