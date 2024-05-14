@@ -6,11 +6,9 @@ import Aos from "aos";
 
 import teamMemberConfig from "./config";
 
-import SectionTitle from "../global/SectionTitle";
-
 import styles from "./style.module.scss";
 
-const { title, id, slug, name, role, text, avatar } = teamMemberConfig;
+const { name, role, text, avatar } = teamMemberConfig;
 
 export default function TeamMember() {
     useEffect(() => {
@@ -21,7 +19,6 @@ export default function TeamMember() {
 
     return (
         <main className={styles.main}>
-            <SectionTitle title={title} />
             <div className={styles.container}>
                 <section
                     className={styles.right}

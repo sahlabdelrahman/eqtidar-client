@@ -2,51 +2,11 @@
 @import "@/styles/partials/variables";
 
 .content {
-    .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 30px;
-        background-color: $lightGrayBackgroundColor;
-        color: $mainTextColor;
-        border: 1px solid $secondaryTextColor;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 2px 9px rgba(0, 0, 0, 0.17);
-
-        .imageContainer {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            overflow: hidden;
-            background-color: $grayBackgroundColor;
-            .image {
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: cover;
-            }
-        }
-        .name {
-            font-size: 16px;
-            font-weight: 700;
-            display: -webkit-box;
-            text-overflow: ellipsis;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .role {
-            font-size: 12px;
-            font-weight: 500;
-            display: -webkit-box;
-            text-overflow: ellipsis;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
+    text-align: center;
+    .subDescriptions {
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: underline;
+        text-align: center;
     }
 }

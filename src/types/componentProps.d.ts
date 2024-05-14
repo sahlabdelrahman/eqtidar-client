@@ -255,9 +255,9 @@ interface TeamMemberProps {
 export interface OurTeamComponentProps {
     title: string;
     description: string;
+    subDescriptions: string;
     sectionId: string;
     teamMembers: TeamMemberProps[];
-    swiperConfig: SwiperConfig;
 }
 
 // Partners types

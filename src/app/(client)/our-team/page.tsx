@@ -1,4 +1,4 @@
-import TeamMemberComp from "@/components/client/OurTeam/TeamMember";
+import OurTeamComp from "@/components/client/OurTeam";
 
 export const metadata = {
     title: {
@@ -7,14 +7,14 @@ export const metadata = {
     },
 };
 
-export default function TeamMember({
+export default function OurTeam({
     params: { slug },
 }: {
     params: { slug: string };
 }) {
     return (
         <>
-            <TeamMemberComp />
+            <OurTeamComp />
         </>
     );
 }

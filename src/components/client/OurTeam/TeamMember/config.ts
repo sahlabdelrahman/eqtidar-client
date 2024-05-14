@@ -3,8 +3,7 @@ import { TeamMemberComponentProps } from "@/types/ourTeam/componentProps";
 import Avatar from "@/components/Images/team_member.jpeg";
 
 const TeamMemberConfig: TeamMemberComponentProps = {
-    title: "فريقنا",
-    id: 1,
+    id: "1",
     slug: "1",
     name: "محمد محمود",
     role: "المدير التنفيذي",

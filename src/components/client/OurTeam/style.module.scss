@@ -1,0 +1,104 @@
+@import "@/styles/partials/mixins";
+@import "@/styles/partials/variables";
+
+.main {
+    padding-top: calc(80px + 60px);
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 1;
+    .container {
+        @include container();
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .members {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 30px;
+                    padding: 30px;
+                    background-color: $lightGrayBackgroundColor;
+                    color: $mainTextColor;
+                    border: 1px solid $secondaryTextColor;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.17);
+
+                    .imageContainer {
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        width: 150px;
+                        height: 150px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        background-color: $grayBackgroundColor;
+                        .image {
+                            max-width: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .name {
+                        font-size: 18px;
+                        font-weight: 700;
+                        display: -webkit-box;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        color: $secondaryTextColor;
+                    }
+                    .role {
+                        font-size: 12px;
+                        font-weight: 500;
+                        display: -webkit-box;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive("lg") {
+        .container {
+            .section {
+                .members {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+    }
+
+    @include responsive("md") {
+        .container {
+            .section {
+                .members {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+
+    @include responsive("sm") {
+        .container {
+            .section {
+                .members {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+    }
+}

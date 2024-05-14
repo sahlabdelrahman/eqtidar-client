@@ -13,11 +13,7 @@ const navbarConfig: NavbarConfigProps = {
             path: "/#goals",
             text: "أهدافنا",
         },
-        {
-            id: 1,
-            path: "/services",
-            text: "خدماتنا",
-        },
+
         {
             id: 2,
             path: "/#achievements",
@@ -35,11 +31,6 @@ const navbarConfig: NavbarConfigProps = {
             text: "عملاؤنا",
         },
         {
-            id: 5,
-            path: "/#ourTeam",
-            text: "فريقنا",
-        },
-        {
             id: 6,
             path: "/#partners",
             text: "شركاؤنا",
@@ -55,6 +46,16 @@ const navbarConfig: NavbarConfigProps = {
         //     path: "/#contactUs",
         //     text: "تواصل معنا",
         // },
+        {
+            id: 1,
+            path: "/services",
+            text: "خدماتنا",
+        },
+        {
+            id: 5,
+            path: "/our-team",
+            text: "فريقنا",
+        },
         {
             id: 10,
             path: "/blogs",
