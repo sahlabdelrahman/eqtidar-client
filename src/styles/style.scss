@@ -55,6 +55,16 @@ a {
     color: inherit;
 }
 
+img {
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
 /* Disable zoom in in mobile */
 input[type="color"],
 input[type="date"],

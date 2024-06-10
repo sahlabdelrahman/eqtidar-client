@@ -1,6 +1,7 @@
 import Main from "@/components/client/Services/Main";
 
-import servicesConfig from "@/components/client/Home/Services/config";
+import { getData } from "@/services/index.service";
+import { APIUrlsConstants } from "@/utils/API/constants";
 
 export const metadata = {
     title: {
@@ -9,12 +10,14 @@ export const metadata = {
     },
 };
 
-const { data } = servicesConfig;
+export default async function Services() {
+    const services = await getData({
+        url: APIUrlsConstants.service,
+    });
 
-export default function Services() {
     return (
         <>
-            <Main data={data} />
+            <Main data={services} />
         </>
     );
 }

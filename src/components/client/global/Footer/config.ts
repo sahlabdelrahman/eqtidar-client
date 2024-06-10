@@ -6,7 +6,7 @@ import SnapChatLogo from "@/components/Icons/SnapChatLogo";
 import MailLogo from "@/components/Icons/MailLogo";
 import LocationIcon from "@/components/Icons/LocationIcon";
 
-import { FooterConfigProps } from "@/types/componentProps";
+import { FooterConfigProps } from "@/components/client/global/Footer/footer";
 
 const footerConfig: FooterConfigProps = {
     slogan: "أوقاف مستدامة لمستقبل مشرق",
@@ -18,7 +18,6 @@ const footerConfig: FooterConfigProps = {
     },
     idFile: {
         text: "تحميل الملف التعريفي ",
-        path: "/",
     },
 
     whoAreWe:
@@ -26,21 +25,24 @@ const footerConfig: FooterConfigProps = {
     contact: [
         {
             id: 0,
-            text: "٩٦٦٠٥٣٥٢٩٢٨١١+",
-            path: "tel:+9660535292811",
+            // text: "٩٦٦٠٥٣٥٢٩٢٨١١+",
+            // path: "tel:+9660535292811",
             Icon: CallIcon,
+            key: "mobile",
         },
         {
             id: 1,
-            text: "eqtidar.ksa@gmail.com",
-            path: "mailto:eqtidar.ksa@gmail.com",
+            // text: "eqtidar.ksa@gmail.com",
+            // path: "mailto:eqtidar.ksa@gmail.com",
             Icon: MailLogo,
+            key: "email",
         },
         {
             id: 2,
-            text: "المملكة العربية السعودية - مدينة الرياض",
-            path: "/",
+            // text: "المملكة العربية السعودية - مدينة الرياض",
+            // path: "/",
             Icon: LocationIcon,
+            key: "location",
         },
     ],
     socialMediaLinks: [
@@ -51,23 +53,27 @@ const footerConfig: FooterConfigProps = {
         // },
         {
             id: 1,
-            path: "https://www.linkedin.com/in/eqtidarksa",
+            // path: "https://www.linkedin.com/in/eqtidarksa",
             Icon: LinkedInLogo,
+            key: "linkedin",
         },
         {
             id: 2,
-            path: "https://twitter.com/EqtidarKsa",
+            // path: "https://twitter.com/EqtidarKsa",
             Icon: TwitterLogo,
+            key: "x",
         },
         {
             id: 3,
-            path: "https://www.instagram.com/eqtidarksa",
+            // path: "https://www.instagram.com/eqtidarksa",
             Icon: InstagramLogo,
+            key: "instagram",
         },
         {
             id: 4,
-            path: "https://www.snapchat.com/add/eqtidarksa",
+            // path: "https://www.snapchat.com/add/eqtidarksa",
             Icon: SnapChatLogo,
+            key: "snapchat",
         },
         // {
         //     id: 5,

@@ -1,5 +1,5 @@
-const baseUrl = process.env.REACT_APP_FILES_BASE_URL || "http://localhost:8000";
+import { filesBaseUrl } from "../config";
 
 export function getProperImageUrl({ filePath }: { filePath: string }) {
-    return `${baseUrl}/${filePath}`;
+    return `${filesBaseUrl}/${filePath}`;
 }

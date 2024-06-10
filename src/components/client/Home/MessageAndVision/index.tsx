@@ -1,20 +1,21 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import Section from "@/components/client/global/Section";
+import EmptySection from "../../global/EmptySection";
 
 import styles from "./style.module.scss";
 
 import messageAndVisionConfig from "./config";
 
-const { data } = messageAndVisionConfig;
+import { BannerTextProps } from "@/components/client/Home/Main/info";
 
-function MessageAndVision() {
+const { data: configData } = messageAndVisionConfig;
+
+function MessageAndVision({ data }: { data: BannerTextProps }) {
     return (
         <Section>
             <div className={styles.container}>
-                {data?.map(({ id, title, text }) => (
+                {configData?.map(({ id, title, key }) => (
                     <aside
                         key={id}
                         className={styles.content}
@@ -22,7 +23,11 @@ function MessageAndVision() {
                         data-aos-duration="500"
                     >
                         <h1 className={styles.title}>{title}</h1>
-                        <p className={styles.text}>{text}</p>
+                        {data[key]?.text ? (
+                            <p className={styles.text}>{data[key]?.text}</p>
+                        ) : (
+                            <EmptySection />
+                        )}
                     </aside>
                 ))}
             </div>

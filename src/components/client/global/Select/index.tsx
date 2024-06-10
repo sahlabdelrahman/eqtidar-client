@@ -70,12 +70,14 @@ export const SelectInput: React.FC<SelectComponentProps> = ({
                             native
                         >
                             {options?.map((group) => (
-                                <optgroup label={group.text} key={group.id}>
-                                    {group?.subServices.map(({ id, text }) => (
-                                        <option key={id} value={text}>
-                                            {text}
-                                        </option>
-                                    ))}
+                                <optgroup label={group.text} key={group?._id}>
+                                    {group?.subServices.map(
+                                        ({ _id: id, text }) => (
+                                            <option key={id} value={text}>
+                                                {text}
+                                            </option>
+                                        )
+                                    )}
                                 </optgroup>
                             ))}
                         </Select>

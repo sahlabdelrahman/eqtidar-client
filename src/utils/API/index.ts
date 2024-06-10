@@ -1,13 +1,17 @@
 import axios from "axios";
-import toast from "react-toastify";
+import { toast } from "react-toastify";
 
-const baseURL =
-    process.env.REACT_APP_BACKEND_BASE_URL || "http://localhost:8000/api";
-const headers = { "Content-Type": "application/json" };
+import { backendBaseURL } from "../config";
+
+const headers = {
+    Accept: "application/json, text/plain, */*",
+    "Content-Type": "application/json; charset=utf-8",
+};
 
 const APIConfig = axios.create({
-    baseURL,
+    baseURL: backendBaseURL,
     headers,
+    timeout: 40000,
 });
 
 const onResponse = (response: any) => {
@@ -15,12 +19,9 @@ const onResponse = (response: any) => {
 };
 
 const onResponseError = (error: any) => {
-    // toast.error();
-    console.log("Error from axios response interceptor => ", error);
-    console.log(
-        "Error message from axios response interceptor => ",
-        error?.message
-    );
+    toast.error(error?.response?.data?.message || error?.message, {
+        rtl: false,
+    });
 };
 
 APIConfig.interceptors.response.use(onResponse, onResponseError);

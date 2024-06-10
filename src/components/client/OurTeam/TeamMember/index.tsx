@@ -4,13 +4,20 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Aos from "aos";
 
-import teamMemberConfig from "./config";
+import { getProperImageUrl } from "@/utils/helpers";
+
+import { MemberProps } from "../main";
 
 import styles from "./style.module.scss";
 
-const { name, role, text, avatar } = teamMemberConfig;
+export default function TeamMember({ member }: { member: MemberProps }) {
+    const {
+        name,
+        role,
+        description,
+        image: { alt, url, blurUrl, width, height },
+    } = member;
 
-export default function TeamMember() {
     useEffect(() => {
         Aos.init({
             once: true,
@@ -27,11 +34,18 @@ export default function TeamMember() {
                 >
                     <div className={styles.avatarContainer}>
                         <Image
-                            src={avatar?.url}
-                            alt={avatar?.alt}
+                            alt={alt}
+                            src={getProperImageUrl({
+                                filePath: url,
+                            })}
+                            className={styles.avatar}
                             loading="lazy"
                             placeholder="blur"
-                            className={styles.avatar}
+                            blurDataURL={getProperImageUrl({
+                                filePath: blurUrl,
+                            })}
+                            width={width}
+                            height={height}
                         />
                     </div>
                     <div className={styles.nameAndRole}>
@@ -45,13 +59,7 @@ export default function TeamMember() {
                     data-aos-duration="500"
                 >
                     <div className={styles.textContainer}>
-                        <p className={styles.text}>{text}</p>
-                    </div>
-                    <div className={styles.textContainer}>
-                        <p className={styles.text}>{text}</p>
-                    </div>
-                    <div className={styles.textContainer}>
-                        <p className={styles.text}>{text}</p>
+                        <p className={styles.text}>{description}</p>
                     </div>
                 </section>
             </div>

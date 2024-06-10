@@ -7,56 +7,6 @@ import { ClientsComponentProps } from "@/types/componentProps";
 const ClientsConfig: ClientsComponentProps = {
     title: "عملاؤنا",
     sectionId: "clients",
-    clients: [
-        {
-            id: "0",
-            alt: "string",
-            url: Logo02,
-            blurUrl: "string",
-        },
-        {
-            id: "1",
-            alt: "string",
-            url: Logo02,
-            blurUrl: "string",
-        },
-        {
-            id: "2",
-            alt: "string",
-            url: Logo02,
-            blurUrl: "string",
-        },
-        {
-            id: "3",
-            alt: "string",
-            url: Logo02,
-            blurUrl: "string",
-        },
-        {
-            id: "4",
-            alt: "string",
-            url: Logo02,
-            blurUrl: "string",
-        },
-        {
-            id: "5",
-            alt: "string",
-            url: Logo02,
-            blurUrl: "string",
-        },
-        {
-            id: "6",
-            alt: "string",
-            url: Logo02,
-            blurUrl: "string",
-        },
-        {
-            id: "7",
-            alt: "string",
-            url: Logo02,
-            blurUrl: "string",
-        },
-    ],
     swiperConfig: {
         autoplay: {
             delay: 4000,

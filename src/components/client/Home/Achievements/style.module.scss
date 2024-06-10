@@ -31,7 +31,8 @@
             flex-direction: column;
             color: $mainTextColor;
 
-            p {
+            span,
+            .text {
                 font-size: 24px;
                 font-weight: 700;
                 text-align: center;

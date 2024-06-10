@@ -19,7 +19,6 @@ const navbarConfig: NavbarConfigProps = {
             path: "/#achievements",
             text: "إنجازاتنا",
         },
-        // TODO: Show and hide from dashboard
         // {
         //     id: 3,
         //     path: "/#projects",
@@ -35,7 +34,6 @@ const navbarConfig: NavbarConfigProps = {
             path: "/#partners",
             text: "شركاؤنا",
         },
-        // TODO: Show and hide from dashboard
         // {
         //     id: 7,
         //     path: "/#faq",

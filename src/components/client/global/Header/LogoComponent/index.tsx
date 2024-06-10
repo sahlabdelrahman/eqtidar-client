@@ -32,6 +32,8 @@ const LogoComponent: FC<LogoComponentProps> = ({
                     alt="logo"
                     className={withSlogan ? styles.withSlogan : ""}
                     src={withSlogan ? LogoWithSlogan : Logo}
+                    loading="lazy"
+                    // placeholder="blur"
                 />
             )}
         </Link>

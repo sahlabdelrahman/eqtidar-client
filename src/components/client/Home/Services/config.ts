@@ -1,8 +1,6 @@
-import { Autoplay } from "swiper/modules";
+import { ServicesConfigProps } from "../../Services/Main/services";
 
-import { ServicesComponentProps } from "@/types/componentProps";
-
-const ServicesConfig: ServicesComponentProps = {
+const ServicesConfig: ServicesConfigProps = {
     title: "خدماتنا",
     sectionId: "services",
     data: [
@@ -11,9 +9,9 @@ const ServicesConfig: ServicesComponentProps = {
             slug: "0",
             text: "تأسيس الأوقاف",
             subServices: [
-                { id: 0, text: "صيغة وثيقة فنية" },
-                { id: 1, text: "تسجيل شهادة الوقف" },
-                { id: 2, text: "فتح حساب بنكي للوقف" },
+                { _id: 0, text: "صيغة وثيقة فنية" },
+                { _id: 1, text: "تسجيل شهادة الوقف" },
+                { _id: 2, text: "فتح حساب بنكي للوقف" },
             ],
         },
         {
@@ -21,12 +19,12 @@ const ServicesConfig: ServicesComponentProps = {
             slug: "1",
             text: "حلول الأوقاف",
             subServices: [
-                { id: 0, text: "تقديم استشارات وقفية" },
-                { id: 1, text: "صياغة العقود" },
-                { id: 2, text: "توفير أصول وقفية" },
-                { id: 3, text: "تشغيل وقف" },
-                { id: 4, text: "إدارة غلة وقف" },
-                { id: 5, text: "استبدال وقف متعطل" },
+                { _id: 0, text: "تقديم استشارات وقفية" },
+                { _id: 1, text: "صياغة العقود" },
+                { _id: 2, text: "توفير أصول وقفية" },
+                { _id: 3, text: "تشغيل وقف" },
+                { _id: 4, text: "إدارة غلة وقف" },
+                { _id: 5, text: "استبدال وقف متعطل" },
             ],
         },
         {
@@ -35,7 +33,7 @@ const ServicesConfig: ServicesComponentProps = {
             text: "خدمات التدريب",
             subServices: [
                 {
-                    id: 0,
+                    _id: 0,
                     text: "دورات تدريبية للواقفين والعاملين في القطاع الوقفي",
                 },
             ],
@@ -45,8 +43,8 @@ const ServicesConfig: ServicesComponentProps = {
             slug: "3",
             text: "خدمات التسويق والإعلام",
             subServices: [
-                { id: 0, text: "تسويق وقف قائم" },
-                { id: 1, text: "الإبراز الاعلامي للوقف" },
+                { _id: 0, text: "تسويق وقف قائم" },
+                { _id: 1, text: "الإبراز الاعلامي للوقف" },
             ],
         },
     ],

@@ -47,7 +47,7 @@ const NumberCounter: FC<NumberCounterProps> = ({ targetNumber }) => {
         }, 1);
     };
 
-    return <p ref={counterRef}>{currentNumber}</p>;
+    return <span ref={counterRef}>{currentNumber}</span>;
 };
 
 export default NumberCounter;

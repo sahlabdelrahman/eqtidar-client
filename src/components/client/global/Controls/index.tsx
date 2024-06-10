@@ -5,9 +5,11 @@ import { useEffect, useState } from "react";
 import TopArrow from "@/components/Icons/TopArrow";
 import WhatsAppLogo from "@/components/Icons/WhatsAppLogo";
 
+import { ControlsProps } from "@/components/client/global/Footer/footer";
+
 import styles from "./style.module.scss";
 
-function ScrollToTop() {
+function Controls({ data }: { data: ControlsProps }) {
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
     // Function to toggle visibility based on scroll position
@@ -38,7 +40,7 @@ function ScrollToTop() {
     return (
         <>
             <a
-                href="https://wa.me/message/272JIPSGD74HH1"
+                href={data?.whatsapp?.url}
                 target="_blank"
                 className={`${styles.whatsApp} ${isVisible ? styles.show : ""}`}
                 aria-label="Chat on whatsapp"
@@ -60,4 +62,4 @@ function ScrollToTop() {
     );
 }
 
-export default ScrollToTop;
+export default Controls;

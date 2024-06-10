@@ -1,7 +1,8 @@
-import styles from "./style.module.scss";
+import Image from "next/image";
 
 import bannerConfig from "./config";
-import Image from "next/image";
+
+import styles from "./style.module.scss";
 
 const { image } = bannerConfig;
 

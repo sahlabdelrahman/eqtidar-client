@@ -1,14 +1,18 @@
 import LogoComponent from "../../Header/LogoComponent";
+import EmptySection from "../../EmptySection";
 
 import navbarConfig from "../../Header/config";
 import footerConfig from "../config";
 
+import { TopSectionProps } from "@/components/client/global/Footer/footer";
+
 import styles from "./style.module.scss";
 
 const { Logo } = navbarConfig;
-const { socialMediaLinks, contact, whoAreWe, idFile } = footerConfig;
+const { socialMediaLinks, contact: contactConfig, idFile } = footerConfig;
 
-export default function TopSection() {
+export default function TopSection({ data }: { data: TopSectionProps }) {
+    const { contact, socialMedia, profileFile, whoWeAre } = data;
     return (
         <div className={styles.topSection}>
             <section className={styles.container}>
@@ -18,19 +22,27 @@ export default function TopSection() {
                 <div className={styles.sectionWithTitle}>
                     <p className={styles.title}>اتصل بنا</p>
                     <ul className={styles.contact}>
-                        {contact?.map(({ id, text, Icon, path }) => (
-                            <li key={id} aria-label={text}>
+                        {contactConfig?.map(({ id, Icon, key }) => (
+                            <li key={id} aria-label={contact?.[key].text}>
                                 <a
-                                    href={path}
+                                    href={
+                                        contact?.[key]?.url
+                                            ? contact?.[key]?.url
+                                            : "/"
+                                    }
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label={text}
+                                    aria-label={contact?.[key].text}
                                     className={styles.item}
                                 >
                                     <span>
                                         <Icon />
                                     </span>
-                                    {text}
+                                    {contact?.[key].text ? (
+                                        contact?.[key].text
+                                    ) : (
+                                        <EmptySection />
+                                    )}
                                 </a>
                             </li>
                         ))}
@@ -38,16 +50,24 @@ export default function TopSection() {
                 </div>
                 <div className={styles.sectionWithTitle}>
                     <p className={styles.title}>من نحن</p>
-                    <p className={styles.text}>{whoAreWe}</p>
+                    {whoWeAre?.text ? (
+                        <p className={styles.text}>{whoWeAre?.text}</p>
+                    ) : (
+                        <EmptySection />
+                    )}
                     <div className={styles.socialMediaLinks}>
-                        {socialMediaLinks?.map(({ id, path, Icon }) => (
+                        {socialMediaLinks?.map(({ id, Icon, key }) => (
                             <a
                                 key={id}
-                                href={path}
+                                href={
+                                    socialMedia?.[key]
+                                        ? socialMedia?.[key]
+                                        : "/"
+                                }
                                 className={styles.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label={path}
+                                aria-label={socialMedia?.[key]}
                             >
                                 <Icon />
                             </a>
@@ -55,7 +75,7 @@ export default function TopSection() {
                     </div>
                     {/* TODO: Replace this path with path of file after uploading file on server */}
                     <a
-                        href={idFile?.path}
+                        href={profileFile?.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="الملف التعريفي"

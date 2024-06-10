@@ -10,6 +10,7 @@ import React, {
 
 import { StaticImageData } from "next/image";
 import { SlideProps } from "@mui/material";
+import { SubServicesDataProps } from "@/components/client/Services/Main/services";
 
 // Navbar types
 
@@ -29,39 +30,11 @@ interface NavbarLinkProps {
     text: string;
 }
 
-interface ContactProps {
-    id: number;
-    text: string;
-    path: string;
-    Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
-}
-interface SocialMediaLinkProps {
-    id: number;
-    path: string;
-    Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
-}
-
 export interface NavbarConfigProps {
     Logo: StaticImageData | string;
     LogoWithSlogan: StaticImageData | string;
     drawerWidth: number;
     links: NavbarLinkProps[];
-}
-export interface FooterConfigProps {
-    slogan: string;
-    copyright: string;
-    developed: {
-        text: string;
-        name: string;
-        path: string;
-    };
-    idFile: {
-        text: string;
-        path: string;
-    };
-    whoAreWe: string;
-    socialMediaLinks: SocialMediaLinkProps[];
-    contact: ContactProps[];
 }
 
 export interface LinksComponentProps {
@@ -82,6 +55,7 @@ interface MessageAndVisionDataProps {
     id: number;
     title: string;
     text: string;
+    key: string;
 }
 
 export interface MessageAndVisionComponentProps {
@@ -122,43 +96,6 @@ export interface OurGoalsComponentProps {
     sectionId: string;
     data: OurGoalsDataProps[];
     swiperConfig: SwiperConfig;
-}
-
-// Services types
-
-interface SubServicesDataProps {
-    id: number;
-    text: string;
-}
-
-interface ServicesDataProps {
-    id: number;
-    slug: string;
-    text: string;
-    subServices: SubServicesDataProps[];
-}
-
-export interface ServicesComponentProps {
-    title: string;
-    sectionId: string;
-    data: ServicesDataProps[];
-    buttonText: string;
-    successMessage: string;
-    fields: Field[];
-}
-
-// Achievements types
-
-interface AchievementsDataProps {
-    id: number;
-    text: string;
-    number: number;
-}
-
-export interface AchievementsComponentProps {
-    title: string;
-    sectionId: string;
-    data: AchievementsDataProps[];
 }
 
 // Projects types
@@ -220,19 +157,9 @@ export interface ProjectsComponentProps {
 
 // Clients types
 
-interface ClientProps {
-    id: string;
-    alt: string;
-    url: StaticImageData;
-    blurUrl?: string;
-    width?: number;
-    height?: number;
-}
-
 export interface ClientsComponentProps {
     title: string;
     sectionId: string;
-    clients: ClientProps[];
     swiperConfig: SwiperConfig;
 }
 
@@ -262,19 +189,10 @@ export interface OurTeamComponentProps {
 
 // Partners types
 
-interface PartnerProps {
-    id: string;
-    alt: string;
-    url: StaticImageData;
-    blurUrl?: string;
-    width?: number;
-    height?: number;
-}
-
 export interface PartnersComponentProps {
     title: string;
     sectionId: string;
-    partners: PartnerProps[];
+
     swiperConfig: SwiperConfig;
 }
 
@@ -354,7 +272,7 @@ export interface SelectComponentProps {
     value?: string;
     options: {
         text: string;
-        id: string | number;
+        _id: string | number;
         subServices: SubServicesDataProps[];
     }[];
 }

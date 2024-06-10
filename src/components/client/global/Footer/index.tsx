@@ -1,16 +1,17 @@
 import TopSection from "./TopSection";
 
-import navbarConfig from "../Header/config";
 import footerConfig from "./config";
+
+import { TopSectionProps } from "@/components/client/global/Footer/footer";
 
 import styles from "./style.module.scss";
 
 const { copyright } = footerConfig;
 
-export default function Footer() {
+export default function Footer({ data }: { data: TopSectionProps }) {
     return (
         <footer className={styles.footerContainer}>
-            <TopSection />
+            <TopSection data={{ ...data }} />
             <div className={styles.bottomContainer}>
                 <section className={styles.bottomSection}>
                     <p className={styles.copyright}>{copyright}</p>

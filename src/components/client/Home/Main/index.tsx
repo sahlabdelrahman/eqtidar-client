@@ -16,9 +16,11 @@ import Partners from "../Partners";
 // import FAQ from "../FAQ";
 // import ContactUs from "../ContactUs";
 
+import { MainProps } from "@/components/client/Home/Main/main";
+
 import styles from "./style.module.scss";
 
-export default function Main() {
+export default function Main({ info }: MainProps) {
     useEffect(() => {
         AOS.init({
             once: true,
@@ -28,10 +30,10 @@ export default function Main() {
     return (
         <main className={styles.main}>
             <Banner />
-            <MessageAndVision />
+            <MessageAndVision data={info?.bannerText} />
             <OurGoals />
             <Services />
-            <Achievements />
+            <Achievements data={info?.achievements} />
             {/* <Projects /> */}
             <Clients />
             <OurTeam />

@@ -6,6 +6,11 @@ import Footer from "@/components/client/global/Footer";
 
 import LogoWithSlogan from "@/components/Images/logoWithSlogan.png";
 
+import { getData } from "@/services/index.service";
+import { APIUrlsConstants } from "@/utils/API/constants";
+
+import { InfoProps } from "@/components/client/Home/Main/info";
+
 import styles from "@/styles/not-found.module.scss";
 
 export const metadata: Metadata = {
@@ -15,7 +20,9 @@ export const metadata: Metadata = {
     },
 };
 
-export default function NotFound() {
+export default async function NotFound() {
+    const info: InfoProps = await getData({ url: APIUrlsConstants.info });
+
     return (
         <>
             <Header />
@@ -29,7 +36,15 @@ export default function NotFound() {
                     <p className={styles.text}>عذرا، الصفحة غير متوفرة</p>
                 </section>
             </main>
-            <Footer />
+            <Footer
+                data={{
+                    secondaryLogo: info.secondaryLogo,
+                    contact: info.contact,
+                    socialMedia: info.socialMedia,
+                    profileFile: info.profileFile,
+                    whoWeAre: info.whoWeAre,
+                }}
+            />
         </>
     );
 }
