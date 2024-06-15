@@ -8,4 +8,7 @@ export const APIUrlsConstants = {
     question: "/question",
     blog: "/blog",
     member: "/member",
+    login: "/auth/login",
+    register: "/auth/register",
+    logout: "/auth/logout",
 };

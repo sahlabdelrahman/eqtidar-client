@@ -15,10 +15,11 @@ const LogoComponent: FC<LogoComponentProps> = ({
     Logo = defaultLogo,
     externalPage = false,
     withSlogan = false,
+    url = "/",
 }) => {
     return (
         <Link
-            href="/"
+            href={url}
             className={`${styles.logoContainer} ${
                 inDrawer ? styles.inDrawer : ""
             } ${externalPage ? styles.externalPage : ""}`}

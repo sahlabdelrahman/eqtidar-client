@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { FormProvider, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
@@ -8,27 +9,36 @@ import ButtonSpinner from "@/components/client/global/ButtonSpinner";
 import Button from "@/components/client/global/Button";
 import { Input } from "@/components/client/global/Input";
 
+import AuthService from "@/services/auth.service";
+
 import styles from "./style.module.scss";
 
 import loginFormConfig from "./config";
 
-const { title, description, fields, buttonText, successMessage } =
-    loginFormConfig;
+const {
+    title,
+    description,
+    fields,
+    buttonText,
+    successMessage,
+    redirectSuccessPath,
+} = loginFormConfig;
 
 function LoginForm() {
     const [loading, setLoading] = useState(false);
+    const router = useRouter();
 
     const methods = useForm();
 
     const onSubmit = methods.handleSubmit(async (data) => {
         setLoading(true);
-
-        setTimeout(() => {
-            methods.reset();
-            toast.success(successMessage);
-        }, 1000);
-
-        setLoading(false);
+        const { email, password } = data;
+        AuthService.login({ email, password })
+            .then(() => {
+                router.push(redirectSuccessPath);
+                toast.success(successMessage);
+            })
+            .finally(() => setLoading(false));
     });
 
     return (
@@ -42,6 +52,7 @@ function LoginForm() {
                     }}
                     noValidate
                     autoComplete="off"
+                    method="POST"
                 >
                     <div className={styles.content}>
                         <h2 className={styles.title}>{title}</h2>

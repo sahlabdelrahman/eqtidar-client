@@ -47,6 +47,7 @@ export interface LogoComponentProps {
     Logo?: StaticImageData | string;
     externalPage?: boolean;
     withSlogan?: boolean;
+    url?: string;
 }
 
 // MessageAndVision types
@@ -217,7 +218,7 @@ type ValidationRule = {
     message: string;
 };
 
-type Field = {
+export type Field = {
     id: string;
     name: string;
     type: string;
@@ -295,13 +296,3 @@ export interface ButtonComponentProps
 }
 
 // ================================================== Pages ============================================== //
-
-// Login page
-
-export interface LoginFormComponentProps {
-    title: string;
-    description: string;
-    fields: Field[];
-    buttonText: string;
-    successMessage: string;
-}

@@ -1,6 +1,6 @@
-import { LoginFormComponentProps } from "@/types/componentProps";
+import { LoginFormConfigProps } from "../types";
 
-const LoginFormConfig: LoginFormComponentProps = {
+const LoginFormConfig: LoginFormConfigProps = {
     title: "مرحبا بعودتك",
     description:
         " يرجى تسجيل الدخول للوصول إلى لوحة التحكم الخاصة بك للتحكم في محتوى موقعك",
@@ -46,6 +46,7 @@ const LoginFormConfig: LoginFormComponentProps = {
     ],
     buttonText: "تسجيل الدخول",
     successMessage: "مرحبا بك تم تسجيل الدخول بنجاح",
+    redirectSuccessPath: "/dashboard",
 };
 
 export default LoginFormConfig;
