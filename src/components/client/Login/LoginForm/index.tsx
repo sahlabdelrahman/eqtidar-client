@@ -5,6 +5,9 @@ import { useRouter } from "next/navigation";
 import { FormProvider, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
+import { setAuthState } from "@/store/slices/authSlice";
+import { useAppDispatch } from "@/store";
+
 import ButtonSpinner from "@/components/client/global/ButtonSpinner";
 import Button from "@/components/client/global/Button";
 import { Input } from "@/components/client/global/Input";
@@ -27,6 +30,7 @@ const {
 function LoginForm() {
     const [loading, setLoading] = useState(false);
     const router = useRouter();
+    const dispatch = useAppDispatch();
 
     const methods = useForm();
 
@@ -34,9 +38,16 @@ function LoginForm() {
         setLoading(true);
         const { email, password } = data;
         AuthService.login({ email, password })
-            .then(() => {
+            .then((res) => {
                 router.push(redirectSuccessPath);
                 toast.success(successMessage);
+
+                dispatch(
+                    setAuthState({
+                        user: { ...res?.data?.data },
+                        isLoggedIn: true,
+                    })
+                );
             })
             .finally(() => setLoading(false));
     });

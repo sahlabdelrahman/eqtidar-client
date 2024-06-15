@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, MouseEvent, useState } from "react";
+import { MouseEvent, useState } from "react";
 import Link from "next/link";
 import {
     Avatar,
@@ -51,7 +51,7 @@ function DashboardHeader({
                 <h3 className={styles.title}>لوحة التحكم</h3>
             </div>
             <div className={styles.controls}>
-                {/* <Box>
+                <Box>
                     <Tooltip title={tooltipTitle}>
                         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                             <Avatar alt={name} src={avatar?.src} />
@@ -105,7 +105,7 @@ function DashboardHeader({
                             )
                         )}
                     </Menu>
-                </Box> */}
+                </Box>
             </div>
         </header>
     );

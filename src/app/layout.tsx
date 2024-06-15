@@ -1,6 +1,12 @@
 import type { Metadata, Viewport } from "next";
+import dynamic from "next/dynamic";
 import { Cairo, Kufam } from "next/font/google";
 import { ToastContainer } from "react-toastify";
+
+const ReduxProvider = dynamic(() => import("@/store/redux-provider"), {
+    ssr: false,
+});
+
 import "@/styles/style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,6 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "aos/dist/aos.css";
 
 import ogImage from "./opengraph-image.png";
+import { persistor } from "@/store";
 
 const cairo = Cairo({
     subsets: ["arabic", "latin"],
@@ -58,7 +65,8 @@ export default function RootLayout({
     return (
         <html lang="ar">
             <body className={`${cairo.className} ${kufam.className}`}>
-                {children}
+                <ReduxProvider>{children}</ReduxProvider>
+
                 <ToastContainer
                     position="top-left"
                     autoClose={4000}

@@ -3,6 +3,7 @@
 // Solve lag problem in main section and background appearance
 
 import { ReactNode, useState } from "react";
+import { useAppSelector } from "@/store";
 
 import DashboardHeader from "@/components/client/Dashboard/global/DashboardHeader";
 import DashboardSideMenu from "@/components/client/Dashboard/global/DashboardSideMenu";
@@ -12,6 +13,7 @@ import styles from "./style.module.scss";
 
 function DashboardLayout({ children }: { children: ReactNode }) {
     const [openSideMenu, setOpenSideMenu] = useState<boolean>(false);
+    const user = useAppSelector((state) => state.auth.user);
 
     const handleSideMenu = () => {
         setOpenSideMenu(!openSideMenu);
