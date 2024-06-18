@@ -45,7 +45,7 @@ const LoginFormConfig: LoginFormConfigProps = {
         },
     ],
     buttonText: "تسجيل الدخول",
-    successMessage: "مرحبا بك تم تسجيل الدخول بنجاح",
+    successMessage: "مرحبا بك تم تسجيل الدخول بنجاح.",
     redirectSuccessPath: "/dashboard",
 };
 

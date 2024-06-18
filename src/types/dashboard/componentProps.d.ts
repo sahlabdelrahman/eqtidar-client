@@ -2,20 +2,18 @@ import { FunctionComponent, SVGProps } from "react";
 
 // Header
 
-type Avatar = {
-    src: string;
-};
-
 type Link = {
     id: number;
     path: string;
     text: string;
+    key?: string;
 };
 
 type Action = {
     id: number;
     text: string;
     Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+    key?: string;
 };
 
 type MenuLinksAndActions = {
@@ -24,9 +22,9 @@ type MenuLinksAndActions = {
 };
 
 export interface DashboardHeaderConfigProps {
-    name: string;
-    avatar: Avatar;
     tooltipTitle: string;
+    redirectSuccessPath: string;
+    successMessage: string;
     menuLinksAndActions: MenuLinksAndActions;
 }
 

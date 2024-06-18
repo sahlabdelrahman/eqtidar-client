@@ -1,10 +1,12 @@
 "use client";
 
 import { MouseEvent, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useAppDispatch } from "@/store";
+import { useAppSelector } from "@/store";
 import Link from "next/link";
 import {
     Avatar,
-    Box,
     Divider,
     IconButton,
     ListItemIcon,
@@ -12,23 +14,35 @@ import {
     MenuItem,
     Tooltip,
 } from "@mui/material";
+import { toast } from "react-toastify";
 
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import { DashboardHeaderComponentProps } from "@/types/dashboard/componentProps";
 
-import styles from "./style.module.scss";
+import AuthService from "@/services/auth.service";
+import { forceLogout } from "@/store/slices/authSlice";
 
 import dashboardHeaderConfig from "./config";
 
-const { name, avatar, tooltipTitle, menuLinksAndActions } =
-    dashboardHeaderConfig;
+import styles from "./style.module.scss";
+import { getInitials } from "@/functions";
+
+const {
+    tooltipTitle,
+    menuLinksAndActions,
+    redirectSuccessPath,
+    successMessage,
+} = dashboardHeaderConfig;
 
 function DashboardHeader({
     handleSideMenu,
     openSideMenu,
 }: DashboardHeaderComponentProps) {
     const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+    const user = useAppSelector((state) => state.auth.user);
+    const router = useRouter();
+    const dispatch = useAppDispatch();
 
     const handleOpenUserMenu = (event: MouseEvent<HTMLElement>) => {
         setAnchorElUser(event.currentTarget);
@@ -36,6 +50,15 @@ function DashboardHeader({
 
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
+    };
+
+    const handleLogout = () => {
+        handleCloseUserMenu();
+        AuthService.logout().then(() => {
+            router.push(redirectSuccessPath);
+            toast.success(successMessage);
+            dispatch(forceLogout());
+        });
     };
 
     return (
@@ -51,10 +74,17 @@ function DashboardHeader({
                 <h3 className={styles.title}>لوحة التحكم</h3>
             </div>
             <div className={styles.controls}>
-                <Box>
+                <div className={styles.box}>
                     <Tooltip title={tooltipTitle}>
                         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                            <Avatar alt={name} src={avatar?.src} />
+                            <Avatar
+                                alt={user?.fullName}
+                                className={styles.avatar}
+                            >
+                                {getInitials({
+                                    fullName: user?.fullName || "",
+                                })}
+                            </Avatar>
                         </IconButton>
                     </Tooltip>
                     <Menu
@@ -73,12 +103,14 @@ function DashboardHeader({
                         }}
                         open={Boolean(anchorElUser)}
                         onClose={handleCloseUserMenu}
+                        className={styles.menu}
                     >
                         {menuLinksAndActions?.links?.map(
                             ({ id, text, path }) => (
                                 <MenuItem
                                     key={id}
                                     onClick={handleCloseUserMenu}
+                                    className={styles.listItem}
                                 >
                                     <Link
                                         href={path}
@@ -92,20 +124,28 @@ function DashboardHeader({
                         )}
                         <Divider />
                         {menuLinksAndActions?.actions?.map(
-                            ({ id, text, Icon }) => (
+                            ({ id, text, Icon, key }) => (
                                 <MenuItem
                                     key={id}
-                                    onClick={handleCloseUserMenu}
+                                    onClick={
+                                        key === "logout"
+                                            ? handleLogout
+                                            : () => {}
+                                    }
+                                    className={styles.listItem}
                                 >
                                     {text}
-                                    <ListItemIcon>
-                                        <Icon />
+
+                                    <ListItemIcon
+                                        className={styles.listItemIcon}
+                                    >
+                                        <Icon className={styles.icon} />
                                     </ListItemIcon>
                                 </MenuItem>
                             )
                         )}
                     </Menu>
-                </Box>
+                </div>
             </div>
         </header>
     );

@@ -3,11 +3,9 @@ import LogoutIcon from "@/components/Icons/LogoutIcon";
 import { DashboardHeaderConfigProps } from "@/types/dashboard/componentProps";
 
 const DashboardHeaderConfig: DashboardHeaderConfigProps = {
-    name: "Admin Dashboard",
-    avatar: {
-        src: "https://mui.com/static/images/avatar/2.jpg",
-    },
     tooltipTitle: "الإعدادات",
+    redirectSuccessPath: "/login",
+    successMessage: "تم تسجيل الخروج بنجاح.",
     menuLinksAndActions: {
         links: [
             {
@@ -21,6 +19,7 @@ const DashboardHeaderConfig: DashboardHeaderConfigProps = {
                 id: 0,
                 Icon: LogoutIcon,
                 text: "تسجيل الخروج",
+                key: "logout",
             },
         ],
     },
