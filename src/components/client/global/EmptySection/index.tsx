@@ -6,11 +6,7 @@ const EmptySection = ({
     text?: string;
 }) => {
     return (
-        <section
-            className={styles.emptySection}
-            data-aos="fade-up"
-            data-aos-duration="500"
-        >
+        <section className={styles.emptySection}>
             <p className={styles.text}>{text}</p>
         </section>
     );

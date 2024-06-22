@@ -1,0 +1,10 @@
+@import "@/styles/partials/variables";
+
+.divider {
+    display: flex;
+    width: 100%;
+    height: 2px;
+    margin: 10px 0;
+    background-color: $grayBackgroundColor;
+    border-radius: 2px;
+}
