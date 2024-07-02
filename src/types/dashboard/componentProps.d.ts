@@ -53,7 +53,7 @@ export interface DashboardSideMenuComponentProps {
 
 // Dynamic form
 
-interface Field {
+export interface Field {
     id: string;
     name: string;
     type: string;
@@ -61,22 +61,33 @@ interface Field {
     placeholder: string;
     multiline?: boolean;
     validation: any;
+    options?: any;
 }
 
 export interface FormDataProps {
-    page: string;
-    api: string;
+    page?: string;
+    api?: string;
     title?: string;
     description?: string;
     submitText?: string;
     fields: Field[];
-    success: {
+    success?: {
         message: string;
         redirectUrl?: string;
     };
 }
 
+export interface SubmitHandlerResponse {
+    status: number;
+    success: boolean;
+    message: string;
+    data: any;
+}
+
 export interface DynamicFormComponentProps {
     formData: FormDataProps;
-    initialValues?: any;
+    submitHandler: (
+        data: any,
+        id?: number
+    ) => Promise<SubmitHandlerResponse | null>;
 }

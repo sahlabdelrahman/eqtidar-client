@@ -1,5 +1,8 @@
 import { DynamicFormComponentProps } from "@/types/dashboard/componentProps";
 
+import APIConfig from "@/utils/API";
+import { APIUrlsConstants } from "@/utils/API/constants";
+
 const GoalsConfig: DynamicFormComponentProps = {
     formData: {
         page: "goals",
@@ -10,8 +13,8 @@ const GoalsConfig: DynamicFormComponentProps = {
         fields: [
             {
                 id: "goal",
-                name: "goal",
-                type: "goal",
+                name: "text",
+                type: "text",
                 label: "الهدف",
                 placeholder: "الهدف",
                 multiline: true,
@@ -32,6 +35,30 @@ const GoalsConfig: DynamicFormComponentProps = {
             },
         ],
         submitText: "إرسال",
+    },
+    submitHandler: async ({ data, id }) => {
+        if (id) {
+            const response = await APIConfig.patch(
+                `${APIUrlsConstants.goal}/${id}`,
+                { ...data }
+            );
+            return {
+                status: response?.status,
+                success: response?.data?.success,
+                message: response?.data?.message,
+                data: response?.data?.data,
+            };
+        } else {
+            const response = await APIConfig.post(APIUrlsConstants.goal, {
+                ...data,
+            });
+            return {
+                status: response?.status,
+                success: response?.data?.success,
+                message: response?.data?.message,
+                data: response?.data?.data,
+            };
+        }
     },
 };
 

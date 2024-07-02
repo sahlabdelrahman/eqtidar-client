@@ -2,16 +2,16 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import EmptySection from "../../../global/EmptySection";
-import Card from "../Card";
+import Card from "./Card";
 
-import ourGoalsConfig from "../config";
-import { GoalProps } from "../ourGoals";
+import { PartnerProps } from "../partners";
+import partnersConfig from "../config";
 
 import styles from "./style.module.scss";
 
-const { swiperConfig } = ourGoalsConfig;
+const { swiperConfig } = partnersConfig;
 
-function GoalsCards({
+function PartnerCards({
     inDashboard = false,
     data,
     loading,
@@ -19,9 +19,9 @@ function GoalsCards({
     handleDelete,
 }: {
     inDashboard?: boolean;
-    data: GoalProps[];
+    data: PartnerProps[];
     loading: boolean;
-    handleEdit?: (goal: GoalProps) => void;
+    handleEdit?: (partner: PartnerProps) => void;
     handleDelete?: (id: string) => Promise<void>;
 }) {
     return (
@@ -35,13 +35,13 @@ function GoalsCards({
                     }`}
                 >
                     {inDashboard ? (
-                        data?.map((goal) => (
+                        data?.map((partner) => (
                             <div
-                                key={goal?._id}
+                                key={partner?._id}
                                 className={styles.cardContainer}
                             >
                                 <Card
-                                    goal={goal}
+                                    partner={partner}
                                     enableAOS={false}
                                     handleEdit={handleEdit}
                                     handleDelete={handleDelete}
@@ -51,9 +51,9 @@ function GoalsCards({
                         ))
                     ) : (
                         <Swiper {...swiperConfig}>
-                            {data?.map((goal) => (
-                                <SwiperSlide key={goal?._id}>
-                                    <Card goal={goal} />
+                            {data?.map((partner) => (
+                                <SwiperSlide key={partner?._id}>
+                                    <Card partner={partner} />
                                 </SwiperSlide>
                             ))}
                         </Swiper>
@@ -64,4 +64,4 @@ function GoalsCards({
     );
 }
 
-export default GoalsCards;
+export default PartnerCards;

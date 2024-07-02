@@ -1,0 +1,25 @@
+@import "@/styles/partials/variables";
+
+.card {
+    position: relative;
+    .imageContainer {
+        height: 120px;
+        cursor: grab;
+        .image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &.clientPage {
+        .imageContainer {
+            opacity: 0.7;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

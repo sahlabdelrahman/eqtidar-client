@@ -1,7 +1,5 @@
 import { Autoplay, Pagination } from "swiper/modules";
 
-import Logo02 from "@/components/Images/logo_02.jpeg";
-
 import { ClientsComponentProps } from "@/types/componentProps";
 
 const ClientsConfig: ClientsComponentProps = {

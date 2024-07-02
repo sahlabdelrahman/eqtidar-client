@@ -1,4 +1,4 @@
-import LogoutIcon from "@/components/Icons/LogoutIcon";
+import PageMenuIcon from "@/components/Icons/PageMenuIcon";
 
 import { DashboardSideMenuConfigProps } from "@/types/dashboard/componentProps";
 
@@ -8,57 +8,50 @@ const DashboardSideMenuConfig: DashboardSideMenuConfigProps = {
             id: 3,
             path: "/dashboard/goals",
             key: "/dashboard/goals",
-            Icon: LogoutIcon,
+            Icon: PageMenuIcon,
             text: "الأهداف",
         },
         {
             id: 4,
             path: "/dashboard/services",
             key: "/dashboard/services",
-            Icon: LogoutIcon,
+            Icon: PageMenuIcon,
             text: "الخدمات",
         },
-        {
-            id: 5,
-            path: "/dashboard/achievements",
-            key: "/dashboard/achievements",
-            Icon: LogoutIcon,
-            text: "الإنجازات",
-        },
-        {
-            id: 6,
-            path: "/dashboard/projects",
-            key: "/dashboard/projects",
-            Icon: LogoutIcon,
-            text: "المشاريع",
-        },
+        // {
+        //     id: 5,
+        //     path: "/dashboard/achievements",
+        //     key: "/dashboard/achievements",
+        //     Icon: PageMenuIcon,
+        //     text: "الإنجازات",
+        // },
+        // {
+        //     id: 6,
+        //     path: "/dashboard/projects",
+        //     key: "/dashboard/projects",
+        //     Icon: PageMenuIcon,
+        //     text: "المشاريع",
+        // },
         {
             id: 7,
             path: "/dashboard/clients",
             key: "/dashboard/clients",
-            Icon: LogoutIcon,
+            Icon: PageMenuIcon,
             text: "العملاء",
         },
         {
             id: 8,
-            path: "/dashboard/team",
-            key: "/dashboard/team",
-            Icon: LogoutIcon,
-            text: "الفريق",
-        },
-        {
-            id: 9,
             path: "/dashboard/partners",
             key: "/dashboard/partners",
-            Icon: LogoutIcon,
+            Icon: PageMenuIcon,
             text: "الشركاء",
         },
         {
-            id: 1,
-            path: "/dashboard/settings",
-            key: "/dashboard/settings",
-            Icon: LogoutIcon,
-            text: "الإعدادات",
+            id: 9,
+            path: "/dashboard/team",
+            key: "/dashboard/team",
+            Icon: PageMenuIcon,
+            text: "الفريق",
         },
     ],
 };

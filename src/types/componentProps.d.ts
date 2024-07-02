@@ -85,20 +85,6 @@ export interface SectionComponentProps {
     children: ReactNode;
 }
 
-// OurGoals types
-
-interface OurGoalsDataProps {
-    id: number;
-    text: string;
-}
-
-export interface OurGoalsComponentProps {
-    title: string;
-    sectionId: string;
-    data: OurGoalsDataProps[];
-    swiperConfig: SwiperConfig;
-}
-
 // Projects types
 
 interface AutoplayConfig {

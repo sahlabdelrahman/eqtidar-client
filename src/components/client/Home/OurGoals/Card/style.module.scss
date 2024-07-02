@@ -1,7 +1,9 @@
 @import "@/styles/partials/variables";
 
 .card {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 15px;
@@ -15,10 +17,14 @@
     //     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 9px rgba(0, 0, 0, 0.17);
     min-height: 132px;
+    height: 100%;
 
     p {
         font-size: 18px;
         font-weight: 400;
-        text-align: center;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

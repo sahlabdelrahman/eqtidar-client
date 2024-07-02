@@ -2,16 +2,16 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import EmptySection from "../../../global/EmptySection";
-import Card from "../Card";
+import Card from "./Card";
 
-import ourGoalsConfig from "../config";
-import { GoalProps } from "../ourGoals";
+import { ClientProps } from "../clients";
+import clientsConfig from "../config";
 
 import styles from "./style.module.scss";
 
-const { swiperConfig } = ourGoalsConfig;
+const { swiperConfig } = clientsConfig;
 
-function GoalsCards({
+function ClientCards({
     inDashboard = false,
     data,
     loading,
@@ -19,9 +19,9 @@ function GoalsCards({
     handleDelete,
 }: {
     inDashboard?: boolean;
-    data: GoalProps[];
+    data: ClientProps[];
     loading: boolean;
-    handleEdit?: (goal: GoalProps) => void;
+    handleEdit?: (client: ClientProps) => void;
     handleDelete?: (id: string) => Promise<void>;
 }) {
     return (
@@ -35,13 +35,13 @@ function GoalsCards({
                     }`}
                 >
                     {inDashboard ? (
-                        data?.map((goal) => (
+                        data?.map((client) => (
                             <div
-                                key={goal?._id}
+                                key={client?._id}
                                 className={styles.cardContainer}
                             >
                                 <Card
-                                    goal={goal}
+                                    client={client}
                                     enableAOS={false}
                                     handleEdit={handleEdit}
                                     handleDelete={handleDelete}
@@ -51,9 +51,9 @@ function GoalsCards({
                         ))
                     ) : (
                         <Swiper {...swiperConfig}>
-                            {data?.map((goal) => (
-                                <SwiperSlide key={goal?._id}>
-                                    <Card goal={goal} />
+                            {data?.map((client) => (
+                                <SwiperSlide key={client?._id}>
+                                    <Card client={client} />
                                 </SwiperSlide>
                             ))}
                         </Swiper>
@@ -64,4 +64,4 @@ function GoalsCards({
     );
 }
 
-export default GoalsCards;
+export default ClientCards;

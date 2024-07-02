@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FormControl, MenuItem, Select } from "@mui/material";
+import { FormControl, Select } from "@mui/material";
 
 import { Controller, useFormContext } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
@@ -84,7 +84,7 @@ export const SelectInput: React.FC<SelectComponentProps> = ({
     );
 };
 
-const InputError: FC<InputErrorComponentProps> = ({ message }) => {
+export const InputError: FC<InputErrorComponentProps> = ({ message }) => {
     return (
         <motion.p className={styles.inputError} {...framer_error}>
             {message}
@@ -92,7 +92,7 @@ const InputError: FC<InputErrorComponentProps> = ({ message }) => {
     );
 };
 
-const framer_error = {
+export const framer_error = {
     initial: { opacity: 0, y: 10 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: 10 },

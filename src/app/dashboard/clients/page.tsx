@@ -1,9 +1,9 @@
-import Main from "@/components/client/Dashboard/Goals";
+import Main from "@/components/client/Dashboard/Clients";
 
 export const metadata = {
     title: {
-        default: "الأهداف",
-        template: `%s | الأهداف`,
+        default: "العملاء",
+        template: `%s | العملاء`,
     },
 };
 
