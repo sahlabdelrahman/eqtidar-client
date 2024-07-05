@@ -3,7 +3,7 @@ import { DynamicFormComponentProps } from "@/types/dashboard/componentProps";
 import APIConfig from "@/utils/API";
 import { APIUrlsConstants } from "@/utils/API/constants";
 
-const clientsConfig: DynamicFormComponentProps = {
+const ourTeamConfig: DynamicFormComponentProps = {
     formData: {
         fields: [
             {
@@ -29,27 +29,73 @@ const clientsConfig: DynamicFormComponentProps = {
                 },
             },
             {
-                id: "url",
-                name: "url",
+                id: "role",
+                name: "role",
                 type: "text",
-                label: "الرابط",
-                placeholder: "الرابط",
+                label: "الدور",
+                placeholder: "الدور",
                 multiline: false,
                 validation: {
                     required: {
                         value: true,
-                        message: "يجب ادخال الرابط",
+                        message: "يجب ادخال الدور",
                     },
                     minLength: {
                         value: 2,
-                        message: "يجب أن يكون الرابط أكثر من حرفين",
+                        message: "يجب أن يكون الدور أكثر من حرفين",
                     },
                     maxLength: {
                         value: 10000,
-                        message: "يجب أن يكون الرابط أقل من ١٠٠٠٠ حرفًا",
+                        message: "يجب أن يكون الدور أقل من ١٠٠٠٠ حرفًا",
                     },
                 },
             },
+            {
+                id: "description",
+                name: "description",
+                type: "text",
+                label: "الوصف",
+                placeholder: "الوصف",
+                multiline: true,
+                validation: {
+                    required: {
+                        value: true,
+                        message: "يجب ادخال الوصف",
+                    },
+                    minLength: {
+                        value: 2,
+                        message: "يجب أن يكون الوصف أكثر من حرفين",
+                    },
+                    maxLength: {
+                        value: 10000,
+                        message: "يجب أن يكون الوصف أقل من ١٠٠٠٠ حرفًا",
+                    },
+                },
+            },
+            {
+                id: "position",
+                name: "position",
+                type: "single-select",
+                label: "الفريق",
+                placeholder: "الفريق",
+                options: [
+                    {
+                        text: "مجلس الإدارة",
+                        value: "board_member",
+                    },
+                    {
+                        text: "فريق العمل",
+                        value: "team_member",
+                    },
+                ],
+                validation: {
+                    required: {
+                        value: true,
+                        message: "يجب اختيار الفريق",
+                    },
+                },
+            },
+
             {
                 id: "image",
                 name: "files",
@@ -69,7 +115,7 @@ const clientsConfig: DynamicFormComponentProps = {
     submitHandler: async ({ data, id }) => {
         if (id) {
             const response = await APIConfig.patch(
-                `/${APIUrlsConstants.client}/${id}`,
+                `${APIUrlsConstants.member}/${id}`,
                 {
                     ...data,
                 }
@@ -81,7 +127,7 @@ const clientsConfig: DynamicFormComponentProps = {
                 data: response?.data?.data,
             };
         } else {
-            const response = await APIConfig.post(APIUrlsConstants.client, {
+            const response = await APIConfig.post(APIUrlsConstants.member, {
                 ...data,
             });
             return {
@@ -94,4 +140,4 @@ const clientsConfig: DynamicFormComponentProps = {
     },
 };
 
-export default clientsConfig;
+export default ourTeamConfig;

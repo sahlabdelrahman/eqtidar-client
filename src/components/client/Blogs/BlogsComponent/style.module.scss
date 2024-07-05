@@ -6,6 +6,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     .card {
+        position: relative;
         display: flex;
         flex-direction: column;
         background-color: $lightGrayBackgroundColor;

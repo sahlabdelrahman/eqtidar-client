@@ -1,5 +1,4 @@
-// TODO: Request send even that hasMore is false "Check network tag when scrolling"
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 
 interface InfiniteScrollConfig<T> {
     initialItems: T[];
@@ -26,38 +25,46 @@ const useInfiniteScroll = <T>({
 
     const bottomBoundaryRef = useRef<HTMLDivElement>(null);
 
+    // Fetch data function memoized with useCallback
+    const fetchData = useCallback(async () => {
+        if (isLoading || !hasMore) return; // Prevent fetching if already loading or no more items
+        setIsLoading(true);
+        try {
+            const { items: newItems, hasNextPage } = await fetchItems(page);
+            setItems((prevItems) => [...prevItems, ...newItems]);
+            setPage((prevPage) => prevPage + 1);
+            setHasMore(hasNextPage);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    }, [fetchItems, page, hasMore, isLoading]);
+
     useEffect(() => {
-        const fetchData = async () => {
-            setIsLoading(true);
-            try {
-                const { items: newItems, hasNextPage } = await fetchItems(page);
-                if (!hasNextPage) {
-                    setHasMore(false);
-                }
-                setItems((prevItems) => [...prevItems, ...newItems]);
-                setPage((prevPage) => prevPage + 1);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
+        fetchData();
+    }, [fetchData]); // Only call fetchData when dependencies change
 
-        const handleScroll = () => {
-            if (bottomBoundaryRef.current) {
-                const { top } =
-                    bottomBoundaryRef.current.getBoundingClientRect();
-                if (top <= window.innerHeight && hasMore && !isLoading) {
-                    fetchData();
-                }
+    const handleScroll = useCallback(() => {
+        if (bottomBoundaryRef.current) {
+            const { top } = bottomBoundaryRef.current.getBoundingClientRect();
+            if (top <= window.innerHeight && hasMore && !isLoading) {
+                fetchData();
             }
-        };
+        }
+    }, [fetchData, hasMore, isLoading]);
 
+    useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [fetchItems, page, hasMore, isLoading]);
+    }, [handleScroll]);
+
+    // Reset items when initialItems change
+    useEffect(() => {
+        setItems(initialItems);
+    }, [initialItems]);
 
     return { items, isLoading, hasMore, bottomBoundaryRef };
 };

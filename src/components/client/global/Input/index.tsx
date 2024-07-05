@@ -57,7 +57,7 @@ export const Input: React.FC<InputComponentProps> = ({
                     aria-label={placeholder}
                     placeholder={placeholder}
                     {...register(name, validation)}
-                    rows={6}
+                    rows={10}
                 ></textarea>
             ) : (
                 <input

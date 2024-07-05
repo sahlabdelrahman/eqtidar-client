@@ -3,50 +3,50 @@ import { DynamicFormComponentProps } from "@/types/dashboard/componentProps";
 import APIConfig from "@/utils/API";
 import { APIUrlsConstants } from "@/utils/API/constants";
 
-const clientsConfig: DynamicFormComponentProps = {
+const blogsConfig: DynamicFormComponentProps = {
     formData: {
         fields: [
             {
-                id: "name",
-                name: "name",
+                id: "title",
+                name: "title",
                 type: "text",
-                label: "الأسم",
-                placeholder: "الأسم",
+                label: "العنوان",
+                placeholder: "العنوان",
                 multiline: false,
                 validation: {
                     required: {
                         value: true,
-                        message: "يجب ادخال الأسم",
+                        message: "يجب ادخال العنوان",
                     },
                     minLength: {
                         value: 2,
-                        message: "يجب أن يكون الأسم أكثر من حرفين",
+                        message: "يجب أن يكون العنوان أكثر من حرفين",
                     },
                     maxLength: {
                         value: 10000,
-                        message: "يجب أن يكون الأسم أقل من ١٠٠٠٠ حرفًا",
+                        message: "يجب أن يكون العنوان أقل من ١٠٠٠٠ حرفًا",
                     },
                 },
             },
             {
-                id: "url",
-                name: "url",
+                id: "description",
+                name: "description",
                 type: "text",
-                label: "الرابط",
-                placeholder: "الرابط",
-                multiline: false,
+                label: "الوصف",
+                placeholder: "الوصف",
+                multiline: true,
                 validation: {
                     required: {
                         value: true,
-                        message: "يجب ادخال الرابط",
+                        message: "يجب ادخال الوصف",
                     },
                     minLength: {
                         value: 2,
-                        message: "يجب أن يكون الرابط أكثر من حرفين",
+                        message: "يجب أن يكون الوصف أكثر من حرفين",
                     },
                     maxLength: {
                         value: 10000,
-                        message: "يجب أن يكون الرابط أقل من ١٠٠٠٠ حرفًا",
+                        message: "يجب أن يكون الوصف أقل من ١٠٠٠٠ حرفًا",
                     },
                 },
             },
@@ -69,7 +69,7 @@ const clientsConfig: DynamicFormComponentProps = {
     submitHandler: async ({ data, id }) => {
         if (id) {
             const response = await APIConfig.patch(
-                `/${APIUrlsConstants.client}/${id}`,
+                `${APIUrlsConstants.blog}/${id}`,
                 {
                     ...data,
                 }
@@ -81,8 +81,9 @@ const clientsConfig: DynamicFormComponentProps = {
                 data: response?.data?.data,
             };
         } else {
-            const response = await APIConfig.post(APIUrlsConstants.client, {
+            const response = await APIConfig.post(APIUrlsConstants.blog, {
                 ...data,
+                images: [data?.image],
             });
             return {
                 status: response?.status,
@@ -94,4 +95,4 @@ const clientsConfig: DynamicFormComponentProps = {
     },
 };
 
-export default clientsConfig;
+export default blogsConfig;

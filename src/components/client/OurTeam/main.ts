@@ -1,5 +1,10 @@
 import { ImageProps } from "@/types";
 
+export enum Position {
+    TeamMember = "team_member",
+    BoardMember = "board_member",
+}
+
 export interface MemberProps {
     _id: string;
     name: string;
@@ -25,6 +30,20 @@ export interface MembersProps {
     prev: boolean | null;
     next: boolean | null;
 }
+
+export const initialMembersState: MembersProps = {
+    items: [],
+    itemCount: 0,
+    offset: 0,
+    perPage: 0,
+    totalPages: 0,
+    page: 0,
+    pagingCounter: 0,
+    hasPrevPage: false,
+    hasNextPage: false,
+    prev: null,
+    next: null,
+};
 
 export interface OurTeamConfigProps {
     ourBoard: {

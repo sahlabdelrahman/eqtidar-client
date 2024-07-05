@@ -12,7 +12,7 @@ const partnersConfig: DynamicFormComponentProps = {
                 type: "text",
                 label: "الأسم",
                 placeholder: "الأسم",
-                multiline: true,
+                multiline: false,
                 validation: {
                     required: {
                         value: true,
@@ -34,7 +34,7 @@ const partnersConfig: DynamicFormComponentProps = {
                 type: "text",
                 label: "الرابط",
                 placeholder: "الرابط",
-                multiline: true,
+                multiline: false,
                 validation: {
                     required: {
                         value: true,

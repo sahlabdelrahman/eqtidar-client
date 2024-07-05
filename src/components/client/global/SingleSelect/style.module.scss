@@ -1,0 +1,39 @@
+@import "@/styles/partials/variables";
+
+.inputComponent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+
+    .labelAndError {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            color: $secondaryTextColor;
+            font-weight: 500;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .inputError {
+            font-weight: 500;
+            color: #f44336;
+        }
+    }
+
+    select {
+        width: 100%;
+        background: $grayBackgroundColor;
+        outline: none !important;
+        font-weight: 400;
+        font-size: 14px;
+
+        option {
+            color: $mainTextColor !important;
+        }
+    }
+}

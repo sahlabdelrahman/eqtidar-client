@@ -53,6 +53,13 @@ const DashboardSideMenuConfig: DashboardSideMenuConfigProps = {
             Icon: PageMenuIcon,
             text: "الفريق",
         },
+        {
+            id: 10,
+            path: "/dashboard/blogs",
+            key: "/dashboard/blogs",
+            Icon: PageMenuIcon,
+            text: "المدونات",
+        },
     ],
 };
 

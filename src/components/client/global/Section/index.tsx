@@ -10,12 +10,15 @@ const Section: FC<SectionComponentProps> = ({
     title,
     description,
     dark = false,
+    inDashboard = false,
     children,
 }) => {
     return (
         <section
             id={sectionId}
-            className={`${styles.section} ${dark ? styles.dark : ""}`}
+            className={`${styles.section} ${dark ? styles.dark : ""} ${
+                inDashboard ? styles.inDashboard : styles.notInDashboard
+            } `}
         >
             <div className={styles.container}>
                 {title && <SectionTitle title={title} />}

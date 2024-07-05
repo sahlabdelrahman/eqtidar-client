@@ -3,7 +3,7 @@ import Main from "@/components/client/Blogs/Main";
 import { getData } from "@/services/index.service";
 import { APIUrlsConstants } from "@/utils/API/constants";
 
-import { BlogsProps } from "@/components/client/Blogs/Main/main";
+import { BlogProps } from "@/components/client/Blogs/Main/main";
 
 export const metadata = {
     title: {
@@ -13,8 +13,8 @@ export const metadata = {
 };
 
 export default async function Blogs() {
-    const blogs: BlogsProps = await getData({
-        url: `${APIUrlsConstants.blog}?page=0&size=30`,
+    const blogs: BlogProps[] = await getData({
+        url: `${APIUrlsConstants.blog}`,
     });
     return (
         <>

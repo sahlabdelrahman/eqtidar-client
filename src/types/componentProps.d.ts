@@ -83,6 +83,7 @@ export interface SectionComponentProps {
     dark?: boolean;
     styles?: StyleHTMLAttributes;
     children: ReactNode;
+    inDashboard?: boolean;
 }
 
 // Projects types
@@ -261,6 +262,19 @@ export interface SelectComponentProps {
         text: string;
         _id: string | number;
         subServices: SubServicesDataProps[];
+    }[];
+}
+export interface SingleSelectComponentProps {
+    name: string;
+    label: string;
+    id: string;
+    placeholder: string;
+    validation?: any;
+    multiline?: boolean;
+    value?: string;
+    options: {
+        text: string;
+        value: string;
     }[];
 }
 

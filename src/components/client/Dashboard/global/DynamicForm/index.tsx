@@ -12,6 +12,7 @@ import { toast } from "react-toastify";
 import { Input } from "@/components/client/global/Input";
 import { ImageUpload } from "@/components/client/global/ImageUpload";
 import { SelectInput } from "@/components/client/global/Select";
+import { SingleSelectInput } from "@/components/client/global/SingleSelect";
 import Button from "@/components/client/global/Button";
 import ButtonSpinner from "@/components/client/global/ButtonSpinner";
 
@@ -25,11 +26,23 @@ import styles from "./style.module.scss";
 interface DynamicFormProps extends DynamicFormComponentProps {
     defaultValues?: Record<string, any>;
     id?: string; // ID for editing
+    mode?: string;
+    blogsPage?: boolean;
 }
 
-const Fields = ({ fields }: { fields: Field[] }) => {
+const Fields = ({
+    fields,
+    mode,
+    blogsPage = false,
+}: {
+    fields: Field[];
+    mode?: string;
+    blogsPage?: boolean;
+}) => {
     return (
-        <div className={styles.fields}>
+        <div
+            className={`${styles.fields} ${blogsPage ? styles.blogsPage : ""}`}
+        >
             {fields?.map((field) => {
                 switch (field.type) {
                     case "select":
@@ -40,8 +53,26 @@ const Fields = ({ fields }: { fields: Field[] }) => {
                                 options={field?.options || []}
                             />
                         );
+                    case "single-select":
+                        return (
+                            <SingleSelectInput
+                                key={field?.id}
+                                {...field}
+                                options={field?.options || []}
+                            />
+                        );
                     case "image":
-                        return <ImageUpload key={field?.id} {...field} />;
+                        return (
+                            <ImageUpload
+                                key={field?.id}
+                                {...field}
+                                validation={
+                                    mode === "edit"
+                                        ? {}
+                                        : { ...field.validation }
+                                }
+                            />
+                        );
                     default:
                         return <Input key={field?.id} {...field} />;
                 }
@@ -55,6 +86,8 @@ const DynamicForm: FC<DynamicFormProps> = ({
     submitHandler,
     defaultValues,
     id,
+    mode,
+    blogsPage = false,
 }) => {
     const { fields } = formData;
 
@@ -89,7 +122,7 @@ const DynamicForm: FC<DynamicFormProps> = ({
                 noValidate
                 autoComplete="off"
             >
-                <Fields fields={fields} />
+                <Fields fields={fields} mode={mode} blogsPage={blogsPage} />
                 <div className={styles.buttonContainer}>
                     <Button
                         type="submit"
