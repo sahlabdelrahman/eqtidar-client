@@ -38,10 +38,10 @@ export default async function NotFound() {
             </main>
             <Footer
                 data={{
-                    contact: info.contact,
-                    socialMedia: info.socialMedia,
-                    profileFile: info.profileFile,
-                    whoWeAre: info.whoWeAre,
+                    contact: info?.contact,
+                    socialMedia: info?.socialMedia,
+                    profileFile: info?.profileFile,
+                    whoWeAre: info?.whoWeAre,
                 }}
             />
         </>

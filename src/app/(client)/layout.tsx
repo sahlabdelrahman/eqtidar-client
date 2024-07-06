@@ -22,20 +22,19 @@ export default async function Layout({
     children: React.ReactNode;
 }) {
     const info: InfoProps = await getData({ url: APIUrlsConstants.info });
-
     return (
         <>
             <Header />
             {children}
             <Footer
                 data={{
-                    contact: info.contact,
-                    socialMedia: info.socialMedia,
-                    profileFile: info.profileFile,
-                    whoWeAre: info.whoWeAre,
+                    contact: info?.contact,
+                    socialMedia: info?.socialMedia,
+                    profileFile: info?.profileFile,
+                    whoWeAre: info?.whoWeAre,
                 }}
             />
-            <Controls data={{ whatsapp: info.contact.whatsapp }} />
+            <Controls data={{ whatsapp: info?.contact?.whatsapp }} />
         </>
     );
 }
