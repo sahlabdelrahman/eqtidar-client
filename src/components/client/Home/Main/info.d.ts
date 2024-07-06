@@ -17,7 +17,6 @@ export interface BannerTextProps {
 
 export interface InfoProps {
     mainLogo: ImageProps;
-    secondaryLogo: ImageProps;
     bannerImage: ImageProps;
     bannerText: BannerTextProps;
     achievements: {

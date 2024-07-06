@@ -29,7 +29,6 @@ export default async function Layout({
             {children}
             <Footer
                 data={{
-                    secondaryLogo: info.secondaryLogo,
                     contact: info.contact,
                     socialMedia: info.socialMedia,
                     profileFile: info.profileFile,

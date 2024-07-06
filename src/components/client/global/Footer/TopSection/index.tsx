@@ -87,7 +87,6 @@ export default function TopSection({ data }: { data: TopSectionProps }) {
                             </a>
                         ))}
                     </div>
-                    {/* TODO: Replace this path with path of file after uploading file on server */}
                     <a
                         href={getProperFileUrl({
                             filePath: "uploads/files/profileFile",

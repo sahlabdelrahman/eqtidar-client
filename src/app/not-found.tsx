@@ -38,7 +38,6 @@ export default async function NotFound() {
             </main>
             <Footer
                 data={{
-                    secondaryLogo: info.secondaryLogo,
                     contact: info.contact,
                     socialMedia: info.socialMedia,
                     profileFile: info.profileFile,

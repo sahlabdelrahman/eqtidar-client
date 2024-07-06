@@ -29,7 +29,6 @@ export interface FooterConfigProps {
 }
 
 export interface TopSectionProps {
-    secondaryLogo: ImageProps;
     contact: {
         [mobile: string]: ContactProps;
         [whatsapp: string]: ContactProps;
