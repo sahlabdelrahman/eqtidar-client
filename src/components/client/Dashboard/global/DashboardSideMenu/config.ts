@@ -5,6 +5,13 @@ import { DashboardSideMenuConfigProps } from "@/types/dashboard/componentProps";
 const DashboardSideMenuConfig: DashboardSideMenuConfigProps = {
     links: [
         {
+            id: 0,
+            path: "/dashboard",
+            key: "/dashboard",
+            Icon: PageMenuIcon,
+            text: "الصفحة الرئيسية",
+        },
+        {
             id: 3,
             path: "/dashboard/goals",
             key: "/dashboard/goals",

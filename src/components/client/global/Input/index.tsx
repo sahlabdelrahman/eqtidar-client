@@ -66,6 +66,7 @@ export const Input: React.FC<InputComponentProps> = ({
                     aria-label={placeholder}
                     placeholder={placeholder}
                     {...register(name, validation)}
+                    min={0}
                 />
             )}
         </div>

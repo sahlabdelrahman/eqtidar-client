@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Aos from "aos";
 
-import { getProperImageUrl } from "@/utils/helpers";
+import { getProperFileUrl } from "@/utils/helpers";
 
 import { MemberProps } from "../main";
 
@@ -35,13 +35,13 @@ export default function TeamMember({ member }: { member: MemberProps }) {
                     <div className={styles.avatarContainer}>
                         <Image
                             alt={alt}
-                            src={getProperImageUrl({
+                            src={getProperFileUrl({
                                 filePath: url,
                             })}
                             className={styles.avatar}
                             loading="lazy"
                             placeholder="blur"
-                            blurDataURL={getProperImageUrl({
+                            blurDataURL={getProperFileUrl({
                                 filePath: blurUrl,
                             })}
                             width={width}

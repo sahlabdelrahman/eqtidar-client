@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import ControlsOverlay from "@/components/client/global/ControlsOverlay";
 
-import { getProperImageUrl } from "@/utils/helpers";
+import { getProperFileUrl } from "@/utils/helpers";
 
 import styles from "./style.module.scss";
 import { PartnerProps } from "../../partners";
@@ -57,13 +57,13 @@ function Card({
             <div className={styles.imageContainer}>
                 <Image
                     alt={alt}
-                    src={getProperImageUrl({
+                    src={getProperFileUrl({
                         filePath: url,
                     })}
                     className={styles.image}
                     loading="lazy"
                     placeholder="blur"
-                    blurDataURL={getProperImageUrl({
+                    blurDataURL={getProperFileUrl({
                         filePath: blurUrl,
                     })}
                     width={width}

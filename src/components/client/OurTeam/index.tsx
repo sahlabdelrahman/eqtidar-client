@@ -12,7 +12,7 @@ import TextComp from "../global/TextComp";
 import ControlsOverlay from "../global/ControlsOverlay";
 
 import { getData } from "@/services/index.service";
-import { getProperImageUrl } from "@/utils/helpers";
+import { getProperFileUrl } from "@/utils/helpers";
 import { APIUrlsConstants } from "@/utils/API/constants";
 
 import { MemberProps, MembersProps } from "./main";
@@ -63,13 +63,13 @@ export default function OurTeam({
                     <div className={styles.imageContainer}>
                         <Image
                             alt={member?.image?.alt}
-                            src={getProperImageUrl({
+                            src={getProperFileUrl({
                                 filePath: member?.image?.url,
                             })}
                             className={styles.image}
                             loading="lazy"
                             placeholder="blur"
-                            blurDataURL={getProperImageUrl({
+                            blurDataURL={getProperFileUrl({
                                 filePath: member?.image?.blurUrl,
                             })}
                             width={member?.image?.width}
@@ -93,13 +93,13 @@ export default function OurTeam({
                     <div className={styles.imageContainer}>
                         <Image
                             alt={member?.image?.alt}
-                            src={getProperImageUrl({
+                            src={getProperFileUrl({
                                 filePath: member?.image?.url,
                             })}
                             className={styles.image}
                             loading="lazy"
                             placeholder="blur"
-                            blurDataURL={getProperImageUrl({
+                            blurDataURL={getProperFileUrl({
                                 filePath: member?.image?.blurUrl,
                             })}
                             width={member?.image?.width}
@@ -116,7 +116,7 @@ export default function OurTeam({
     // Define fetchItems functions using useCallback
     const fetchBoardMembers = useCallback(async (page: number) => {
         const response = await getData({
-            url: `${APIUrlsConstants.member}?page=${page}&size=30&position=board_member`,
+            url: `${APIUrlsConstants.member}?page=${page}&size=50&position=board_member`,
         });
         return {
             items: response.items,
@@ -126,7 +126,7 @@ export default function OurTeam({
 
     const fetchTeamMembers = useCallback(async (page: number) => {
         const response = await getData({
-            url: `${APIUrlsConstants.member}?page=${page}&size=30&position=team_member`,
+            url: `${APIUrlsConstants.member}?page=${page}&size=50&position=team_member`,
         });
         return {
             items: response.items,

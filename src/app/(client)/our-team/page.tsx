@@ -14,10 +14,10 @@ export const metadata = {
 
 export default async function OurTeam() {
     const boardMembers: MembersProps = await getData({
-        url: `${APIUrlsConstants.member}?page=0&size=30&position=board_member`,
+        url: `${APIUrlsConstants.member}?page=0&size=50&position=board_member`,
     });
     const teamMembers: MembersProps = await getData({
-        url: `${APIUrlsConstants.member}?page=0&size=30&position=team_member`,
+        url: `${APIUrlsConstants.member}?page=0&size=50&position=team_member`,
     });
     return (
         <>

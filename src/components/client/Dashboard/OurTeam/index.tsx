@@ -33,7 +33,7 @@ export default function Main() {
     const [mode, setMode] = useState<"add" | "edit">("add");
 
     const { response, loading, apiRequest } = useAPI({
-        url: `${APIUrlsConstants.member}?page=0&size=30&position=team_member`,
+        url: `${APIUrlsConstants.member}?page=0&size=50&position=team_member`,
     });
 
     const {
@@ -41,7 +41,7 @@ export default function Main() {
         loading: boardMembersLoading,
         apiRequest: apiRequestBoardMembers,
     } = useAPI({
-        url: `${APIUrlsConstants.member}?page=0&size=30&position=board_member`,
+        url: `${APIUrlsConstants.member}?page=0&size=50&position=board_member`,
     });
 
     useEffect(() => {
@@ -62,10 +62,10 @@ export default function Main() {
         window.location.reload();
 
         // const response: any = await apiRequest({
-        //     url: `${APIUrlsConstants.member}?page=0&size=30&position=team_member`,
+        //     url: `${APIUrlsConstants.member}?page=0&size=50&position=team_member`,
         // });
         // const boardResponse: any = await apiRequestBoardMembers({
-        //     url: `${APIUrlsConstants.member}?page=0&size=30&position=board_member`,
+        //     url: `${APIUrlsConstants.member}?page=0&size=50&position=board_member`,
         // });
         // setTeamMembers(response?.data);
         // setBoardMembers(boardResponse?.data);

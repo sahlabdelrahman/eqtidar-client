@@ -3,7 +3,7 @@ import Image from "next/image";
 import { BlogProps } from "../Blogs/Main/main";
 
 import { convertToArabicDate } from "@/functions/date";
-import { getProperImageUrl } from "@/utils/helpers";
+import { getProperFileUrl } from "@/utils/helpers";
 
 import styles from "./style.module.scss";
 
@@ -17,12 +17,12 @@ export default function BlogComponent({ data }: { data: BlogProps }) {
                 <section className={styles.coverContainer}>
                     <Image
                         alt={alt}
-                        src={getProperImageUrl({
+                        src={getProperFileUrl({
                             filePath: url,
                         })}
                         loading="lazy"
                         placeholder="blur"
-                        blurDataURL={getProperImageUrl({
+                        blurDataURL={getProperFileUrl({
                             filePath: blurUrl,
                         })}
                         width={width}

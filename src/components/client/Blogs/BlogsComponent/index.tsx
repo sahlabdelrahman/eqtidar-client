@@ -11,7 +11,7 @@ import ControlsOverlay from "../../global/ControlsOverlay";
 
 import blogsConfig from "./config";
 
-import { getProperImageUrl } from "@/utils/helpers";
+import { getProperFileUrl } from "@/utils/helpers";
 
 import { BlogProps } from "../Main/main";
 
@@ -88,13 +88,13 @@ function BlogsComponent({
                                         <div className={styles.imagesContainer}>
                                             <Image
                                                 alt={alt}
-                                                src={getProperImageUrl({
+                                                src={getProperFileUrl({
                                                     filePath: url,
                                                 })}
                                                 className={styles.image}
                                                 loading="lazy"
                                                 placeholder="blur"
-                                                blurDataURL={getProperImageUrl({
+                                                blurDataURL={getProperFileUrl({
                                                     filePath: blurUrl,
                                                 })}
                                                 width={width}
@@ -127,13 +127,13 @@ function BlogsComponent({
                                         <div className={styles.imagesContainer}>
                                             <Image
                                                 alt={alt}
-                                                src={getProperImageUrl({
+                                                src={getProperFileUrl({
                                                     filePath: url,
                                                 })}
                                                 className={styles.image}
                                                 loading="lazy"
                                                 placeholder="blur"
-                                                blurDataURL={getProperImageUrl({
+                                                blurDataURL={getProperFileUrl({
                                                     filePath: blurUrl,
                                                 })}
                                                 width={width}

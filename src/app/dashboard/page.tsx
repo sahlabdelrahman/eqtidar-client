@@ -1,7 +1,5 @@
+import Main from "@/components/client/Dashboard/Main";
+
 export default function Home() {
-    return (
-        <div>
-            <p>الصفحة الرئيسية</p>
-        </div>
-    );
+    return <Main />;
 }

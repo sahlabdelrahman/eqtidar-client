@@ -6,13 +6,15 @@ import footerConfig from "../config";
 
 import { TopSectionProps } from "@/components/client/global/Footer/footer";
 
+import { getProperFileUrl } from "@/utils/helpers";
+
 import styles from "./style.module.scss";
 
 const { Logo } = navbarConfig;
 const { socialMediaLinks, contact: contactConfig, idFile } = footerConfig;
 
 export default function TopSection({ data }: { data: TopSectionProps }) {
-    const { contact, socialMedia, profileFile, whoWeAre } = data;
+    const { contact, socialMedia, whoWeAre } = data;
     return (
         <div className={styles.topSection}>
             <section className={styles.container}>
@@ -75,7 +77,9 @@ export default function TopSection({ data }: { data: TopSectionProps }) {
                     </div>
                     {/* TODO: Replace this path with path of file after uploading file on server */}
                     <a
-                        href={profileFile?.url}
+                        href={getProperFileUrl({
+                            filePath: "uploads/files/profileFile",
+                        })}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="الملف التعريفي"

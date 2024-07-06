@@ -11,7 +11,7 @@ import { ImageProps } from "@/types";
 
 import { APIUrlsConstants } from "@/utils/API/constants";
 
-import { getProperImageUrl } from "@/utils/helpers";
+import { getProperFileUrl } from "@/utils/helpers";
 
 import projectsConfig from "./config";
 
@@ -61,7 +61,7 @@ function Projects() {
                                                         >
                                                             <Image
                                                                 alt={alt}
-                                                                src={getProperImageUrl(
+                                                                src={getProperFileUrl(
                                                                     {
                                                                         filePath:
                                                                             url,
@@ -72,7 +72,7 @@ function Projects() {
                                                                 }
                                                                 loading="lazy"
                                                                 placeholder="blur"
-                                                                blurDataURL={getProperImageUrl(
+                                                                blurDataURL={getProperFileUrl(
                                                                     {
                                                                         filePath:
                                                                             blurUrl,
