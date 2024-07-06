@@ -30,7 +30,7 @@ export default function Main({ info }: MainProps) {
     return (
         <main className={styles.main}>
             <Banner />
-            <MessageAndVision data={info?.bannerText} />
+            {/* <MessageAndVision data={info?.bannerText} /> */}
             <OurGoals />
             <Services />
             <Achievements data={info?.achievements} />
