@@ -23,8 +23,8 @@ function MessageAndVision({ data }: { data: BannerTextProps }) {
                         data-aos-duration="500"
                     >
                         <h1 className={styles.title}>{title}</h1>
-                        {data[key]?.text ? (
-                            <p className={styles.text}>{data[key]?.text}</p>
+                        {data?.[key]?.text ? (
+                            <p className={styles.text}>{data?.[key]?.text}</p>
                         ) : (
                             <EmptySection />
                         )}
