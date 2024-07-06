@@ -1,0 +1,57 @@
+@import "@/styles/partials/mixins";
+@import "@/styles/partials/variables";
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        gap: 15px;
+        padding: 15px;
+        background-color: $lightGrayBackgroundColor;
+        color: $mainTextColor;
+        border: 1px solid $secondaryTextColor;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 9px rgba(0, 0, 0, 0.17);
+        min-height: 132px;
+
+        .title {
+            position: relative;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .subServices {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .subService {
+                font-size: 16px;
+                font-weight: 400;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+    }
+    @include responsive("lg") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include responsive("sm") {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

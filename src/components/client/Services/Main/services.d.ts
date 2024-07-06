@@ -17,7 +17,6 @@ interface ServicesDataProps {
 export interface ServicesConfigProps {
     title: string;
     sectionId: string;
-    data: ServicesDataProps[];
     buttonText: string;
     successMessage: string;
     fields: Field[];

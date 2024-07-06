@@ -1,4 +1,4 @@
-// import Main from "@/components/client/Dashboard/Clients";
+import Main from "@/components/client/Dashboard/Services";
 
 export const metadata = {
     title: {
@@ -8,5 +8,5 @@ export const metadata = {
 };
 
 export default function Goals() {
-    return <>services</>;
+    return <Main />;
 }

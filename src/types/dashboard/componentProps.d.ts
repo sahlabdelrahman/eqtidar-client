@@ -77,6 +77,19 @@ export interface FormDataProps {
     };
 }
 
+export interface FormDataPropsForSettings {
+    page?: string;
+    api?: string;
+    title?: string;
+    description?: string;
+    submitText?: string;
+    fields: Field[][];
+    success?: {
+        message: string;
+        redirectUrl?: string;
+    };
+}
+
 export interface SubmitHandlerResponse {
     status: number;
     success: boolean;
@@ -87,6 +100,18 @@ export interface SubmitHandlerResponse {
 export interface DynamicFormComponentProps {
     formData: FormDataProps;
     submitHandler: (
+        data: any,
+        id?: number
+    ) => Promise<SubmitHandlerResponse | null>;
+}
+
+export interface DynamicFormComponentPropsForSettings {
+    formData: FormDataPropsForSettings;
+    submitHandlerForEmail: (
+        data: any,
+        id?: number
+    ) => Promise<SubmitHandlerResponse | null>;
+    submitHandlerForPassword: (
         data: any,
         id?: number
     ) => Promise<SubmitHandlerResponse | null>;

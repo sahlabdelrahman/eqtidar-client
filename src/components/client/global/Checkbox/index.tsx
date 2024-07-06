@@ -31,10 +31,21 @@ const CheckboxInput: FC<CheckboxComponentProps> = ({
     const {
         control,
         formState: { errors },
+        setValue,
+        getValues,
     } = useFormContext();
 
     const inputErrors = findInputError(errors, name);
     const isInvalid = isFormInvalid(inputErrors);
+
+    const handleCheckboxChange = (field: any, value: string) => {
+        const currentValues = getValues(name) || [];
+        const newValues = currentValues.includes(value)
+            ? currentValues.filter((val: string) => val !== value)
+            : [...currentValues, value];
+        setValue(name, newValues);
+        field.onChange(newValues);
+    };
 
     return (
         <div
@@ -67,6 +78,15 @@ const CheckboxInput: FC<CheckboxComponentProps> = ({
                                             {...field}
                                             {...validation}
                                             id={id + "_" + option.value}
+                                            checked={(
+                                                field.value || []
+                                            ).includes(option.value)}
+                                            onChange={() =>
+                                                handleCheckboxChange(
+                                                    field,
+                                                    option.value
+                                                )
+                                            }
                                         />
                                     )}
                                 />

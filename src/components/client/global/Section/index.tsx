@@ -11,6 +11,7 @@ const Section: FC<SectionComponentProps> = ({
     description,
     dark = false,
     inDashboard = false,
+    enableAOS = true,
     children,
 }) => {
     return (
@@ -21,7 +22,7 @@ const Section: FC<SectionComponentProps> = ({
             } `}
         >
             <div className={styles.container}>
-                {title && <SectionTitle title={title} />}
+                {title && <SectionTitle title={title} enableAOS={enableAOS} />}
                 {description && (
                     <p className={styles.description}>{description}</p>
                 )}

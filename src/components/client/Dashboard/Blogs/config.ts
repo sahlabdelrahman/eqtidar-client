@@ -45,8 +45,8 @@ const blogsConfig: DynamicFormComponentProps = {
                         message: "يجب أن يكون الوصف أكثر من حرفين",
                     },
                     maxLength: {
-                        value: 10000,
-                        message: "يجب أن يكون الوصف أقل من ١٠٠٠٠ حرفًا",
+                        value: 50000,
+                        message: "يجب أن يكون الوصف أقل من ٥٠٠٠٠ حرفًا",
                     },
                 },
             },

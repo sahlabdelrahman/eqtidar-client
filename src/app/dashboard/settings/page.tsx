@@ -1,3 +1,5 @@
+import Main from "@/components/client/Dashboard/Settings";
+
 export const metadata = {
     title: {
         default: "الإعدادات",
@@ -6,5 +8,5 @@ export const metadata = {
 };
 
 export default function Settings() {
-    return <div>الإعدادات</div>;
+    return <Main />;
 }

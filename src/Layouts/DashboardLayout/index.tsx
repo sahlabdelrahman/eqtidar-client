@@ -29,7 +29,7 @@ function DashboardLayout({ children }: { children: ReactNode }) {
                 openSideMenu={openSideMenu}
             />
             <main className={styles.main}>
-                <Breadcrumb />
+                {/* <Breadcrumb /> */}
                 <section className={styles.content}>{children}</section>
             </main>
         </div>

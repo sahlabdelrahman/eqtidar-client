@@ -84,6 +84,7 @@ export interface SectionComponentProps {
     styles?: StyleHTMLAttributes;
     children: ReactNode;
     inDashboard?: boolean;
+    enableAOS?: boolean;
 }
 
 // Projects types

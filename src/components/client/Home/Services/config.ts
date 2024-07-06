@@ -3,56 +3,11 @@ import { ServicesConfigProps } from "../../Services/Main/services";
 const ServicesConfig: ServicesConfigProps = {
     title: "خدماتنا",
     sectionId: "services",
-    data: [
-        {
-            id: 0,
-            slug: "0",
-            text: "تأسيس الأوقاف",
-            subServices: [
-                { _id: 0, text: "صيغة وثيقة فنية" },
-                { _id: 1, text: "تسجيل شهادة الوقف" },
-                { _id: 2, text: "فتح حساب بنكي للوقف" },
-            ],
-        },
-        {
-            id: 1,
-            slug: "1",
-            text: "حلول الأوقاف",
-            subServices: [
-                { _id: 0, text: "تقديم استشارات وقفية" },
-                { _id: 1, text: "صياغة العقود" },
-                { _id: 2, text: "توفير أصول وقفية" },
-                { _id: 3, text: "تشغيل وقف" },
-                { _id: 4, text: "إدارة غلة وقف" },
-                { _id: 5, text: "استبدال وقف متعطل" },
-            ],
-        },
-        {
-            id: 2,
-            slug: "2",
-            text: "خدمات التدريب",
-            subServices: [
-                {
-                    _id: 0,
-                    text: "دورات تدريبية للواقفين والعاملين في القطاع الوقفي",
-                },
-            ],
-        },
-        {
-            id: 3,
-            slug: "3",
-            text: "خدمات التسويق والإعلام",
-            subServices: [
-                { _id: 0, text: "تسويق وقف قائم" },
-                { _id: 1, text: "الإبراز الاعلامي للوقف" },
-            ],
-        },
-    ],
 
     fields: [
         {
             id: "name",
-            name: "customerName",
+            name: "name",
             type: "name",
             label: "الاسم",
             placeholder: "الاسم",
@@ -73,8 +28,8 @@ const ServicesConfig: ServicesConfigProps = {
         },
         {
             id: "mobileNumber",
-            name: "customerMobileNumber",
-            type: "number",
+            name: "mobile",
+            type: "string",
             label: "الموبايل",
             placeholder: "الموبايل",
             validation: {
@@ -94,31 +49,31 @@ const ServicesConfig: ServicesConfigProps = {
         },
         {
             id: "email",
-            name: "customerEmail",
+            name: "email",
             type: "email",
-            label: "الإيميل",
-            placeholder: "الإيميل",
+            label: "البريد الالكتروني",
+            placeholder: "البريد الالكتروني",
             validation: {
                 required: {
                     value: true,
-                    message: "يجب ادخال الإيميل",
+                    message: "يجب ادخال البريد الالكتروني",
                 },
                 pattern: {
                     value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-                    message: "الإيميل غير صالح",
+                    message: "البريد الالكتروني غير صالح",
                 },
             },
         },
         {
-            id: "contactMethod",
-            name: "contactMethod",
+            id: "contactWay",
+            name: "contactWay",
             type: "checkbox",
             label: "وسيلة الاتصال المفضلة لديكم",
             placeholder: "وسيلة الاتصال المفضلة لديكم",
             options: [
-                { label: "الاتصال هاتفيا", value: "phone" },
-                { label: "البريد الإلكتروني", value: "email" },
-                { label: "واتساب", value: "whatsapp" },
+                { label: "الاتصال هاتفيا", value: "الاتصال هاتفيا" },
+                { label: "البريد الإلكتروني", value: "البريد الإلكتروني" },
+                { label: "واتساب", value: "واتساب" },
             ],
         },
         {

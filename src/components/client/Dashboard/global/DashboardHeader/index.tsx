@@ -107,19 +107,16 @@ function DashboardHeader({
                     >
                         {menuLinksAndActions?.links?.map(
                             ({ id, text, path }) => (
-                                <MenuItem
+                                <Link
                                     key={id}
                                     onClick={handleCloseUserMenu}
                                     className={styles.listItem}
+                                    href={path}
+                                    aria-label={text}
+                                    title={text}
                                 >
-                                    <Link
-                                        href={path}
-                                        aria-label={text}
-                                        title={text}
-                                    >
-                                        {text}
-                                    </Link>
-                                </MenuItem>
+                                    {text}
+                                </Link>
                             )
                         )}
                         <Divider />

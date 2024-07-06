@@ -26,26 +26,38 @@ export default function TopSection({ data }: { data: TopSectionProps }) {
                     <ul className={styles.contact}>
                         {contactConfig?.map(({ id, Icon, key }) => (
                             <li key={id} aria-label={contact?.[key].text}>
-                                <a
-                                    href={
-                                        contact?.[key]?.url
-                                            ? contact?.[key]?.url
-                                            : "/"
-                                    }
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={contact?.[key].text}
-                                    className={styles.item}
-                                >
-                                    <span>
-                                        <Icon />
-                                    </span>
-                                    {contact?.[key].text ? (
-                                        contact?.[key].text
-                                    ) : (
-                                        <EmptySection />
-                                    )}
-                                </a>
+                                {contact?.[key]?.url && key !== "location" ? (
+                                    <a
+                                        href={contact?.[key]?.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={contact?.[key].text}
+                                        className={styles.item}
+                                    >
+                                        <span>
+                                            <Icon />
+                                        </span>
+                                        {contact?.[key].text ? (
+                                            contact?.[key].text
+                                        ) : (
+                                            <EmptySection />
+                                        )}
+                                    </a>
+                                ) : (
+                                    <p
+                                        aria-label={contact?.[key].text}
+                                        className={styles.item}
+                                    >
+                                        <span>
+                                            <Icon />
+                                        </span>
+                                        {contact?.[key].text ? (
+                                            contact?.[key].text
+                                        ) : (
+                                            <EmptySection />
+                                        )}
+                                    </p>
+                                )}
                             </li>
                         ))}
                     </ul>

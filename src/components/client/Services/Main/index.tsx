@@ -16,8 +16,10 @@ import CheckboxInput from "../../global/Checkbox";
 
 import servicesConfig from "@/components/client/Home/Services/config";
 import { ServicesProps } from "./services";
+import APIConfig from "@/utils/API";
 
 import styles from "./style.module.scss";
+import { APIUrlsConstants } from "@/utils/API/constants";
 
 const { fields, buttonText, successMessage } = servicesConfig;
 
@@ -34,29 +36,17 @@ export default function Main({ data }: { data: ServicesProps[] }) {
 
     const onSubmit = methods.handleSubmit(async (data) => {
         setLoading(true);
-
-        setTimeout(() => {
-            methods.reset();
-            toast.success(successMessage);
-        }, 1000);
-
-        // await API({
-        //     endpoint: "contactUs",
-        //     method: "POST",
-        //     data: data,
-        //     params: { orgId: 4 },
-        // })
-        //     .then(() => {
-        //         methods.reset();
-        //         toast.success(
-        //             "Thank you for contacting us! We will get back to you soon."
-        //         );
-        //     })
-        //     .catch((error) => {
-        //         toast.error(error.data.response.message);
-        //     });
-
-        setLoading(false);
+        APIConfig.post(APIUrlsConstants.contact, {
+            ...data,
+            contactWay: data?.contactWay?.join(" ، "),
+        })
+            .then(() => {
+                methods.reset();
+                toast.success(successMessage);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
     });
     return (
         <main className={styles.main}>

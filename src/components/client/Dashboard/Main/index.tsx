@@ -1,13 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { toast } from "react-toastify";
 
 import useAPI from "@/hooks/useAPI";
 import DynamicForm from "@/components/client/Dashboard/global/DynamicForm";
 import { APIUrlsConstants } from "@/utils/API/constants";
 import infoConfig from "./config";
-import { ClientProps } from "../../Home/Clients/clients";
 
 import styles from "./style.module.scss";
 
@@ -16,7 +14,7 @@ const { formData, submitHandler } = infoConfig;
 export default function Main() {
     const [info, setInfo] = useState({});
 
-    const { response, apiRequest } = useAPI({
+    const { response } = useAPI({
         url: APIUrlsConstants.info,
     });
 

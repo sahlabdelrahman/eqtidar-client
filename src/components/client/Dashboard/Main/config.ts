@@ -171,7 +171,7 @@ const infoConfig: DynamicFormComponentProps = {
             {
                 id: "mobile",
                 name: "mobile",
-                type: "number",
+                type: "text",
                 label: "الموبايل",
                 placeholder: "الموبايل",
                 multiline: false,
@@ -338,7 +338,7 @@ const infoConfig: DynamicFormComponentProps = {
                 },
             },
         ],
-        submitText: "إرسال",
+        submitText: "تحديث",
     },
     submitHandler: async ({ data }) => {
         const formattedData = {

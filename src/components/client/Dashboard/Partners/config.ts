@@ -69,7 +69,7 @@ const partnersConfig: DynamicFormComponentProps = {
     submitHandler: async ({ data, id }) => {
         if (id) {
             const response = await APIConfig.patch(
-                `/${APIUrlsConstants.partner}/${id}`,
+                `${APIUrlsConstants.partner}/${id}`,
                 {
                     ...data,
                 }

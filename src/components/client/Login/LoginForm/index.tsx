@@ -39,15 +39,17 @@ function LoginForm() {
         const { email, password } = data;
         AuthService.login({ email, password })
             .then((res) => {
-                router.push(redirectSuccessPath);
-                toast.success(successMessage);
+                if (res?.data?.success) {
+                    router.push(redirectSuccessPath);
+                    toast.success(successMessage);
 
-                dispatch(
-                    setAuthState({
-                        user: { ...res?.data?.data },
-                        isLoggedIn: true,
-                    })
-                );
+                    dispatch(
+                        setAuthState({
+                            user: { ...res?.data?.data },
+                            isLoggedIn: true,
+                        })
+                    );
+                }
             })
             .finally(() => setLoading(false));
     });

@@ -29,16 +29,16 @@ const ContactUsConfig: ContactUsComponentProps = {
             id: "email",
             name: "customerEmail",
             type: "email",
-            label: "الإيميل",
-            placeholder: "الإيميل",
+            label: "البريد الالكتروني",
+            placeholder: "البريد الالكتروني",
             validation: {
                 required: {
                     value: true,
-                    message: "يجب ادخال الإيميل",
+                    message: "يجب ادخال البريد الالكتروني",
                 },
                 pattern: {
                     value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-                    message: "الإيميل غير صالح",
+                    message: "البريد الالكتروني غير صالح",
                 },
             },
         },
